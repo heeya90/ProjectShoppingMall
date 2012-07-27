@@ -10,6 +10,8 @@
 	<ul>
 	<li><a href="main.do">타일즈</a></li>
 	<li><a href="/ProjectShoppingMall/sitehelper/sitehelper_login.jsp">관리자 페이지</a></li>
+	<li><a href="order.tiles">타일즈</a></li>
+	<li><a href="menuuser.tiles">타일즈</a></li>
 	</ul>
 </body>
 </html>
