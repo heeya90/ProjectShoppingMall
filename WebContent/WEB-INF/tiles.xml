@@ -25,24 +25,12 @@
 	<!-- wild Card Tiles 2.1버전부터 설정파일에서 와일드카드를 사용하여 설정파일의 내용을 
 	줄이는 방법이 지원된다 -->
         	
-    <definition name="user*" extends="nomenuuser"> 
-		<put-attribute name="body"  value="/user/user{1}.jsp" />
+    <definition name="no_*_*" extends="nomenuuser"> 
+		<put-attribute name="body"  value="/{1}/{1}_{2}.jsp" />
 	</definition>
 	
-   	<definition name="goods*" extends="menuuser">
- 		<put-attribute name="body"  value="/goods/goods{1}.jsp" />
-	</definition>
-   		
-   	<definition name="mypage*" extends="menuuser">
- 		<put-attribute name="body"  value="/mypage/mypage{1}.jsp" />
-	</definition>
-	
-   	<definition name="order*" extends="menuuser">
- 		<put-attribute name="body"  value="/order/order{1}.jsp" />
-	</definition>
-
-   	<definition name="mypage*" extends="menuuser">
- 		<put-attribute name="body"  value="/mypage/mypage{1}.jsp" />
+   	<definition name="m_*_*" extends="menuuser">
+ 		<put-attribute name="body"  value="/{1}/{1}_{2}.jsp" />
 	</definition>
 
    	<!-- 관리자 계정  tiles -->
@@ -55,38 +43,12 @@
 		<put-attribute name="footer"  value="/sitehelper/tiles/footer1.jsp" />
 	</definition>
 	
-	<definition name="nomenuhelper" template="/sitehelper/tiles/layout2.jsp">
-		<put-attribute name="title"  value="ShoppingMall" />
-		<put-attribute name="header"   value="/sitehelper/tiles/header1.jsp" />
-		<put-attribute name="body"  value="/sitehelper/tiles/body1.jsp" />
-		<put-attribute name="footer"  value="/sitehelper/tiles/footer1.jsp" />
-	</definition>
-	
 	<!-- wild Card Tiles 2.1버전부터 설정파일에서 와일드카드를 사용하여 설정파일의 내용을 
 	줄이는 방법이 지원된다 -->	
 	
-    <definition name="sitehelper*" extends="nomenuhelper"> 
-		<put-attribute name="body"  value="/sitehelper/sitehelper{1}.jsp" />
-	</definition>
-
-   	<definition name="category*" extends="menuhelper">
-   		<put-attribute name="menu"  value="/sitehelper/category/menu.jsp" />   	    
- 		<put-attribute name="body"  value="/sitehelper/category/category{1}.jsp" />
-	</definition>
-	
-   	<definition name="hgoods*" extends="menuhelper">
-   		<put-attribute name="menu"  value="/sitehelper/goods/menu.jsp" />
- 		<put-attribute name="body"  value="/sitehelper/goods/hgoods{1}.jsp" />
-	</definition>
-	
-   	<definition name="huser*" extends="menuhelper">
-   		<put-attribute name="menu"  value="/sitehelper/user/menu.jsp" />   	    
- 		<put-attribute name="body"  value="/sitehelper/user/huser{1}.jsp" />
-	</definition>
-	
-   	<definition name="horder*" extends="menuhelper">
-   	    <put-attribute name="menu"  value="/sitehelper/order/menu.jsp" />
-  	    <put-attribute name="body"  value="/sitehelper/order/horder{1}.jsp" />
+   	<definition name="sitehelper_*_*" extends="menuhelper">
+   		<put-attribute name="menu"  value="/sitehelper/{1}/menu.jsp" />   	    
+ 		<put-attribute name="body"  value="/sitehelper/{1}/{1}_{2}.jsp" />
 	</definition>
     		
 </tiles-definitions>

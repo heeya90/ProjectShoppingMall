@@ -1,8 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+    pageEncoding="EUC-KR"%>
+<div class="left_tmenu">카테고리
+	</div>
 
-<table style="valign:top; width:100%; border: 1px solid black">
-	<tr>
-		<td>관리자메뉴2</td>
-	</tr>
-</table>
+	<div class="left2">
+
+	<ul class="left_mu_ul">
+		<li class="left_mu_li">카테고리</li>
+	</ul>
+	</div>
