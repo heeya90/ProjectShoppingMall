@@ -13,8 +13,8 @@ public class LoginCheck implements CommandHandler{
 	public String process(HttpServletRequest request,
 			HttpServletResponse response) throws Throwable {
 		//1.명령어와 관련된 비즈니스 로직 처리
-		String id = request.getParameter("adminId");
-		String pw = request.getParameter("adminPwd");
+		String id = request.getParameter("id");
+		String pw = request.getParameter("pw");
 		System.out.println(id+" getParameter "+pw);
 
 		HelperBean hb = new HelperService().login();
@@ -37,7 +37,7 @@ public class LoginCheck implements CommandHandler{
 		System.out.println(status);
 		request.setAttribute("status", status);
 		//3.뷰 페이지의 URI 리턴
-		return "/ajaxreturnpage/LoginCheck.jsp";
+		return "../ajaxreturnpage/LoginCheck.jsp";
 	}
 
 }
