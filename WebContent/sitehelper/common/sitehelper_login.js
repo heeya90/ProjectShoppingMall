@@ -19,11 +19,9 @@ $(document).ready(function(){
 			return false;
 		}	
 		
-		$.post("loginchk.do",$("form").serialize(),function(data){	
-			alert($.trim(data));
+		$.post("loginchk.do",$("form").serialize(),function(data){
 			if (data == 'ok'){
-				//location.href = 'index.asp';
-				aleert("성공");
+				location.href = 'sitehelper_order_list.tiles';
 			}else if (data == 'id'){
 				alert('아이디를 확인하세요.');
 				return false; 
