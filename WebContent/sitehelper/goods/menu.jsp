@@ -8,8 +8,8 @@
 	<ul class="left_mu_ul">
 		<li class="left_mu_li">상품관리</li>
 			<ul class="mu_ul">
-				<li class="mu_li"><a href="notice.asp?tblName=inner">상품관리 리스트</a></li>
-				<li class="mu_li"><a href="notice.asp?tblName=outer">상품 추가 /수정</a></li>
+				<li class="mu_li"><a href="sitehelper_goods_list.tiles">상품 리스트</a></li>
+				<li class="mu_li"><a href="sitehelper_goods_insert.tiles">상품 등록 /수정</a></li>
 			</ul>
 	</ul>
 	</div>
