@@ -3,66 +3,52 @@
 
 <title>관리자모드(카테고리)</title>
 
-<style type="text/css">
-div{
-	text-align: center;
-	line-height:30px;
-	border:1px solid blue;
-	padding:5px;
-	margin:5px;
-	padding-top:50px
-}
-td{
-	border:1px solid red;
-	text-align:center;
-}
-</style>
+<div id="sub_contents">
+	<div id="content">
+		<div class="admin_loca"> HOME - 상품관리 - <b>카테고리관리</b>
+		</div>
+		<div class="admin_title">카테고리 리스트</div>
 
-<form action="command/helper/Category.jsp" method="post">
-	<div>
-		<table align="center" >
-			<tr>
-				<td width="40%">
-					<textarea name="category_lev1" style="width:100%; height:200px"></textarea>
-				</td>
-				<td width="10%">
-					<input type="button" value="제일위"><br/>
-					<input type="button" value="바로위"><br/>
-					<input type="button" value="바로아래"><br/>
-					<input type="button" value="제일아래">
-				</td>
-				<td width="40%">
-					<textarea name="category_lev1" style="width:100%; height: 200px;"></textarea>
-				</td>
-				<td width="10%">
-					<input type="button" value="제일위"><br/>
-					<input type="button" value="바로위"><br/>
-					<input type="button" value="바로아래"><br/>
-					<input type="button" value="제일아래">
-				</td>
-			</tr>
-			
-			<tr>
-				<td>
-					<input type="text" name="category_lev1"></td>
-				<td> </td>
-				<td>
-					<input type="text" name="category_lev2"></td>
-			</tr>
-			
-			<tr>
-				<td>
-					<input type="button" value="등록">
-					<input type="button" value="수정">
-					<input type="button" value="삭제">
-				</td>
-				<td></td>
-				<td>
-					<input type="button" value="등록">
-					<input type="button" value="수정">
-					<input type="button" value="삭제">
-				</td>
-			</tr>
-		</table>
+		<div style="padding-left: 50px; margin: 0 auto; text-align: center">
+			<div class="categoryBox01">
+				<div class="categoryGubun01">대분류</div>
+				<div class="categorySelectBox" style="padding-left: 20px; float: left">
+					<select name="categoryA" id="categoryA" class="selectBox" size="16"></select>
+				</div>
+
+				<div class="categoryMove" style="padding-right: 10px; float: left">
+					<span class="pointer" id="upA">▲</span><br>
+					<span class="pointer" id="downA">▼</span>
+				</div>
+				<div class="categorySet" style="clear: both;">
+					<input type="text" id="categoryName" class="inputbox" /><br />
+					<input type="button" class="clickbutton03" id="newbutton" value="등록" />
+					<input type="button" class="clickbutton06" id="updatebutton" value="수정" />
+					<input type="button" class="clickbutton05" id="deletebutton" value="삭제" />
+				</div>
+				<input type="hidden" id="group" value="A" />
+			</div>
+
+			<div class="categoryBox01">
+				<div class="categoryGubun01">중분류</div>
+				<div class="categorySelectBox" style="padding-left: 20px; float: left">
+					<select name="categoryB" id="categoryB" class="selectBox" size="16"></select>
+				</div>
+				<div class="categoryMove" style="padding-right: 10px; float: left">
+					<span class="pointer" id="upB">▲</span><br>
+					<span class="pointer" id="downB">▼</span>
+				</div>
+				<div class="categorySet" style="clear: both;">
+					<input type="text" id="categoryName" class="inputbox" /><br/>
+					<input type="button" class="clickbutton03" id="newbutton" value="등록" />
+					<input type="button" class="clickbutton06" id="updatebutton" value="수정" />
+					<input type="button" class="clickbutton05" id="deletebutton" value="삭제" />
+				</div>
+				<input type="hidden" id="group" value="B" />
+			</div>
+
+		</div>
+
 	</div>
-</form>
+</div>
+
