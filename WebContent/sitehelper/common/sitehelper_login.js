@@ -21,7 +21,7 @@ $(document).ready(function(){
 		
 		$.post("loginchk.do",$("form").serialize(),function(data){
 			if (data == 'ok'){
-				location.href = 'sitehelper_order_list.tiles';
+				location.href = '../sitehelper_order_list.tiles';
 			}else if (data == 'id'){
 				alert('아이디를 확인하세요.');
 				return false; 
@@ -35,7 +35,7 @@ $(document).ready(function(){
 		});
 	});
 
-	$("#ㅔpw,#id").keydown(function(e) {
+	$("#pw,#id").keydown(function(e) {
 		if (e.keyCode == 13) {
 			$("#loginBtn").click();
 		}

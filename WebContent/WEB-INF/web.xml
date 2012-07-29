@@ -48,12 +48,6 @@
 		<url-pattern>*.tiles</url-pattern>
 	</servlet-mapping>
 	
-    <!-- <resource-ref>
-        <description>oracledb</description>
-        <res-ref-name>jdbc/myoracle</res-ref-name>
-        <res-type>javax.sql.DataSource</res-type>
-        <res-auth>Container</res-auth>
-        </resource-ref> -->
     <resource-ref>
         <description>
             Resource reference to a factory for java.sql.Connection

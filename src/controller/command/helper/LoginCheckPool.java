@@ -8,7 +8,7 @@ import model.service.HelperService;
 
 import controller.command.CommandHandler;
 
-public class LoginCheck2 implements CommandHandler{
+public class LoginCheckPool implements CommandHandler{
 
 	public String process(HttpServletRequest request,
 			HttpServletResponse response) throws Throwable {

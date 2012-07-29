@@ -37,7 +37,7 @@ public class LoginCheck implements CommandHandler{
 		System.out.println(status);
 		request.setAttribute("status", status);
 		//3.뷰 페이지의 URI 리턴
-		return "../ajaxreturnpage/LoginCheck.jsp";
+		return "../common/ajaxreturn/sitehelper_login_return.jsp";
 	}
 
 }

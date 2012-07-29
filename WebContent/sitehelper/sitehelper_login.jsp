@@ -1,82 +1,49 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>ADMIN LOGIN PAGE</title>
-<script type="text/javascript" src="../common/jquery-1.7.2.js"></script>
-<script type="text/javascript">
-	$(document).ready(function() {
-		$("#loginBtn").bind("click", function() {
-			if ($("#adminId").val() == '') {
-				alert("아이디를 입력하세요");
-				$("#adminId").focus();
-				return false;
-			}
-			if ($("#adminPwd").val() == '') {
-				alert("패스워드를 입력하세요");
-				$("#adminPwd").focus();
-				return false;
-			}
-			$.post("loginchk.do", $("form").serialize(), function(data){
-				alert("ajax get return");
-				alert(data);
-				if (data == 'ok') {
-					location.href = '/index.jsp';
-				} else if (data == 'id' || data == 'pw') {
-					alert('아이디 비번을 확인하세요.');
-					return false;
-				} else if (data == 'notShop') {
-					alert('등록되지 않은 가맹점입니다.');
-					return false;
-				} else {
-					alert(data + '에러가 발생하였습니다.');
-					return false;
-				}
-			});
-		});
-		$("#loginBtn2").bind("click", function() {
-            if ($("#adminId2").val() == '') {
-                alert("아이디를 입력하세요");
-                $("#adminId2").focus();
-                return false;
-            }
-            if ($("#adminPwd2").val() == '') {
-                alert("패스워드를 입력하세요");
-                $("#adminPwd2").focus();
-                return false;
-            }
-            $.post("loginchk2.do", $("form").serialize(), function(data){
-                alert(data+"2");
-                if (data == 'ok') {
-                    location.href = '/index.jsp';
-                } else if (data == 'id' || data == 'pw') {
-                    alert('아이디 비번을 확인하세요.');
-                    return false;
-                } else if (data == 'notShop') {
-                    alert('등록되지 않은 가맹점입니다.');
-                    return false;
-                } else {
-                    alert(data + '에러가 발생하였습니다.');
-                    return false;
-                }
-            });
-        });
-	});
-</script>
+<link href="./common/common.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../common/jquery/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="./common/sitehelper_login.js"></script>
+<title>Insert title here</title>
 </head>
 <body>
-	<h2>관리자 로그인</h2>
 
-	<form method="post">
-	ID :<input type="text" name="adminId" id="adminId" value="admin" /><br />
-	PW :<input type="password" name="adminPwd" id="adminPwd" value="test" /><br />
-	<button id="loginBtn">로그인</button>
-	<hr />
-    ID :<input type="text" name="adminId2" id="adminId2" value="admin" /><br />
-    PW :<input type="password" name="adminPwd2" id="adminPwd2" value="test" /><br />
-    <button id="loginBtn2">컨넥션풀로그인</button>
-	</form>
+	<div id="login_main">
+
+
+		<div class="login_img">
+			<div class="login_left"><img src="./img/admin_login_ltt.gif" /></div>
+
+			<div class="login_right">
+				<span class="login_ttt"><img src="./img/admin_login_ttt.gif" /></span>
+				<span class="login_bg">
+					<div class="login_uid">
+						<span class="login_id"><img src="./img/admin_login_id.gif"  /> <input type="text" class="text_Box" name="id" id="id" /></span>
+						<span class="login_pw"><img src="./img/admin_login_pw.gif"  /> <input type="password" class="text_Box" name="pw" id="pw" /></span>
+					</div>
+
+					<div class="login_btn"><img src="./img/admin_login_btn.gif" border="0"  id="loginBtn" /></div>
+					<div class="login_txt"><b></b> <b></b> </div>
+				</span>
+
+			</div>
+			
+
+			<div class="login_copy">
+				<span class="login_cy"><b>ShoppingMall</b><br>
+				Tel: xx-xxxx-xxxx&nbsp;&nbsp;/&nbsp;&nbsp;Fax: xx-xxxx-xxxx&nbsp;&nbsp;/&nbsp;&nbsp;E-mail: xxxx@xxxx.xx.xx&nbsp;&nbsp;/&nbsp;&nbsp;
+				</span>
+			</div>
+
+
+
+		</div>
+
+
+
+	</div>
 </body>
 </html>
