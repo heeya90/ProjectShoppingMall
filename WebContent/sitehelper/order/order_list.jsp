@@ -64,7 +64,6 @@
 						<select name="sType" class="admin_select_sel">
 							<option value="ord_no"  selected="selected" >주문번호</option>
 							<option value="sname" selected="selected" >주문자명</option>
-							<option value="scompany"  selected="selected" >업체명</option>
 						</select>
 						<input type="text" name="sKey" class="input_box_sel01" value="" />
 					</span>
@@ -78,60 +77,42 @@
 <!-- 검색 부분 끝 -->
 
 <input type="hidden" name="delivery_code" id="deliveryCode" value="" />
-
-
-		<table width="780" class="mainTbl">
+		<table style="width:780px" class="mainTbl">
 			<thead>
 				<tr>
 					<th>주문번호<br>주문자명</th>
-					<th class="th_cen200">상품/판매가/수량<br>판매금액/시안/매출등록</th>
+					<th class="th_cen200">상품/판매가/수량<br>판매금액</th>
 					<th class="th_cen105">출고확인</th>
 					<th class="th_cen75">납품희망일</th>
-					<th>결제금액<br />결제방법</th>
-					<th>제휴몰<br />주문일시</th>
-					<th>서류</th>
-					
+					<th>결제금액<br>결제방법</th>
+					<th>주문일시</th>
 				</tr>
 			</thead>
 			<tbody>
-				
 				<tr>
 					<td class="td_cen">
 					<a href="#" class="memoLayer">▼</a><div class="textLayer" style="line-height:21px;position:absolute;display:none;background:white;margin-left:40px;margin-top:-2px;padding:15px;border:1px solid #e5422c;text-align:left;"></div><br>
 					<a href="order_list.jsp"></a>
 					<br /><br />
 					</td>
-
-
 					<td class="td_center" colspan="3">
-
 						<table class="admin_table07">
-
 							<tr>
 								<td class="tbl01_td01">
-									
 									<div class="">
 										<div class="adm_t01">
-
-											<span class="adm_s01"><a href="../product/productWrite.asp?p_code="><img src="/upload/product/" width="50" height="50" /></a></span>
-											<span class="adm_s02"><a href="../product/productWrite.asp?p_code=">[]</a><br><a href="../product/productWrite.asp?p_code="></a></span>
-						
-											<span class="adm_s01"><img src="/upload/product/" width="50" height="50" /></span>
-											<span class="adm_s02">[]<br></span>
-
+											<span class="adm_s01"><a href=""><img src="" width="50" height="50" /></a></span>
+											<span class="adm_s02"><a href="">[]</a><br><a href=""></a></span>
+											<span class="adm_s01"><img src="" width="50" height="50" /></span>
+											<span class="adm_s02"><br></span>
 										</div>
 										
 										<div class="adm_t02">
-											<span class="adm_s01">
-												
-												판매가:×개 <br>
-												
-												</span>
+											<span class="adm_s01">판매가:×개 <br></span>
 											<span class="adm_s010">
-												
 											<a href="stiker_list.asp?sKey="></a>
-												</span><br><span class="adm_s02"><span class="maechulN">매출미등록</span><span class="maechulY">매출등록</span></span>
-											<span class="adm_s03">->=<b>[%]</b></span>
+												</span><br><span class="adm_s02"></span>
+											<span class="adm_s03">-=<b>[%]</b></span>
 										</div>
 										
 									</div>
@@ -150,14 +131,14 @@
 								</td>								
 								<td class="tbl02_td01">									
 									<b></b><br><input type="hidden" name="com_id" value="" />
-									<b>일반긴급<span>배송특이</span></b>
+									<b>일반</b><b>긴급</b><b><span>배송</span><span>특이</span></b>
 								</td>
 							</tr>
 					</table>
 
 					</td>
 					
-					<!--order테이블에 있는 실제 결제금액, vat뺀 금액으로 마진 계산-->
+					<!-- order 테이블에 있는 실제 결제금액, vat 뺀 금액으로 마진 계산-->
 					<td class="td_cen"><b></b><!--주문건당 마진추가--><br /><span>원<br></span><!--//주문건당 마진추가-->카드결제 무통장입금 가상계좌<br> 
 						<select name="order_status" class="admin_select_mem">							
 							<option value="1" selected="selected" >입금확인중</option>
@@ -173,31 +154,17 @@
 						
 					</td>
 					<td class="td_cen">
-					<br><b>[협력몰 독립몰 제휴몰]</b>
 					<br>
-					
 					</td>
-					<td class="td_cen" style="white-space: nowrap"><span>[<a  href="account_write.asp?ord_no="  href="#" onClick="javascript:request('','');">거래명세표</a>]</span>
-						<br><span>[<a href="orderform_write.asp">견적서</a>]</span><br><span>[<a href="request_write.asp">작업의뢰서</a>]</span><br><span>[<a href="restiker_write.asp">시안의뢰서</a>]</span><br><span>[<a href="stiker_up.asp">시안관리</a>]</span>
-					</td>
-					
 				</tr>
-				
 			</tbody>
 		</table>
-
 		<div class="admin_list">
-		
 		<span><a href="&nPage=">이전10개</a></span>  
-		
 		<span><a href="&nPage=">이전</a></span>  
 		<a href="&nPage="></a> |  
 		<span><a href="&nPage=">다음</a></span>  
-		
 		<span><a href="&nPage=">다음10개</a></span>
-		
 		</div>
-
 	</div>
-
 </div>

@@ -1,8 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+    pageEncoding="EUC-KR"%>
+<div class="left_tmenu">회원관리
+	</div>
 
-<table style="valign:top; width:100%; border: 1px solid black">
-	<tr>
-		<td>관리자메뉴3</td>
-	</tr>
-</table>
+	<div class="left2">
+
+	<ul class="left_mu_ul">
+		<li class="left_mu_li">회원관리</li>
+			<ul class="mu_ul">
+				<li class="mu_li"><a href="sitehelper_user_list.tiles">회원 리스트</a></li>
+			</ul>
+	</ul>
+	</div>
