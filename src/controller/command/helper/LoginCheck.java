@@ -5,7 +5,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import model.beans.HelperBean;
 import model.service.HelperService;
-
 import controller.command.CommandHandler;
 
 public class LoginCheck implements CommandHandler{
@@ -15,7 +14,7 @@ public class LoginCheck implements CommandHandler{
 		//1.명령어와 관련된 비즈니스 로직 처리
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
-		System.out.println(id+" getParameter "+pw);
+		System.out.println(" getParameter id:"+id+" pw:"+pw);
 
 		HelperBean hb = new HelperService().login();
 
