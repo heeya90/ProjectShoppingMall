@@ -1,8 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
-
-<table style="width:100%; border: 1px solid black">
-	<tr>
-		<td>관리자푸터1</td>
-	</tr>
-</table>
+    pageEncoding="EUC-KR"%>
+    
+<span class="footer_copy">
+	copyright ⓒ 2012 by risingsun All rights reserved
+</span>
