@@ -9,9 +9,9 @@
 		</div>
 		<div class="admin_title">카테고리 리스트</div>
 
-		<div style="padding-left: 50px; margin: 0 auto; text-align: center">
-			<div class="categoryBox01">
-				<div class="categoryGubun01">대분류</div>
+		<div style="padding-left: 20px; margin: 0 auto; text-align: center">
+			<div class="categoryBox">
+				<div class="categoryGubun">대분류</div>
 				<div class="categorySelectBox" style="padding-left: 20px; float: left">
 					<select name="categoryA" id="categoryA" class="selectBox" size="16"></select>
 				</div>
@@ -21,7 +21,7 @@
 					<span class="pointer" id="downA">▼</span>
 				</div>
 				<div class="categorySet" style="clear: both;">
-					<input type="text" id="categoryName" class="inputbox" /><br />
+					<input type="text" id="categoryName" class="inputbox" />
 					<input type="button" class="clickbutton03" id="newbutton" value="등록" />
 					<input type="button" class="clickbutton06" id="updatebutton" value="수정" />
 					<input type="button" class="clickbutton05" id="deletebutton" value="삭제" />
@@ -29,8 +29,8 @@
 				<input type="hidden" id="group" value="A" />
 			</div>
 
-			<div class="categoryBox01">
-				<div class="categoryGubun01">중분류</div>
+			<div class="categoryBox">
+				<div class="categoryGubun">중분류</div>
 				<div class="categorySelectBox" style="padding-left: 20px; float: left">
 					<select name="categoryB" id="categoryB" class="selectBox" size="16"></select>
 				</div>
@@ -39,7 +39,7 @@
 					<span class="pointer" id="downB">▼</span>
 				</div>
 				<div class="categorySet" style="clear: both;">
-					<input type="text" id="categoryName" class="inputbox" /><br/>
+					<input type="text" id="categoryName" class="inputbox" />
 					<input type="button" class="clickbutton03" id="newbutton" value="등록" />
 					<input type="button" class="clickbutton06" id="updatebutton" value="수정" />
 					<input type="button" class="clickbutton05" id="deletebutton" value="삭제" />

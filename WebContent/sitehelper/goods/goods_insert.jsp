@@ -55,21 +55,19 @@
 				</tr>
 				<tr>
 					<th class="th_center">카테고리</th>
-					<td class="left" colspan="3">
-						<div class="categoryBox">
-							<div class="categoryGubun">대분류</div>
+					<td class="left" colspan="4">
+						<div class="categoryBox01">
+							<div class="categoryGubun01">대분류</div>
 							<div class="categorySelectBox">
-								<select name="categoryA" id="categoryA" class="selectBox"
-									size="10">
+								<select name="categoryA" id="categoryA" class="selectBox" size="10">
 									<option value="" selected="selected"></option>
 								</select>
 							</div>
 						</div>
-						<div class="categoryBox">
-							<div class="categoryGubun">중분류</div>
+						<div class="categoryBox01">
+							<div class="categoryGubun01">중분류</div>
 							<div class="categorySelectBox">
-								<select name="categoryB" id="categoryB" class="selectBox"
-									size="10">
+								<select name="categoryB" id="categoryB" class="selectBox" size="10">
 									<option value="" selected="selected"></option>
 								</select>
 							</div>
@@ -88,45 +86,29 @@
 						<table style="border:0; cellpadding:0; cellspacing:0"
 							class="admin_table03">
 							<tr>
-								<th class="th_center"><input type="text" name="optionText1"
-									id="optionText1" value="" class="optionText" /></th>
-								<th class="th_center"><input type="text" name="optionText2"
-									id="optionText2" value="" class="optionText" /></th>
-								<th class="th_center"><input type="text" name="optionText3"
-									id="optionText3" value="" class="optionText" /></th>
-								<th class="th_center"><input type="text" name="optionText4"
-									id="optionText4" value="" class="optionText" /></th>
+								<th class="th_center"><input type="text" name="optionText1" id="optionText1" value="" class="optionText" /></th>
+								<th class="th_center"><input type="text" name="optionText2" id="optionText2" value="" class="optionText" /></th>
+								<th class="th_center"><input type="text" name="optionText3"	id="optionText3" value="" class="optionText" /></th>
+								<th class="th_center"><input type="text" name="optionText4"	id="optionText4" value="" class="optionText" /></th>
 								<!--th class="eeeeBg"><input type="text" name="optionText3" id="optionText3" value="" class="optionText" /></th-->
 							</tr>
 							<tr>
-								<td class="td_cen"><input type="text" name="optionValue1"
-									id="optionValue1" value="" class="inputbox" /></td>
-								<td class="td_cen"><input type="text" name="optionValue2"
-									id="optionValue2" value="" class="inputbox" /></td>
-								<td class="td_cen"><input type="text" name="optionValue3"
-									id="optionValue3" value="" class="inputbox" /></td>
-								<td class="td_cen"><input type="text" name="optionValue4"
-									id="optionValue4" value="" class="inputbox" /></td>
+								<td class="td_cen"><input type="text" name="optionValue1" id="optionValue1" value="" class="inputbox" /></td>
+								<td class="td_cen"><input type="text" name="optionValue2" id="optionValue2" value="" class="inputbox" /></td>
+								<td class="td_cen"><input type="text" name="optionValue3" id="optionValue3" value="" class="inputbox" /></td>
+								<td class="td_cen"><input type="text" name="optionValue4" id="optionValue4" value="" class="inputbox" /></td>
 							</tr>
 							<tr>
-								<th class="th_center"><input type="text" name="optionText5"
-									id="optionText5" value="" class="optionText" /></th>
-								<th class="th_center"><input type="text" name="optionText6"
-									id="optionText6" value="" class="optionText" /></th>
-								<th class="th_center"><input type="text" name="optionText7"
-									id="optionText7" value="" class="optionText" /></th>
-								<th class="th_center"><input type="text" name="optionText8"
-									id="optionText8" value="" class="optionText" /></th>
+								<th class="th_center"><input type="text" name="optionText5"	id="optionText5" value="" class="optionText" /></th>
+								<th class="th_center"><input type="text" name="optionText6"	id="optionText6" value="" class="optionText" /></th>
+								<th class="th_center"><input type="text" name="optionText7"	id="optionText7" value="" class="optionText" /></th>
+								<th class="th_center"><input type="text" name="optionText8"	id="optionText8" value="" class="optionText" /></th>
 							</tr>
 							<tr>
-								<td class="td_cen"><input type="text" name="optionValue5"
-									id="optionValue5" value="" class="inputbox" /></td>
-								<td class="td_cen"><input type="text" name="optionValue6"
-									id="optionValue6" value="" class="inputbox" /></td>
-								<td class="td_cen"><input type="text" name="optionValue7"
-									id="optionValue7" value="" class="inputbox" /></td>
-								<td class="td_cen"><input type="text" name="optionValue8"
-									id="optionValue8" value="" class="inputbox" /></td>
+								<td class="td_cen"><input type="text" name="optionValue5" id="optionValue5" value="" class="inputbox" /></td>
+								<td class="td_cen"><input type="text" name="optionValue6" id="optionValue6" value="" class="inputbox" /></td>
+								<td class="td_cen"><input type="text" name="optionValue7" id="optionValue7" value="" class="inputbox" /></td>
+								<td class="td_cen"><input type="text" name="optionValue8" id="optionValue8" value="" class="inputbox" /></td>
 							</tr>
 						</table>
 					</td>
@@ -134,69 +116,53 @@
 				<tr>
 					<th class="th_center">상품구분</th>
 					<td class="left" colspan="3">
-						<table style="border:0; cellpadding:0; cellspacing:0"
-							class="admin_table03">
+						<table style="border:0; cellpadding:0; cellspacing:0" class="admin_table03">
 							<tr>
 								<th class="th_center">추천상품</th>
 								<th class="th_center">인기상품</th>
 							</tr>
 							<tr>
-								<td class="td_cen"><input type="checkbox"
-									name="recommand_product" id="recommand_product" value="Y"
-									 checked="checked"
-									 /></td>
-								<td class="td_cen"><input type="checkbox"
-									name="new_product" id="new_product" value="Y"
-									 checked="checked"  /></td>
+								<td class="td_cen">
+								<input type="checkbox" name="recommand_product" id="recommand_product" value="Y" checked="checked" /></td>
+								<td class="td_cen">
+								<input type="checkbox" name="new_product" id="new_product" value="Y" checked="checked" /></td>
 							</tr>
 						</table>
 							</td>
 				</tr>
 				<tr>
 					<th class="th_center">판매상태</th>
-					<td class="left" colspan="3"><label><input
-							type="radio" name="useType" value="Y"
-							 checked="checked"
-							 /> 승인</label> <label><input type="radio"
-							name="useType" value="N" 
-							checked="checked"  /> 미승인</label> <label><input
-							type="radio" name="useType" value="P" 
-							checked="checked"  /> 일시품절</label></td>
+					<td class="left" colspan="3">
+						<label><input type="radio" name="useType" value="Y" checked="checked" /> 승인</label> 
+						<label><input type="radio" name="useType" value="N" checked="checked" /> 미승인</label> 
+						<label><input type="radio" name="useType" value="P" checked="checked" /> 일시품절</label>
+					</td>
 				</tr>
 				<tr>
 					<th class="th_center">판매단위</th>
-					<td class="left" colspan="3"><select name="sale_unit"
-						id="sale_unit" class="admin_select_site">
+					<td class="left" colspan="3">
+						<select name="sale_unit" id="sale_unit" class="admin_select_site">
 							<!-- class="inputbox" -->
-							<option value="개" 
-								selected="selected" >개</option>
-							<option value="SET" 
-								selected="selected" >SET</option>
-							<option value="BOX" 
-								selected="selected" >BOX</option>
-					</select></td>
+							<option value="개" selected="selected" >개</option>
+							<option value="SET"	selected="selected" >SET</option>
+							<option value="BOX"	selected="selected" >BOX</option>
+						</select>
+					</td>
 				</tr>
 				<tr>
 					<th class="th_center">원산지</th>
-					<td class="left" colspan="3"><input name="origin_place_radio"
-						type="radio" value="" /><span>원산지미확실</span> <input name="origin_place_radio"
-						type="radio" value="국내산" /><span>국내산</span> <input name="origin_place_radio"
-						type="radio" value="중국산" /><span>중국산</span>
+					<td class="left" colspan="3">
+						<input name="origin_place_radio" type="radio" value="" /><span>원산지미확실</span>
+						<input name="origin_place_radio" type="radio" value="국내산" /><span>국내산</span>
+						<input name="origin_place_radio" type="radio" value="중국산" /><span>중국산</span>
 					</td>
 				</tr>
 				<tr>
 					<th class="th_center">가격</th>
-					<td class="left" colspan="3"><span>상품원가 : </span><input
-						type="text" name="prime_price" id="prime_price"
-						value="" class="inputbox50" />원 <span
-						id="marginTab"> <input type="button" id="margin1"
-							value="33,30,27" class="clickbutton01" /> <input type="button"
-							id="margin2" value="38,35,32" class="clickbutton01" /> <input
-							type="button" id="margin3" value="50,47,44" class="clickbutton01" />
-					</span> <br /> 
+					<td class="left" colspan="3"><span>상품원가 : </span>
+						<input type="text" name="prime_price" id="prime_price" value="" class="inputbox50" />원 
 						<div id="B2CPrice">
-							<span>판  매  가 : </span><input type="text" name="price" id="price"
-								value="" class="inputbox50" />원
+							<span>판  매  가 : </span><input type="text" name="price" id="price" value="" class="inputbox50" />원
 						</div></td>
 				</tr>
 				<tr class="center">
@@ -269,17 +235,15 @@
 				</tr>
 				<tr>
 					<th class="th_center">이미지 상세삽입</th>
-					<td class="left" colspan="3"><input type="checkbox"
-						name="content_include" id="content_include" value="Y"
-						 checked="checked"  /></td>
+					<td class="left" colspan="3">
+						<input type="checkbox"	name="content_include" id="content_include" value="Y" checked="checked"  />
+					</td>
 				</tr>
 
 				<tr>
 					<th class="th_center">공통 이미지</th>
 					<td class="left" colspan="3">
-						 <label><input type="checkbox" name="comImg"
-							value=""  checked="checked"
-							> </label> 
+						 <label><input type="checkbox" name="comImg" value=""  checked="checked"> </label> 
 					</td>
 				</tr>
 
@@ -287,18 +251,15 @@
 					<th class="th_center">상세설명</th>
 					<td class="left" colspan="3">
 						<div id="contentTab">
-							<textarea id="prd_content" name="prd_content"
-								style='width: 600px; height: 100px; display: none;'></textarea>
+							<textarea id="prd_content" name="prd_content" style="width:100%; height:100px; /* display:none; */"></textarea>
 						</div>
-						<br /> <input type="button" value="이미지첨부" id="imgPluse"
-						name="imgPluse" class="clickbutton01" />
+						<br><input type="button" value="이미지첨부" id="imgPluse" name="imgPluse" class="clickbutton01" /> 
 					</td>
 				</tr>
 				<tr>
 					<th class="th_center">메모</th>
-					<td class="left" colspan="3"><textarea id="prd_memo"
-							name="prd_memo" class="textarea"
-							style="width: 600px; height: 150px;"></textarea></td>
+					<td class="left" colspan="3">
+						<textarea id="prd_memo" name="prd_memo" class="textarea" style="width:100%; height: 150px;"></textarea></td>
 				</tr>
 				<tr>
 					<td class="td_cen" colspan="4"><span class="action">

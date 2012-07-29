@@ -23,6 +23,7 @@
 		<div class="categoryGubun">등록상품 :<span id="nTotal"></span>개 
 		<input type="button" class="clickbutton02" id="allcategory" value="전체보기" />
 		</div>
+
 		<div class="categoryBox">
 			<div class="categoryGubun">대분류</div>
 			<div class="categorySelectBox">
@@ -35,8 +36,9 @@
 			<div class="categorySelectBox">
 				<select name="categoryB" id="categoryB" class="selectBox" size="10">
 				</select><input type="hidden" value="" />
-			</div>
 		</div>
+		</div>
+
 		<div style="clear: both;"></div>
 		<div style="width: 780px; text-align: center; padding-top: 10px;">
 			<input type="button" name="productGo" value=" 상품등록 " class="clickbutton01" /> 

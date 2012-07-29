@@ -3,6 +3,6 @@
 
 <table style="valign:top; width:100%;border: 1px solid black">
 	<tr>
-		<td>바디1<br><%= request.getAttribute("1") %></td>
+		<td>바디1<br></td>
 	</tr>
 </table>
