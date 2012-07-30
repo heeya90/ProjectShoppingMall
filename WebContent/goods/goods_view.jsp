@@ -1,26 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Insert title here</title>
 <style type="text/css">
-div{
-	border:1px solid blue;
-	float:left;
-	position:relative;
-	margin:3px;
-}
-td{
-	border:1px solid red;
-	vertical-align: middle;
-}
+.goods_view{position: relative;float:left;}
 </style>
-</head>
-<body>
-	<div style="width:39%">
-		<table align="center" width="100%">
+	<div style=width:39%>
+		<table align="center" width="100%" class="goods_view">
 			<tr>
 				<td colspan="3">
 					이미지
@@ -33,48 +17,48 @@ td{
 		</table>
 	</div>
 	
-	<div style="width:59%">
-		<table align="center" width="100%">
+	<div style=width:59%>
+		<table align="center" width="100%" class="goods_view">
 			<tr>
-				<td style="width:40%">
+				<td scope="row" class="sub_v_tb" width="40%">
 					<label>상품명:</label></td>
-				<td>
+				<td scope="row" class="sub_v_tb">
 					<label></label></td>
 			</tr>
 			<tr>
-				<td>
+				<td scope="row" class="sub_v_tb">
 					<label>상품코드:</label></td>
-				<td>
+				<td scope="row" class="sub_v_tb">
 					<label></label></td>
 			</tr>
 			<tr>
-				<td>
+				<td scope="row" class="sub_v_tb">
 					<label>가격:</label></td>
-				<td>
+				<td scope="row" class="sub_v_tb">
 					<label></label></td>
 			</tr>
 			<tr>
-				<td>
+				<td scope="row" class="sub_v_tb">
 					<label>옵션:</label></td>
-				<td>
+				<td scope="row" class="sub_v_tb">
 					<label></label></td>
 			</tr>
 			<tr>
-				<td>
+				<td scope="row" class="sub_v_tb">
 					<label>제조사/원산지:</label></td>
-				<td>
+				<td scope="row" class="sub_v_tb">
 					<label></label></td>
 			</tr>
 			<tr>
-				<td>
+				<td scope="row" class="sub_v_tb">
 					<label>수량:</label></td>
-				<td>
+				<td scope="row" class="sub_v_tb">
 					<label></label></td>
 			</tr>
 			<tr>
-				<td>
+				<td scope="row" class="sub_v_tb">
 					<label>총 금액:</label></td>
-				<td>
+				<td scope="row" class="sub_v_tb">
 					<label></label></td>
 			</tr>
 			<tr>
@@ -94,5 +78,3 @@ td{
 	<div style=width:99%>
 		<label>상품 정보 및 설명</label> 
 	</div>
-</body>
-</html>

@@ -1,66 +1,54 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Insert title here</title>
 <style type="text/css">
-div{
-	text-align: center;
-	line-height:30px;
-	border:1px solid blue;
-	padding:5px;
-	margin:5px;
-}
-td{
-	border:1px solid red;
+
+.tab{
+	border-bottom:1px solid red;
 	vertical-align: middle;
 	text-align:center;
 }
 </style>
-</head>
-<body>
+<div class="sub_loca"><img src="./img/icon_home.gif" alt="현재위치" />홈 > 장바구니</div>
 	<table style="width:100%">
 		<tr>
-			<td>
+			<td class="tab">
 				<label>선택 </label></td>
-			<td>
+			<td class="tab">
 				<label>상품코드 </label></td>
-			<td>		
+			<td class="tab">		
 				<label>상품이미지</label></td>
-			<td>
+			<td class="tab">
 				<label>상품명</label></td>
-			<td>
+			<td class="tab">
 				<label>판매가</label></td>
-			<td>
+			<td class="tab">
 				<label>수량</label></td>
-			<td>
+			<td class="tab">
 				<label>합계</label></td>
-			<td>
+			<td class="tab">
 				<label>주문</label></td>
-			<td>
+			<td class="tab">
 				<label></label></td>
 		</tr>
 		
 		<tr>
-			<td>
+			<td class="sub_v_tb1">
 				<input type="checkbox" name="chck"></td>
-			<td>
+			<td class="sub_v_tb1">
 				<label></label>상품코드 </td>
-			<td>
+			<td class="sub_v_tb1">
 				<label></label>상품이미지 </td>
-			<td>
+			<td class="sub_v_tb1">
 				<label></label>상품명 </td>
-			<td>
+			<td class="sub_v_tb1">
 				<label></label>판매가 </td>
-			<td>
+			<td class="sub_v_tb1">
 				<label></label>수량 </td>
-			<td>
+			<td class="sub_v_tb1">
 				<label></label>합계 </td>
-			<td>
+			<td class="sub_v_tb1">
 				<label></label>주문 </td>
-			<td>
+			<td class="sub_v_tb1">
 				<input type="button" value="삭제"> </td>
 		</tr>
 		<tr>
@@ -85,5 +73,3 @@ td{
 			</td>
 		</tr>
 	</table>
-</body>
-</html>

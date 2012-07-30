@@ -24,7 +24,6 @@
 	
 	<!-- wild Card Tiles 2.1버전부터 설정파일에서 와일드카드를 사용하여 설정파일의 내용을 
 	줄이는 방법이 지원된다 -->
-        	
     <definition name="no_*_*" extends="nomenuuser"> 
 		<put-attribute name="body"  value="/{1}/{1}_{2}.jsp" />
 	</definition>

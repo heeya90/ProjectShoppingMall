@@ -1,23 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-
-<title>구매 상세 내역</title>
-
 <style type="text/css">
-div{
-	border:1px solid blue;
-	margin:3px;
-}
-td{
-	border:1px solid red;
-	vertical-align: middle;
-	text-align:center;
-}
-table{
+.tab{
 	border:1px solid black; 
 	padding:10px; 
 }
@@ -26,10 +10,8 @@ table{
 	font-weight:bold;
 }
 </style>
-
-</head>
-<body>
-	<table width="100%" style="margin-bottom:5px">
+<div class="sub_loca"><img src="./img/icon_home.gif" alt="현재위치" />홈 > 마이페이지 > 주문목록 > 상세보기</div>
+	<table width="100%" style="margin-bottom:5px" class="tab">
 		<tr>
 			<td>
 				<label>상품코드</label></td>
@@ -133,5 +115,3 @@ table{
 				<label>요구사항</label></td>
 		</tr>
 	</table>
-</body>
-</html>
