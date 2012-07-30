@@ -29,6 +29,7 @@
 	</definition>
 	
    	<definition name="m_*_*" extends="menuuser">
+   	    <put-attribute name="menu"  value="/{1}/menu.jsp" />
  		<put-attribute name="body"  value="/{1}/{1}_{2}.jsp" />
 	</definition>
 

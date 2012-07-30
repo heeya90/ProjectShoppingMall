@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Context docBase="ProjectShoppingMall" path="/ProjectShoppingMall" reloadable="true"
-	source="org.eclipse.jst.j2ee.server:ProjectShoppingMall">
-	<Resource name="jdbc/smp" auth="Container"
-              type="javax.sql.DataSource" driverClassName="oracle.jdbc.driver.OracleDriver"
-              url="jdbc:Oracle:thin:@58.233.27.123:1521:orcl"
-              username="smp" password="test" maxActive="20" maxIdle="10"
-              maxWait="-1"/>
-</Context>
