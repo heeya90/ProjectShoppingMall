@@ -6,11 +6,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <link href="./common/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../common/jquery/jquery-1.7.2.js"></script>
-<script type="text/javascript" src="./common/sitehelper_login.js"></script>
+<script type="text/javascript" src="./js/sitehelper_login.js"></script>
 <title>관리자 로그인</title>
 </head>
 <body>
-
+<% 
+if(null!=session.getAttribute("ADMINID")||""!=session.getAttribute("ADMINID")){
+    response.sendRedirect("order_list.tiles");
+}
+%>
 	<div id="login_main">
 		<div class="login_img">
 			<div class="login_left"><img src="./img/admin_login_ltt.gif" /></div>

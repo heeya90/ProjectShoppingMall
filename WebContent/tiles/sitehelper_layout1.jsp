@@ -4,13 +4,15 @@
 <head>
 <title><tiles:getAsString name="title" /></title>
 <link href="./common/style_list.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../common/jquery/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="./common/common.js"></script>
 </head>
 <body class="body">
 	<div id="wrap00">
 		<div id="left00">
 			<div id="left">
 				<div class="left_timg">
-					<a href="http://www.giftmani.com" target="_blank">
+					<a href="../index.jsp" target="_blank">
 					<img src="./img/admin_list_lt.gif" alt="관리자메인" /></a>
 				</div>
 				<tiles:insertAttribute name="menu" />
