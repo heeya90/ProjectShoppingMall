@@ -73,7 +73,7 @@ public class ControllerUsingURI extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 		// 클라이언트가 요청한 기능을 구한다.cmd파라미터 사용
 		String command = request.getRequestURI();
-		System.out.println("command:"+command);
+		System.out.println("request.getRequestURI:"+command);
 		// 요청을 처리할때 사용될 명령어 핸들러 인스턴스를 commandHandlerMap으로부터 구한다.
 		if (command.indexOf(request.getContextPath()) == 0) {
 			command = command.substring(request.getContextPath().length());
@@ -81,8 +81,7 @@ public class ControllerUsingURI extends HttpServlet {
 		//		Map(key, value)
 		//commandHandlerMap -> /main.do=command.MainHandler
 		//						Map(/sitehelper/admchk.do, command.AdmChk)
-		CommandHandler handler = (CommandHandler)commandHandlerMap
-													.get(command);
+		CommandHandler handler = (CommandHandler)commandHandlerMap.get(command);
 		//		/ShoppingMall/sitehelper/admchk.do
 		//		-> /sitehelper/admchk.do
 		//		/sitehelper/admchk.do=command.AdmChk
@@ -91,7 +90,7 @@ public class ControllerUsingURI extends HttpServlet {
 		//
 		System.out.println("request.getContextPath():"+request.getContextPath());
 		System.out.println("command:"+command);
-		System.out.println("handler:"+handler);
+		System.out.println("handler:"+handler.toString());
 		// 명령어에 해당하는 핸들러 인스턴스가 존재하지 않을 경우 NullHandler를 사용한다.
 		if (handler == null) {
 			handler = new NullHandler();
@@ -111,6 +110,7 @@ public class ControllerUsingURI extends HttpServlet {
 		RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage);
 		dispatcher.forward(request, response);
 		System.out.println("Dispatched");
+		System.out.println("===================================================================");
 		
 	}
 }

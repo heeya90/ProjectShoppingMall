@@ -3,7 +3,7 @@
 <html>
 <head>
 <title><tiles:getAsString name="title" /></title>
-<link href="./sitehelper/common/style_list.css" rel="stylesheet" type="text/css" />
+<link href="./common/style_list.css" rel="stylesheet" type="text/css" />
 </head>
 <body class="body">
 	<div id="wrap00">
@@ -11,7 +11,7 @@
 			<div id="left">
 				<div class="left_timg">
 					<a href="http://www.giftmani.com" target="_blank">
-					<img src="./sitehelper/img/admin_list_lt.gif" alt="관리자메인" /></a>
+					<img src="./img/admin_list_lt.gif" alt="관리자메인" /></a>
 				</div>
 				<tiles:insertAttribute name="menu" />
 			</div>

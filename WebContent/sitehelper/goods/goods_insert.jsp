@@ -38,10 +38,10 @@
 			<tbody>
 				<tr>
 					<td class="td_cen" colspan="4"><span class="action">
-						<img src="./sitehelper/img/admin_btn_enter.gif"  class="clickbutton" id="submitbutton1" STYLE="type:button; value:입력"/>
-						<img src="./sitehelper/img/admin_btn_list.gif"  class="clickbutton" id="listbutton1" STYLE="type:button; value:리스트"/> 
-						<img src="./sitehelper/img/admin_btn_del.gif"  class="clickbutton" id="deletebutton1" STYLE="type:button; value:삭제" /> 
-						<img src="./sitehelper/img/admin_btn_zero.gif"  class="clickbutton" id="resetbutton1" STYLE="type:button; value:초기화" /></span></td>
+						<img src="./img/admin_btn_enter.gif"  class="clickbutton" id="submitbutton1" STYLE="type:button; value:입력"/>
+						<img src="./img/admin_btn_list.gif"  class="clickbutton" id="listbutton1" STYLE="type:button; value:리스트"/> 
+						<img src="./img/admin_btn_del.gif"  class="clickbutton" id="deletebutton1" STYLE="type:button; value:삭제" /> 
+						<img src="./img/admin_btn_zero.gif"  class="clickbutton" id="resetbutton1" STYLE="type:button; value:초기화" /></span></td>
 				</tr>
 				<tr>
 					<th class="th_center">상품명</th>
@@ -167,8 +167,8 @@
 				</tr>
 				<tr class="center">
 					<th class="th_center">옵션별가격<br /> 
-					 	<img src="./sitehelper/img/admin_btn_mplus.gif" class="clickbutton" id="optionPlus" STYLE="type:button; value:추가" /> 
-						<img src="./sitehelper/img/admin_btn_sdel.gif" class="clickbutton" id="optionDel" STYLE="type:button; value:제거" />
+					 	<img src="./img/admin_btn_mplus.gif" class="clickbutton" id="optionPlus" STYLE="type:button; value:추가" /> 
+						<img src="./img/admin_btn_sdel.gif" class="clickbutton" id="optionDel" STYLE="type:button; value:제거" />
 					</th>
 					<td colspan="3">
 						<div>옵션구분 | 옵션명+값 = 옵션명+금액;옵션명+금액;....</div> 
@@ -214,23 +214,23 @@
 						class="inputbox01" />
 						<span id="img1">
 							<img src="/upload/product/" border="0" />&nbsp;
-							<img src="./sitehelper/img/admin_btn_del.gif" style="type:button" class="clickbutton" id="delimg1" /></span><br />
+							<img src="./img/admin_btn_del.gif" style="type:button" class="clickbutton" id="delimg1" /></span><br />
 							<input type="file" name="file" class="inputbox01" />
 						<span id="img2">
 							<img src="/upload/product/" border="0" />&nbsp;
-							<img src="./sitehelper/img/admin_btn_del.gif" style="type:button"	class="clickbutton" id="delimg2" /></span><br />
+							<img src="./img/admin_btn_del.gif" style="type:button"	class="clickbutton" id="delimg2" /></span><br />
 							<input type="file" name="file" class="inputbox01" />
 						<span id="img3">
 							<img src="/upload/product/" border="0" />&nbsp;
-							<img src="./sitehelper/img/admin_btn_del.gif" style="type:button" class="clickbutton" id="delimg3" /></span><br /> 
+							<img src="./img/admin_btn_del.gif" style="type:button" class="clickbutton" id="delimg3" /></span><br /> 
 							<input type="file" name="file" class="inputbox01" />
 						<span id="img4">
 							<img src="/upload/product/" border="0" />&nbsp;
-							<img src="./sitehelper/img/admin_btn_del.gif" style="type:button" class="clickbutton" id="delimg4" /></span><br /> 
+							<img src="./img/admin_btn_del.gif" style="type:button" class="clickbutton" id="delimg4" /></span><br /> 
 							<input type="file" name="file" class="inputbox01" />
 						<span id="img5">
 							<img src="/upload/product/" border="0" />&nbsp;
-							<img src="./sitehelper/img/admin_btn_del.gif" style="type:button" class="clickbutton" id="delimg5" /></span>
+							<img src="./img/admin_btn_del.gif" style="type:button" class="clickbutton" id="delimg5" /></span>
 						</td>
 				</tr>
 				<tr>
@@ -263,10 +263,10 @@
 				</tr>
 				<tr>
 					<td class="td_cen" colspan="4"><span class="action">
-						<img src="./sitehelper/img/admin_btn_enter.gif" class="clickbutton" id="submitbutton2" STYLE="type:button; value:입력" /> 
-						<img src="./sitehelper/img/admin_btn_list.gif" class="clickbutton" id="listbutton2" STYLE="type:button; value:리스트" /> 
-						<img src="./sitehelper/img/admin_btn_del.gif" class="clickbutton" id="deletebutton2" STYLE="type:button; value:삭제" /> 
-						<img src="./sitehelper/img/admin_btn_zero.gif" class="clickbutton" id="resetbutton2" STYLE="type:button; value:초기화" /></span></td>
+						<img src="./img/admin_btn_enter.gif" class="clickbutton" id="submitbutton2" STYLE="type:button; value:입력" /> 
+						<img src="./img/admin_btn_list.gif" class="clickbutton" id="listbutton2" STYLE="type:button; value:리스트" /> 
+						<img src="./img/admin_btn_del.gif" class="clickbutton" id="deletebutton2" STYLE="type:button; value:삭제" /> 
+						<img src="./img/admin_btn_zero.gif" class="clickbutton" id="resetbutton2" STYLE="type:button; value:초기화" /></span></td>
 				</tr>
 			</tbody>
 		</table>

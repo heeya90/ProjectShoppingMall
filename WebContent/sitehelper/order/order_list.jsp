@@ -70,7 +70,7 @@
 
 				</div>
 				<div class="admin_tss_bt">
-					<span class="admin_tss_btn"><a href="#"><img src="./sitehelper/img/admin_btn_search.gif" alt="검색" /></a></span>
+					<span class="admin_tss_btn"><a href="#"><img src="./img/admin_btn_search.gif" alt="검색" /></a></span>
 				</div>
 			</div>
 		</div>

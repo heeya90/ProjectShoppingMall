@@ -1,1 +1,1 @@
-<%= request.getAttribute("status") %>
+${status}

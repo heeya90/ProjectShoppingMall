@@ -52,7 +52,7 @@
 				</div>
 				<div class="admin_tss_bt">
 					<span class="admin_tss_btn"><a href="#" id="memSearchGo"><img src=".
-					/sitehelper/img/admin_btn_search.gif" alt="검색" /></a></span>
+					/img/admin_btn_search.gif" alt="검색" /></a></span>
 				</div>
 			</div>
 		</div>

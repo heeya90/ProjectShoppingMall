@@ -24,10 +24,9 @@ public class DBManager {
 		try {
 			
 			conn = DriverManager.getConnection(url, userid, userpw);
-			System.out.println("컨넥션 생성 완료");
 			
 		} catch (Exception e) {
-			System.out.println("DriverLoading getConnection() error");
+			System.out.println("DriverLoading.getConnection() error");
 		}
 		return conn;
 		

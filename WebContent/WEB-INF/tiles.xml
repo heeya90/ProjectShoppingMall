@@ -42,6 +42,14 @@
 		<put-attribute name="body"  value="/sitehelper/tiles/body_test.jsp" />
 		<put-attribute name="footer"  value="/sitehelper/tiles/footer_test.jsp" />
 	</definition>
+	
+	<definition name="menuhelper2" template="/tiles/sitehelper_layout1.jsp">
+        <put-attribute name="title"  value="ShoppingMall" />
+        <put-attribute name="header"   value="/tiles/sitehelper_header.jsp" />
+        <put-attribute name="menu"  value="/tiles/sitehelper_menu.jsp" />
+        <put-attribute name="body"  value="/tiles/sitehelper_body.jsp" />
+        <put-attribute name="footer"  value="/tiles/sitehelper_footer.jsp" />
+    </definition>
 
 	<!-- wild Card Tiles 2.1버전부터 설정파일에서 와일드카드를 사용하여 설정파일의 내용을 
 	줄이는 방법이 지원된다 -->	
@@ -49,7 +57,11 @@
    	<definition name="sitehelper_*_*" extends="menuhelper">
    		<put-attribute name="menu"  value="/sitehelper/{1}/menu.jsp" />   	    
  		<put-attribute name="body"  value="/sitehelper/{1}/{1}_{2}.jsp" />
-
 	</definition>
+	
+	<definition name="sitehelper/*_*" extends="menuhelper2">
+        <put-attribute name="menu"  value="/sitehelper/{1}/menu.jsp" />         
+        <put-attribute name="body"  value="/sitehelper/{1}/{1}_{2}.jsp" />
+    </definition>
     		
 </tiles-definitions>
