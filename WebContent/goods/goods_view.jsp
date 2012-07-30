@@ -1,15 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <style type="text/css">
-
+.goods_view{position: relative;float:left;}
 /* td{
 	border-bottom:1px solid red; 
 	
 	border
 } */
 </style>
-	<div style="width:39%">
-		<table align="center" width="100%">
+	<div style=width:39%>
+		<table align="center" width="100%" class="goods_view">
 			<tr>
 				<td colspan="3">
 					이미지
@@ -22,8 +22,8 @@
 		</table>
 	</div>
 	
-	<div style="width:59%">
-		<table align="center" width="100%">
+	<div style=width:59%>
+		<table align="center" width="100%" class="goods_view">
 			<tr>
 				<td scope="row" class="sub_v_tb" width="40%">
 					<label>상품명:</label></td>
