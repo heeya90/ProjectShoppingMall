@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+
+	<div class="sub_loca">
+		<img src="./img/icon_home.gif" alt="현재위치" />홈 > 마이페이지 > 주문목록
+	</div>
+	
+	<table class="jw_normal_table" style="align:center; width:100%">
+		<tr>
+			<td class="jw_theader">
+				<label>주문번호</label></td>
+			<td class="jw_theader">
+				<label>합  계</label></td>
+			<td class="jw_theader">
+				<label>주문처리상황</label></td>
+		</tr>
+		<tr>
+			<td class="jw_td_center">
+				<label>주문번호호호호</label></td>
+			<td class="jw_td_center">
+				<label>합계꼐꼐꼐</label></td>
+			<td class="jw_td_center">
+				<label>주문처리상황황황황</label></td>
+		</tr>
+	</table>
