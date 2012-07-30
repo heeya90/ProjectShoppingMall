@@ -1,25 +1,24 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <style type="text/css">
-div{
-	border:1px solid blue;
-}
+
 td{
-	border:1px solid red;
-	vertical-align: middle;
 	text-align:center;
 }
-table{
-	border:1px solid black; 
-	padding:10px; 
-}
-.lbl_title{
-	font-size:large;
-	font-weight:bold;
-}
 </style>
+<div class="sub_loca"><img src="./img/icon_home.gif" alt="현재위치" />홈 > 회원가입</div>
 <form action="user_success.jsp">
-	<table align="center" width="60%" style="margin-top:50px; margin-bottom:5px">
+	<div class="join01_tt">
+
+		<span class="join01_tt01"><img src="./img/join01_timg.gif" alt="정보입력" /></span>
+
+		<span class="join01_tt02"><img src="./img/join01_txt.gif" alt="회원가입은 무료이며,회원약관을 꼭 읽고 숙지하시기 바랍니다." /></span>
+
+	</div>
+<div id="content">
+
+<div class="join02_form01">
+	<table class="join02_form02">
 		<tr>
 			<td> 
 				<label class="lbl_title">이용약관</label></td>
@@ -97,80 +96,101 @@ PShoppingMall은 공정거래위원회가 승인한 표준약관을 사용합니다.
 			</td>
 		</tr>
 	</table>
+	</div>
 	<center>
 	<div style="width:60%; text-align:right">
 		<input type="checkbox">
 		<label>동의합니다</label>
 	</div>
 	</center>
+	<div class="sub_v_tt">
+
+		<h2>회원가입</h2>
+
+	</div>
 	
-	<table align="center" width="40%">
+	<div class="join01_tt">
+
+		<span class="join01_tt01"><img src="./img/join02_timg.gif" alt="정보입력" /></span>
+
+		<span class="join01_tt02"><img src="./img/join01_txt.gif" alt="회원가입은 무료이며,회원약관을 꼭 읽고 숙지하시기 바랍니다." /></span>
+
+	</div>
+
+	
+	<div class="join02_sctt">
+		<span class="join02_stt01"><img src="./img/join02_stt01.gif" alt="개인정보입력" /></span>
+		<span class="join02_stt02"><b>*</b> 는 필수 정보입력 항목입니다.</span>
+	</div>
+	
+	<div class="join02_form01">
+	<table class="join02_form02">
 		<tr>
-			<td colspan="2">
+			<td colspan="2" class="sub_v_tt">
 				<label class="lbl_title">회원정보</label></td>
 		</tr>
 		
-		<tr>
-			<td style="width:40%">
-				<label>이름</label></td>
-			<td>
+		<tr class="join02_tr">
+			<td style="width:40%" class="join02_left01">
+				<label><b>*</b>이름</label></td>
+			<td class="join02_right">
 				<INPUT type="text" name="name"> </td>
 		</tr>
 		
-		<tr>
-			<td> 
-				<label>아이디</label></td>
-			<td>
+		<tr class="join02_tr">
+			<td class="join02_left01"> 
+				<label><b>*</b>아이디</label></td>
+			<td class="join02_right">
 				<INPUT type="text" name="id"> </td>
 		</tr>
 		
-		<tr>
-			<td>
-				<label>비밀번호</label></td>
-			<td>
+		<tr class="join02_tr">
+			<td class="join02_left01">
+				<label><b>*</b>비밀번호</label></td>
+			<td class="join02_right">
 				<INPUT type="password" name="pw"></td>
 		</tr>
 		
-		<tr>
-			<td>
-				<label>비밀번호확인</label></td>
-			<td>
+		<tr class="join02_tr">
+			<td class="join02_left01">
+				<label><b>*</b>비밀번호확인</label></td>
+			<td class="join02_right">
 				<INPUT type="password" name="rpw"> </td>
 		</tr>
 		
-		<tr>
-			<td>
-				<label>전화번호</label></td>
-			<td>
+		<tr class="join02_tr">
+			<td class="join02_left01">
+				<label><b>*</b>전화번호</label></td>
+			<td class="join02_right">
 				<INPUT type="text" name="tel"> </td>
 		</tr>
 		
-		<tr>
-			<td>
+		<tr class="join02_tr">
+			<td class="join02_left01">
 				<label>휴대폰</label></td>
-			<td>
+			<td class="join02_right">
 				<INPUT type="text" name="cell"> </td>
 		</tr>
 		
-		<tr>
-			<td>
-				<label>우편번호</label></td>
-			<td> <input type="text" name="zipcode" size="7"> </td>
+		<tr class="join02_tr">
+			<td class="join02_left01">
+				<label><b>*</b>우편번호</label></td>
+			<td class="join02_right"> <input type="text" name="zipcode" size="7"> </td>
 		</tr>
 		
-		<tr>
-			<td>
-				<label>주소</label></td>
-			<td>
+		<tr class="join02_tr">
+			<td class="join02_left01">
+				<label><b>*</b>주소</label></td>
+			<td class="join02_right">
 				<INPUT type="text" name="addr"> <br/> 
 				<INPUT type="text" name="detailaddr">
 			</td>
 		</tr>
 		
-		<tr>
-			<td>
-				<label>이메일</label></td>
-			<td>
+		<tr class="join02_tr">
+			<td class="join02_left01">
+				<label><b>*</b>이메일</label></td>
+			<td class="join02_right">
 				<INPUT type="text" name="email" size="25"> </td>
 		</tr>
 		
@@ -181,4 +201,6 @@ PShoppingMall은 공정거래위원회가 승인한 표준약관을 사용합니다.
 			</td>
 		</tr>
 	</table>
+	</div>
+	</div>
 </form>

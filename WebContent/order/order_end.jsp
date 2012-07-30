@@ -1,16 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <style type="text/css">
-div{
-	border:1px solid blue;
-	margin:3px;
-}
-td{
-	border:1px solid red;
-	vertical-align: middle;
-	text-align:center;
-}
-table{
+
+.tab{
 	border:1px solid black; 
 	margin-top:50px; 
 	padding:10px; 
@@ -21,7 +13,8 @@ table{
 	font-weight:bold;
 }
 </style>
-	<table align="center">
+<div class="sub_loca"><img src="./img/icon_home.gif" alt="현재위치" />홈 > 주문하기 > 주문완료</div>
+	<table align="center" class="tab">
 		<tr>
 			<td>
 				<label class="bold">xx</label>

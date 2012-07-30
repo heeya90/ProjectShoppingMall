@@ -17,23 +17,23 @@
 
 		<div class="f_mu_left">
 
-			<a href="/info/company.asp"><img src="./images/common/f_ltt01.gif" alt="회사소개" /></a>
+			<a href="/info/company.asp"><img src="./img/f_ltt01.gif" alt="회사소개" /></a>
 
-			<img src="./images/common/f_lttline.gif" alt="가운데라인" />
+			<img src="./img/f_lttline.gif" alt="가운데라인" />
 
-			<a href="http://giftkor.giftmani.com/board/board06.asp"><img src="./images/common/f_ltt02.gif" alt="개인정보취급방침" /></a>
+			<a href="http://giftkor.giftmani.com/board/board06.asp"><img src="./img/f_ltt02.gif" alt="개인정보취급방침" /></a>
 
-			<img src="./images/common/f_lttline.gif" alt="가운데라인" />
+			<img src="./img/f_lttline.gif" alt="가운데라인" />
 
-			<a href="http://giftkor.giftmani.com/board/board07.asp"><img src="./images/common/f_ltt03.gif" alt="이용약관" /></a>
+			<a href="http://giftkor.giftmani.com/board/board07.asp"><img src="./img/f_ltt03.gif" alt="이용약관" /></a>
 
-			<img src="./images/common/f_lttline.gif" alt="가운데라인" />
+			<img src="./img/f_lttline.gif" alt="가운데라인" />
 
-			<a href="http://giftkor.giftmani.com/board/notice.asp"><img src="./images/common/f_ltt04.gif" alt="고객지원센터" /></a>
+			<a href="http://giftkor.giftmani.com/board/notice.asp"><img src="./img/f_ltt04.gif" alt="고객지원센터" /></a>
 
-			<img src="./images/common/f_lttline.gif" alt="가운데라인" />
+			<img src="./img/f_lttline.gif" alt="가운데라인" />
 
-			<a href="#"><img src="./images/common/f_ltt05.gif" alt="커뮤니티" /></a>
+			<a href="#"><img src="./img/f_ltt05.gif" alt="커뮤니티" /></a>
 
 		</div>
 
@@ -43,33 +43,33 @@
 
 		<div class="f_mu_right">
 
-			<img class="f_dot" src="./images/common/f_ttdot.gif" alt="" />
+			<img class="f_dot" src="./img/f_ttdot.gif" alt="" />
 
-			<a href="#"><img src="./images/common/f_rtt01.gif" alt="상품입점" /></a>
+			<a href="#"><img src="./img/f_rtt01.gif" alt="상품입점" /></a>
 
-			<img class="f_dot"  src="./images/common/f_ttdot.gif" alt="" />
+			<img class="f_dot"  src="./img/f_ttdot.gif" alt="" />
 
-			<a href="#"><img src="./images/common/f_rtt02.gif" alt="제조업체로그인" /></a>
+			<a href="#"><img src="./img/f_rtt02.gif" alt="제조업체로그인" /></a>
 
-			<img class="f_dot"  src="./images/common/f_ttdot.gif" alt="" />
+			<img class="f_dot"  src="./img/f_ttdot.gif" alt="" />
 
-			<a href="#"><img src="./images/common/f_rtt03.gif" alt="상품등록방법" /></a>
+			<a href="#"><img src="./img/f_rtt03.gif" alt="상품등록방법" /></a>
 
-			<img class="f_dot"  src="./images/common/f_ttdot.gif" alt="" />
+			<img class="f_dot"  src="./img/f_ttdot.gif" alt="" />
 
-			<a href="#"><img src="./images/common/f_rtt04.gif" alt="체인모집안내" /></a>
+			<a href="#"><img src="./img/f_rtt04.gif" alt="체인모집안내" /></a>
 
-			<img class="f_dot"  src="./images/common/f_ttdot.gif" alt="" />
+			<img class="f_dot"  src="./img/f_ttdot.gif" alt="" />
 
-			<a href="#" id="morselJumun"><img src="./images/common/f_rtt05.gif" alt="소량구매" /></a>
+			<a href="#" id="morselJumun"><img src="./img/f_rtt05.gif" alt="소량구매" /></a>
 
-			<img class="f_dot"  src="./images/common/f_ttdot.gif" alt="" />
+			<img class="f_dot"  src="./img/f_ttdot.gif" alt="" />
 
-			<a href="#"><img src="./images/common/f_rtt06.gif" alt="특판상품" /></a>
+			<a href="#"><img src="./img/f_rtt06.gif" alt="특판상품" /></a>
 
-			<img class="f_dot"  src="./images/common/f_ttdot.gif" alt="" />
+			<img class="f_dot"  src="./img/f_ttdot.gif" alt="" />
 
-			<a href="#"><img src="./images/common/f_rtt07.gif" alt="주문서" /></a>
+			<a href="#"><img src="./img/f_rtt07.gif" alt="주문서" /></a>
 
 		</div>
 
@@ -87,7 +87,7 @@
 
 		
 
-		<div class="f_logo"><img src="./images/common/f_logo.gif" alt="기프트마니" /><br><br><br></div>
+		<div class="f_logo"><img src="./img/f_logo.gif" alt="기프트마니" /><br><br><br></div>
 
 		
 

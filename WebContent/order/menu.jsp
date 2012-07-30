@@ -7,6 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	
+	<label><a href="order_cart.tiles">장바구니</a></label><br>
+	<label><a href="order.tiles">주문하기</a></label><br>
+	<label><a href="order_end.tiles">주문완료</a></label>
+		
 </body>
 </html>

@@ -10,7 +10,7 @@ td{
 	vertical-align: middle;
 	text-align:center;
 }
-table{
+.tab{
 	border:1px solid black; 
 	padding:10px; 
 }
@@ -19,8 +19,8 @@ table{
 	font-weight:bold;
 }
 </style>
-
-	<table width="100%" style="margin-bottom:5px">
+<div class="sub_loca"><img src="./img/icon_home.gif" alt="현재위치" />홈 > 마이페이지 > 주문목록 > 상세보기</div>
+	<table width="100%" style="margin-bottom:5px" class="tab">
 		<tr>
 			<td>
 				<label>상품코드</label></td>

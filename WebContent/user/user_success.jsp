@@ -2,18 +2,19 @@
     pageEncoding="EUC-KR"%>
 <style type="text/css">
 div{
-	text-align: center;
-	line-height:30px;
 	border:1px solid blue;
-	padding:5px;
-	margin:5px;
 }
 td{
 	border:1px solid red;
 	vertical-align: middle;
 	text-align:center;
 }
+.tab{
+	border:1px solid black; 
+	padding:10px; 
+}
 </style>
+<div class="sub_loca"><img src="./img/icon_home.gif" alt="현재위치" />홈 > 로그인 완료</div>
 <table align="center" style="text-align:center; width:50%; margin-top:50px; border:1px solid black" >
 	<tr>
 		<td colspan="2"> 회원가입이 완료되었습니다 </td>

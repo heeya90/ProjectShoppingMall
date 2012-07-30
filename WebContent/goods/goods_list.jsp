@@ -1,11 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <style type="text/css">
-div{
-	border:1px solid blue;
-}
-td{
-	border:1px solid red;
+
+.tab{
+	border-bottom:1px solid red;
 	vertical-align: middle;
 	text-align:center;
 }
@@ -19,16 +17,16 @@ td{
 	
 	<table width="100%" >
 		<tr>
-			<td>이미지</td>
-			<td>상품코드</td>
-			<td>가격</td>
-			<td>제조사/원산지</td>
+			<td class="tab">이미지</td>
+			<td class="tab">상품코드</td>
+			<td class="tab">가격</td>
+			<td class="tab">제조사/원산지</td>
 		</tr>
 		
 		<tr>
-			<td>이미지지</td>
-			<td>상품코드드</td>
-			<td>가격격</td>
-			<td>제조사/원산지////</td>
+			<td class="sub_v_tb1">이미지지</td>
+			<td class="sub_v_tb1">상품코드드</td>
+			<td class="sub_v_tb1">가격격</td>
+			<td class="sub_v_tb1">제조사/원산지////</td>
 		</tr>
 	</table>

@@ -25,24 +25,24 @@
 	<!-- wild Card Tiles 2.1버전부터 설정파일에서 와일드카드를 사용하여 설정파일의 내용을 
 	줄이는 방법이 지원된다 -->
         	
-    <definition name="user*" extends="nomenuuser"> 
+    <definition name="user*" extends="menuuser"> 
+       	<put-attribute name="menu"  value="/user/menu.jsp" />   	 
 		<put-attribute name="body"  value="/user/user{1}.jsp" />
 	</definition>
 	
    	<definition name="goods*" extends="menuuser">
+	   	<put-attribute name="menu"  value="/goods/menu.jsp" />   
  		<put-attribute name="body"  value="/goods/goods{1}.jsp" />
 	</definition>
    		
    	<definition name="mypage*" extends="menuuser">
+	   	<put-attribute name="menu"  value="/mypage/menu.jsp" />   
  		<put-attribute name="body"  value="/mypage/mypage{1}.jsp" />
 	</definition>
 	
    	<definition name="order*" extends="menuuser">
+   	   	<put-attribute name="menu"  value="/order/menu.jsp" />   
  		<put-attribute name="body"  value="/order/order{1}.jsp" />
-	</definition>
-
-   	<definition name="mypage*" extends="menuuser">
- 		<put-attribute name="body"  value="/mypage/mypage{1}.jsp" />
 	</definition>
 
    	<!-- 관리자 계정  tiles -->
