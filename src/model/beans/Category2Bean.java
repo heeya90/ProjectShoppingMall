@@ -19,6 +19,12 @@ public class Category2Bean {
 	public Category2Bean() {
 		super();
 	}
+	
+	@Override
+	public String toString() {
+		return "Category2Bean [no=" + no + ", ctg1=" + ctg1 + ", name=" + name
+				+ ", use=" + use + ", orderidx=" + orderidx + "]";
+	}
 
 	public int getNo() {
 		return no;

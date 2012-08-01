@@ -27,6 +27,14 @@ public class OrderBankBean {
 	public OrderBankBean() {
 		super();
 	}
+	
+	@Override
+	public String toString() {
+		return "OrderBankBean [no=" + no + ", account=" + account + ", owner="
+				+ owner + ", payed=" + payed + ", totalpay=" + totalpay
+				+ ", depositeuser=" + depositeuser + ", depositedate="
+				+ depositedate + "]";
+	}
 
 
 	public int getNo() {

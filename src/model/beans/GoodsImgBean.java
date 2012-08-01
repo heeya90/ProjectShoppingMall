@@ -22,6 +22,13 @@ public class GoodsImgBean {
 	public GoodsImgBean() {
 		super();
 	}
+	
+	@Override
+	public String toString() {
+		return "GoodsImgBean [no=" + no + ", goods_no=" + goods_no
+				+ ", thumb1=" + thumb1 + ", thumb2=" + thumb2 + ", image="
+				+ image + "]";
+	}
 
 
 	public int getNo() {

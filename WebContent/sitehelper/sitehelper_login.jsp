@@ -11,7 +11,7 @@
 </head>
 <body>
 <% 
-if(null!=session.getAttribute("ADMINID")||""!=session.getAttribute("ADMINID")){
+if(null!=session.getAttribute("ADMINID")){
     response.sendRedirect("order_list.tiles");
 }
 %>

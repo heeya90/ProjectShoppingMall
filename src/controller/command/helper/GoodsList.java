@@ -1,5 +1,5 @@
 package controller.command.helper;
 
-public class GoodsSelect {
+public class GoodsList {
 
 }

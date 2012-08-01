@@ -45,6 +45,16 @@ public class UserBean {
 		super();
 	}
 
+	@Override
+	public String toString() {
+		return "UserBean [no=" + no + ", id=" + id + ", pw=" + pw + ", name="
+				+ name + ", tel=" + tel + ", cell=" + cell + ", zipcode="
+				+ zipcode + ", addr=" + addr + ", detailaddr=" + detailaddr
+				+ ", email=" + email + ", use=" + use + ", logincnt="
+				+ logincnt + ", point=" + point + ", grade=" + grade
+				+ ", lastlogin=" + lastlogin + ", regdate=" + regdate + "]";
+	}
+
 	public int getNo() {
 		return no;
 	}

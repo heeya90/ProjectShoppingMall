@@ -22,6 +22,12 @@ public class HelperBean {
 	public HelperBean() {
 		super();
 	}
+	
+	@Override
+	public String toString() {
+		return "HelperBean [no=" + no + ", id=" + id + ", pw=" + pw + ", name="
+				+ name + ", cell=" + cell + ", lastlogin=" + lastlogin + "]";
+	}
 
 	public int getNo() {
 		return no;

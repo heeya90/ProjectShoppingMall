@@ -18,6 +18,12 @@ public class WishBean {
 		super();
 	}
 
+	@Override
+	public String toString() {
+		return "WishBean [no=" + no + ", id=" + id + ", goods=" + goods
+				+ ", inputdate=" + inputdate + "]";
+	}
+
 	public int getNo() {
 		return no;
 	}

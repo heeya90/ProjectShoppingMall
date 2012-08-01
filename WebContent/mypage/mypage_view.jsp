@@ -25,14 +25,14 @@
 			<td class="join02_left01">
 				<label>이름 </label></td>
 			<td class="join02_right">
-				<label>이름름 </label></td>
+				<label>${name}</label></td>
 		</tr>
 		
 		<tr class="join02_tr">
 			<td class="join02_left01">
 				<label>아이디 </label></td>
 			<td class="join02_right">
-				<label>아이디디디 </label></td>
+				<label><%= request.getAttribute("name") %></label></td>
 		</tr>
 		
 		<tr class="join02_tr">

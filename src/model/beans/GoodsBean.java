@@ -1,5 +1,6 @@
 package model.beans;
 
+
 public class GoodsBean {
 	
 	private int no;
@@ -11,7 +12,7 @@ public class GoodsBean {
 	private int prime;
 	private String company;
 	private String region;
-	private int content;
+	private String content;
 	private String recommand;
 	private String best;
 	private int sales;
@@ -19,12 +20,12 @@ public class GoodsBean {
 	private int readcnt;
 	private String redate;
 	private String inputdate;
-	private String use;
 	
+	private String use;
 	
 	public GoodsBean(int no, String code, int category1, int category2,
 			String name, int price, int prime, String company, String region,
-			int content, String recommand, String best, int sales,
+			String content, String recommand, String best, int sales,
 			int inventory, int readcnt, String redate, String inputdate,
 			String use) {
 		super();
@@ -47,7 +48,17 @@ public class GoodsBean {
 		this.inputdate = inputdate;
 		this.use = use;
 	}
-	
+	@Override
+	public String toString() {
+		return "GoodsBean [no=" + no + ", code=" + code + ", category1="
+				+ category1 + ", category2=" + category2 + ", name=" + name
+				+ ", price=" + price + ", prime=" + prime + ", company="
+				+ company + ", region=" + region + ", content=" + content
+				+ ", recommand=" + recommand + ", best=" + best + ", sales="
+				+ sales + ", inventory=" + inventory + ", readcnt=" + readcnt
+				+ ", redate=" + redate + ", inputdate=" + inputdate + ", use="
+				+ use + "]";
+	}
 	
 	public GoodsBean() {
 		super();
@@ -108,10 +119,10 @@ public class GoodsBean {
 	public void setRegion(String region) {
 		this.region = region;
 	}
-	public int getContent() {
+	public String getContent() {
 		return content;
 	}
-	public void setContent(int content) {
+	public void setContent(String content) {
 		this.content = content;
 	}
 	public String getRecommand() {

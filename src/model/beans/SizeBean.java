@@ -20,6 +20,13 @@ public class SizeBean {
 	}
 	
 	
+	@Override
+	public String toString() {
+		return "SizeBean [no=" + no + ", goods_no=" + goods_no + ", sized="
+				+ sized + "]";
+	}
+
+
 	public int getNo() {
 		return no;
 	}

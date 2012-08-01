@@ -69,6 +69,22 @@ public class OrderBean {
 	}
 
 
+	@Override
+	public String toString() {
+		return "OrderBean [no=" + no + ", orderno=" + orderno + ", sname="
+				+ sname + ", sid=" + sid + ", szip=" + szip + ", saddr="
+				+ saddr + ", sdetailaddr=" + sdetailaddr + ", stel=" + stel
+				+ ", scell=" + scell + ", semail=" + semail + ", rname="
+				+ rname + ", rzip=" + rzip + ", raddr=" + raddr
+				+ ", rdetailaddr=" + rdetailaddr + ", rtel=" + rtel
+				+ ", rcell=" + rcell + ", paytype=" + paytype + ", paydate="
+				+ paydate + ", senddate=" + senddate + ", enddate=" + enddate
+				+ ", delivery=" + delivery + ", nodelivery=" + nodelivery
+				+ ", status=" + status + ", sum=" + sum + ", payed=" + payed
+				+ "]";
+	}
+
+
 	public int getNo() {
 		return no;
 	}

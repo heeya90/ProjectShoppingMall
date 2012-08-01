@@ -13,9 +13,15 @@ public class Category1Bean {
 		this.use = use;
 		this.orderidx = orderidx;
 	}
-
+	
 	public Category1Bean() {
 		super();
+	}
+	
+	@Override
+	public String toString() {
+		return "Category1Bean [no=" + no + ", name=" + name + ", use=" + use
+				+ ", orderidx=" + orderidx + "]";
 	}
 
 	public int getNo() {

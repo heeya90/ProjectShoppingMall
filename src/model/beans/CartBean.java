@@ -22,6 +22,14 @@ public class CartBean {
 		this.inputdate = inputdate;
 		this.purchase = purchase;
 	}
+	
+	@Override
+	public String toString() {
+		return "CartBean [no=" + no + ", csession=" + csession + ", goods="
+				+ goods + ", color=" + color + ", sized=" + sized + ", su="
+				+ su + ", inputdate=" + inputdate + ", purchase=" + purchase
+				+ "]";
+	}
 
 	public CartBean() {
 		super();

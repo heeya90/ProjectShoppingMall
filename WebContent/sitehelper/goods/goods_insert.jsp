@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
+<script type="text/javascript" src="../common/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="goods/js/goods_insert.js"></script>
 
 <title>관리자모드(상품등록/수정)</title>
 
@@ -45,7 +47,7 @@
 				</tr>
 				<tr>
 					<th class="th_center">상품명</th>
-					<td class="left" colspan="3"><input type="text"	class="input_box_txt" name="p_name" id="p_name" value="" style="width: 400px;" />
+					<td class="left" colspan="3"><input type="text"	class="input_box_txt" name="p_name" id="p_name" value="반바지" style="width: 400px;" />
 					<!-- class="inputbox250" --></td>
 				</tr>
 				<tr>
@@ -78,7 +80,7 @@
 				<tr>
 					<th class="th_center">검색키워드</th>
 					<td class="left" colspan="3"><input type="text" name="keyword"
-						id="keyword" value="" class="input_box_txt"/></td>
+						id="keyword" value="바지" class="input_box_txt"/></td>
 				</tr>
 				<tr>
 					<th class="th_center">옵션</th>
@@ -86,15 +88,15 @@
 						<table style="border:0; cellpadding:0; cellspacing:0"
 							class="admin_table03">
 							<tr>
-								<th class="th_center"><input type="text" name="optionText1" id="optionText1" value="" class="optionText" /></th>
-								<th class="th_center"><input type="text" name="optionText2" id="optionText2" value="" class="optionText" /></th>
+								<th class="th_center"><input type="text" name="optionText1" id="optionText1" value="color" class="optionText" /></th>
+								<th class="th_center"><input type="text" name="optionText2" id="optionText2" value="size" class="optionText" /></th>
 								<th class="th_center"><input type="text" name="optionText3"	id="optionText3" value="" class="optionText" /></th>
 								<th class="th_center"><input type="text" name="optionText4"	id="optionText4" value="" class="optionText" /></th>
 								<!--th class="eeeeBg"><input type="text" name="optionText3" id="optionText3" value="" class="optionText" /></th-->
 							</tr>
 							<tr>
-								<td class="td_cen"><input type="text" name="optionValue1" id="optionValue1" value="" class="inputbox" /></td>
-								<td class="td_cen"><input type="text" name="optionValue2" id="optionValue2" value="" class="inputbox" /></td>
+								<td class="td_cen"><input type="text" name="optionValue1" id="optionValue1" value="yellow" class="inputbox" /></td>
+								<td class="td_cen"><input type="text" name="optionValue2" id="optionValue2" value="M" class="inputbox" /></td>
 								<td class="td_cen"><input type="text" name="optionValue3" id="optionValue3" value="" class="inputbox" /></td>
 								<td class="td_cen"><input type="text" name="optionValue4" id="optionValue4" value="" class="inputbox" /></td>
 							</tr>
@@ -134,8 +136,8 @@
 					<th class="th_center">판매상태</th>
 					<td class="left" colspan="3">
 						<label><input type="radio" name="useType" value="Y" checked="checked" /> 승인</label> 
-						<label><input type="radio" name="useType" value="N" checked="checked" /> 미승인</label> 
-						<label><input type="radio" name="useType" value="P" checked="checked" /> 일시품절</label>
+						<label><input type="radio" name="useType" value="N" /> 미승인</label> 
+						<label><input type="radio" name="useType" value="P" /> 일시품절</label>
 					</td>
 				</tr>
 				<tr>
@@ -153,16 +155,16 @@
 					<th class="th_center">원산지</th>
 					<td class="left" colspan="3">
 						<input name="origin_place_radio" type="radio" value="" /><span>원산지미확실</span>
-						<input name="origin_place_radio" type="radio" value="국내산" /><span>국내산</span>
+						<input name="origin_place_radio" type="radio" value="국내산" checked="checked" /><span>국내산</span>
 						<input name="origin_place_radio" type="radio" value="중국산" /><span>중국산</span>
 					</td>
 				</tr>
 				<tr>
 					<th class="th_center">가격</th>
 					<td class="left" colspan="3"><span>상품원가 : </span>
-						<input type="text" name="prime_price" id="prime_price" value="" class="inputbox50" />원 
+						<input type="text" name="prime_price" id="prime_price" value="30000" class="inputbox50" />원 
 						<div id="B2CPrice">
-							<span>판  매  가 : </span><input type="text" name="price" id="price" value="" class="inputbox50" />원
+							<span>판  매  가 : </span><input type="text" name="price" id="price" value="34000" class="inputbox50" />원
 						</div></td>
 				</tr>
 				<tr class="center">

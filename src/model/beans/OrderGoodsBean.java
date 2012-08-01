@@ -29,6 +29,14 @@ public class OrderGoodsBean {
 	}
 
 
+	@Override
+	public String toString() {
+		return "OrderGoodsBean [no=" + no + ", orderno=" + orderno
+				+ ", goodsno=" + goodsno + ", color=" + color + ", gsize="
+				+ gsize + ", su=" + su + ", price=" + price + "]";
+	}
+
+
 	public int getNo() {
 		return no;
 	}

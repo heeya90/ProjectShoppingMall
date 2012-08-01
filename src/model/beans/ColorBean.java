@@ -12,14 +12,16 @@ public class ColorBean {
 		this.goods_no = goods_no;
 		this.color = color;
 	}
-
-
 	
 	public ColorBean() {
 		super();
 	}
 
-
+	@Override
+	public String toString() {
+		return "ColorBean [no=" + no + ", goods_no=" + goods_no + ", color="
+				+ color + "]";
+	}
 
 	public int getNo() {
 		return no;
