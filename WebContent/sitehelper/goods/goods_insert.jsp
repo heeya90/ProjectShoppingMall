@@ -21,7 +21,6 @@
 			<input type="hidden" name="pType" id="pType" value="" />
 			<input type="hidden" name="categoryA" id="categoryA" value="" />
 			<input type="hidden" name="categoryB" id="categoryB" value="" />
-			<input type="hidden" name="categoryC" id="categoryC" value="" />
 			<input type="hidden" name="sYear" id="sYear" value="" />
 			<input type="hidden" name="sMonth" id="sMonth" value="" />
 			<input type="hidden" name="sDay" id="sDay" value="" />
@@ -98,18 +97,6 @@
 								<td class="td_cen"><input type="text" name="optionValue3" id="optionValue3" value="" class="inputbox" /></td>
 								<td class="td_cen"><input type="text" name="optionValue4" id="optionValue4" value="" class="inputbox" /></td>
 							</tr>
-							<tr>
-								<th class="th_center"><input type="text" name="optionText5"	id="optionText5" value="" class="optionText" /></th>
-								<th class="th_center"><input type="text" name="optionText6"	id="optionText6" value="" class="optionText" /></th>
-								<th class="th_center"><input type="text" name="optionText7"	id="optionText7" value="" class="optionText" /></th>
-								<th class="th_center"><input type="text" name="optionText8"	id="optionText8" value="" class="optionText" /></th>
-							</tr>
-							<tr>
-								<td class="td_cen"><input type="text" name="optionValue5" id="optionValue5" value="" class="inputbox" /></td>
-								<td class="td_cen"><input type="text" name="optionValue6" id="optionValue6" value="" class="inputbox" /></td>
-								<td class="td_cen"><input type="text" name="optionValue7" id="optionValue7" value="" class="inputbox" /></td>
-								<td class="td_cen"><input type="text" name="optionValue8" id="optionValue8" value="" class="inputbox" /></td>
-							</tr>
 						</table>
 					</td>
 				</tr>
@@ -165,38 +152,6 @@
 							<span>판  매  가 : </span><input type="text" name="price" id="price" value="" class="inputbox50" />원
 						</div></td>
 				</tr>
-				<tr class="center">
-					<th class="th_center">옵션별가격<br /> 
-					 	<img src="./img/admin_btn_mplus.gif" class="clickbutton" id="optionPlus" STYLE="type:button; value:추가" /> 
-						<img src="./img/admin_btn_sdel.gif" class="clickbutton" id="optionDel" STYLE="type:button; value:제거" />
-					</th>
-					<td colspan="3">
-						<div>옵션구분 | 옵션명+값 = 옵션명+금액;옵션명+금액;....</div> 
-						<table class="product_option" style="width:600px; cellpadding:0; cellspacing:0; border:0">
-
-							<tr>
-								<td class="td_cen"><input type="text"
-									name="option_title_update" value=""
-									class="inputbox" style="width: 100px;" /></td>
-								<td class="td_cen"><input type="text"
-									name="option_value_update" value=""
-									class="inputbox01" style="width: 400px; text-align: left" /><input
-									type="hidden" name="option_seq_update" value="" />
-								</td>
-							</tr>
-						</table> 
-						<div id="product_option_box">
-							<table class="product_option"  style="width:600px; cellpadding:0; cellspacing:0; border:0">
-								<tr>
-									<td class="td_cen"><input type="text" name="option_title"
-										value="" class="inputbox" style="width: 100px;" /></td>
-									<td class="td_cen"><input type="text" name="option_value"
-										value="" class="inputbox01" style="width: 400px;" /></td>
-								</tr>
-							</table>
-						</div>
-					</td>
-				</tr>
 				<tr>
 					<th class="th_center">결제방식</th>
 					<td class="left" colspan="3"><label><input
@@ -237,13 +192,6 @@
 					<th class="th_center">이미지 상세삽입</th>
 					<td class="left" colspan="3">
 						<input type="checkbox"	name="content_include" id="content_include" value="Y" checked="checked"  />
-					</td>
-				</tr>
-
-				<tr>
-					<th class="th_center">공통 이미지</th>
-					<td class="left" colspan="3">
-						 <label><input type="checkbox" name="comImg" value=""  checked="checked"> </label> 
 					</td>
 				</tr>
 

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
+<script type="text/javascript" src="./category/js/category_insert.js"></script>
 
 <title>관리자모드(카테고리)</title>
 
@@ -15,13 +16,12 @@
 				<div class="categorySelectBox" style="padding-left: 20px; float: left">
 					<select name="categoryA" id="categoryA" class="selectBox" size="16"></select>
 				</div>
-
 				<div class="categoryMove" style="padding-right: 10px; float: left">
 					<span class="pointer" id="upA">▲</span><br>
 					<span class="pointer" id="downA">▼</span>
 				</div>
 				<div class="categorySet" style="clear: both;">
-					<input type="text" id="categoryName" class="inputbox" />
+					<input type="text" id="category1" class="inputbox" />
 					<input type="button" class="clickbutton03" id="newbutton" value="등록" />
 					<input type="button" class="clickbutton06" id="updatebutton" value="수정" />
 					<input type="button" class="clickbutton05" id="deletebutton" value="삭제" />
@@ -39,16 +39,13 @@
 					<span class="pointer" id="downB">▼</span>
 				</div>
 				<div class="categorySet" style="clear: both;">
-					<input type="text" id="categoryName" class="inputbox" />
+					<input type="text" id="category2" class="inputbox" />
 					<input type="button" class="clickbutton03" id="newbutton" value="등록" />
 					<input type="button" class="clickbutton06" id="updatebutton" value="수정" />
 					<input type="button" class="clickbutton05" id="deletebutton" value="삭제" />
 				</div>
 				<input type="hidden" id="group" value="B" />
 			</div>
-
 		</div>
-
 	</div>
 </div>
-

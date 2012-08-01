@@ -3,6 +3,7 @@
 <html>
 <head>
 <title><tiles:getAsString name="title" /></title>
+<link href="./common/common.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 	<table

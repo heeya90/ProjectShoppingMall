@@ -29,7 +29,6 @@
 								<tiles:insertAttribute name="footer" />
 							</div>
 						</div>
-						<iframe src="/doweb/session.asp" style="frameborder: 0" width="0" height="0"></iframe>
 					</div>
 				</div>
 			</div>
