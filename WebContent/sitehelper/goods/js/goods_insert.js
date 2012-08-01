@@ -3,9 +3,9 @@ $("document").ready(function(){
 	$.post("goodscodegen.do", function(result){
 		var date = new Date();
 		var code = date.getMonth().toString()
-					+date.getDate().toString()
-					+date.getHours()
-					+result;
+				  +date.getDate().toString()
+				  +date.getHours()
+				  +result;
 		$("#p_code").val(code);
 	});
 	//카테고리a 불러오기
@@ -19,9 +19,9 @@ jQuery(function(){
 		$.post("goodsinsert.do", $("#frm").serialize(), function(data){
 			//입력된 값들 데이터베이스에 입력
 			if(data == 'true'){
-				alert("입력성공");
+				alert("상품입력성공^^");
 			}else{
-				alert("입력실패");
+				alert("상품입력실패ㅠㅠ");
 			}
 		});
 	});

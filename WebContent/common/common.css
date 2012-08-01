@@ -70,54 +70,79 @@ img{border:0}
 .sub_v_tb1{color:#777;font-size:11px;font-family:'絡遺',Dotum,verdana,sans-serif;letter-spacing:0px;text-decoration:none;font-weight:normal;text-align:center;width:84px;border-top:0;border-bottom:1px solid #c1c1c1;border-spacing:0;padding:0}
 
 
-
 /* 營辦⑽疏 */
-.jw_table{
- cell-padding:0px;
- cell-spacing:0px; 
+.jw_normal_table{
+	padding:0;
+	border-spacing:0px;
+	border-collapse:collapse;
+	margin-top:5px;
+}
+.jw_post_table{
+	padding:10px;
+	border:1px solid black;
+	margin:50px;
 }
 .jw_theader{
- background-color:lightblue;
- borderbottom:1px solid gray;
- text-align:center;
- vertical-align:middle;
+	background-color:lightblue;
+ 	border-bottom:1px solid gray;
+ 	text-align:center;
+ 	vertical-align:middle;
+ 	font-weight:bold;
+ 	height:25px;
 }
 .jw_lheader{
- background-color:lightblue;
- text-align:center;
- vertical-align:middle; 
+	 background-color:lightblue;
+	 text-align:center;
+	 vertical-align:middle;
+	 height:25px; 
 }
 .jw_td_center{
- text-align:center;
- vertical-align:middle; 
+	 text-align:center;
+	 vertical-align:middle;
+	 border-bottom:1px solid Gainsboro; 
+}
+.jw_td_center1{
+	 text-align:center;
+	 vertical-align:middle;
 }
 .jw_td_left{
- text-align:left;
- vertical-align:middle; 
+	 text-align:left;
+	 vertical-align:middle;
+	 padding:3px; 
 } 
 .jw_td_right{
- text-align:right;
- vertical-align:middle; 
+	 text-align:right;
+	 vertical-align:middle; 
 }
 
 .jw_div_center{
- text-align:center;
- vertical-align:middle; 
+	 text-align:center;
+	 vertical-align:middle; 
 }
 .jw_div_right{
- text-align:right;
- vertical-align:middle; 
+	 text-align:right;
+	 vertical-align:middle; 
 }
 
 .jw_lbl_title{
- font-weight:bolder;
+ 	font-weight:bolder;
 }
 .jw_lbl_pop{
- color:blue;
- font-weight:bold;
+ 	color:blue;
+ 	font-weight:bold;
 }
-/* 營辦⑽疏*/
-
+.jw_menu{
+	text-align:center;
+	vertical-align:middle;
+	font-size:16pt;
+	font-weight: bold;
+	color:white;
+	background-color: blue;
+}
+.jw_menu:hover{
+	color:blue;
+	background-color:white;
+}
 
 
 /* Main_topmenu */

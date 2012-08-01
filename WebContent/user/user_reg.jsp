@@ -1,13 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<script type="text/javascript" src="../common/jquery/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="./js/sitehelper_login.js"></script>
 <style type="text/css">
 
 td{
 	text-align:center;
 }
 </style>
-<div class="sub_loca"><img src="./img/icon_home.gif" alt="현재위치" />홈 > 회원가입</div>
-<form action="user_success.jsp">
+<div class="sub_loca"><img src="./img/icon_home.gif" alt="현재위치" />홈-회원가입</div>
+<form action="SignUp.do">
 	<div class="join01_tt">
 
 		<span class="join01_tt01"><img src="./img/join01_timg.gif" alt="정보입력" /></span>
@@ -97,12 +99,10 @@ PShoppingMall은 공정거래위원회가 승인한 표준약관을 사용합니다.
 		</tr>
 	</table>
 	</div>
-	<center>
-	<div style="width:60%; text-align:right">
+	<div style="width:60%; text-align:right; align:center">
 		<input type="checkbox">
 		<label>동의합니다</label>
 	</div>
-	</center>
 	<div class="sub_v_tt">
 
 		<h2>회원가입</h2>

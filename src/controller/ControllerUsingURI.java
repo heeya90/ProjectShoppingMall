@@ -91,17 +91,21 @@ public class ControllerUsingURI extends HttpServlet {
 		System.out.println("request.getContextPath():"+request.getContextPath());
 		System.out.println("command:"+command);
 		System.out.println("handler:"+handler.toString());
+		System.out.println("지금컴파일됨?");
 		// 명령어에 해당하는 핸들러 인스턴스가 존재하지 않을 경우 NullHandler를 사용한다.
-		if (handler == null) {
+		if (handler == null){
 			handler = new NullHandler();
 		}
 		String viewPage = null;
 		try {
 			// 구한 핸들러 인스턴스의 process()매서드를 호출해서 요청을 처리하고,결과로 보여줄 뷰 페이지의 URI를 리턴
 			// 값으로 전달 받는다. 핸들러 인스턴스인 handler의 process()메서드는 클라이언트의 요청을 알맞게 처리한
-			// 후, 뷰 페이지에 보여줄 결과값을 request나 session의 속성에 저장해야 한다.			
+			// 후, 뷰 페이지에 보여줄 결과값을 request나 session의 속성에 저장해야 한다.	
+			System.out.println("핸들러의 프로세스 실행한다?");
 			viewPage = handler.process(request, response);
-		} catch (Throwable e) {
+			System.out.println("핸들러의 프로세스 실행됨");
+		} catch (Throwable e){
+			System.out.println("여기");
 			throw new ServletException(e);
 		}
 		

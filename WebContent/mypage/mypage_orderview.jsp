@@ -1,51 +1,45 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-<style type="text/css">
-.tab{
-	border:1px solid black; 
-	padding:10px; 
-}
-.lbl_title{
-	font-size:large;
-	font-weight:bold;
-}
-</style>
-<div class="sub_loca"><img src="./img/icon_home.gif" alt="현재위치" />홈 > 마이페이지 > 주문목록 > 상세보기</div>
-	<table width="100%" style="margin-bottom:5px" class="tab">
+
+	<div class="sub_loca">
+		<img src="./img/icon_home.gif" alt="현재위치" />홈-마이페이지-주문목록-상세보기
+	</div>
+	
+	<table class="jw_normal_table" style="align:center; width:48%;">
 		<tr>
-			<td>
-				<label>상품코드</label></td>
-			<td>
-				<label>상품이미지</label></td>
-			<td>
-				<label>상품명</label></td>
-			<td>
-				<label>판매가</label></td>
-			<td>
-				<label>수량</label></td>
-			<td>
-				<label>합계</label></td>
+			<td class="jw_theader">
+				<label class="jw_lbl_title">상품코드</label></td>
+			<td class="jw_theader">
+				<label class="jw_lbl_title">상품이미지</label></td>
+			<td class="jw_theader">
+				<label class="jw_lbl_title">상품명</label></td>
+			<td class="jw_theader">
+				<label class="jw_lbl_title">판매가</label></td>
+			<td class="jw_theader">
+				<label class="jw_lbl_title">수량</label></td>
+			<td class="jw_theader">
+				<label class="jw_lbl_title">합계</label></td>
 		</tr>
-		<tr>
-			<td>
+		<tr> 
+			<td class="jw_td_center">
 				<label>상품코드</label></td>
-			<td>
+			<td class="jw_td_center">
 				<label>상품이미지</label></td>
-			<td>
+			<td class="jw_td_center">
 				<label>상품명</label></td>
-			<td>
+			<td class="jw_td_center">
 				<label>판매가</label></td>
-			<td>
+			<td class="jw_td_center">
 				<label>수량</label></td>
-			<td>
+			<td class="jw_td_center">
 				<label>합계</label></td>
 		</tr>
 	</table>
 	
-	<table width="100%" style="margin-bottom:5px">
+	<table class="jw_normal_table" style="align:center; width:100%;">
 		<tr>
 			<td colspan="2">
-				<label class="lbl_title">주문자 정보</label></td>
+				<label class="jw_lbl_title">주문자 정보</label></td>
 		</tr>
 		<tr>
 			<td>
@@ -79,7 +73,7 @@
 		</tr>
 	</table>
 	
-	<table width="100%" style="margin-bottom:5px">
+	<table class="jw_normal_table" style="align:center; width:100%;">
 		<tr>
 			<td colspan="2">
 				<label class="lbl_title">배송정보</label></td>

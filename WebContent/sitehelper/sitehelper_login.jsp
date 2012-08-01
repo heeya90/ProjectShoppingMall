@@ -13,7 +13,7 @@
 <% 
 if(null!=session.getAttribute("ADMINID")){
     response.sendRedirect("order_list.tiles");
-}
+} 
 %>
 	<div id="login_main">
 		<div class="login_img">

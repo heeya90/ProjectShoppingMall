@@ -11,10 +11,11 @@
 	<li><a href="menuuser.tiles">사용자타일즈(메뉴)</a></li>
     <li><a href="nomenuuser.tiles">사용자타일즈(메뉴없음)</a></li>
     <li><a href="no_user_reg.tiles">사용자타일즈(회원가입)</a></li>
+    <li><a href="m_mypage_view.tiles">사용자타일즈(?)</a></li>    
     <li><a href="m_goods_list.tiles">사용자타일즈(?)</a></li>
+    <li><a href="m_order_order.tiles">사용자타일즈(?)</a></li>
     <li></li>
     <li><a href="/ProjectShoppingMall/sitehelper/sitehelper_login.jsp">관리자 페이지</a></li>
-    <li><a href="menuhelper.tiles">관리자타일즈(게시판 관리)</a></li>
     <li><a href="sitehelper/goods_insert.tiles">관리자상품입력</a></li>
     <li><a href="sitehelper/goods_list.tiles">관리자상품리스트</a></li>
     <li></li>
