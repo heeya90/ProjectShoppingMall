@@ -5,35 +5,35 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-
 import model.beans.Category1Bean;
+import model.beans.Category2Bean;
 import model.databasemanage.DBManager;
 
-public class Category_1DAO {
+public class Category_2DAO {
 
 	Connection conn=null;
 	PreparedStatement pstmt=null;
 	ResultSet rs = null; 
 	
-	public int insert(Category1Bean c1b){
+	public int insert(Category1Bean c1b,Category2Bean c2b){
 		try {
 			conn = new DBManager().getConnection();
-			String sql = "SELECT NVL(max(orderidx),0) FROM t_category1";
+			String sql = "SELECT NVL(max(orderidx),0) FROM t_category2";
 			pstmt = conn.prepareStatement(sql);
 			rs = pstmt.executeQuery();
 			rs.next();
 			int orderidx = rs.getInt(1);
-			sql = "INSERT INTO t_category1(no, name, use, orderidx) "
-					+ " values (seq_category1.NEXTVAL ,? ,? ,? )";
+			sql = "INSERT INTO t_category2(no, ctg1, name, use, orderidx) "
+					+ " values (seq_category2.NEXTVAL,? ,? ,? ,? )";
 			pstmt = conn.prepareStatement(sql);
-			System.out.println(c1b.getName());
-			pstmt.setString(1, c1b.getName());
-			pstmt.setString(2, "Y");
-			pstmt.setInt(3, ++orderidx);
+			pstmt.setString(1, c2b.getName());
+			pstmt.setInt(2, c1b.getNo());
+			pstmt.setString(3, "Y");
+			pstmt.setInt(4, ++orderidx);
 			pstmt.executeUpdate();
 			return 0;
 		} catch (Exception e) {
-			System.out.println("카테고리 1 입력에러" + e.getMessage());
+			System.out.println("카테고리 2 입력에러" + e.getMessage());
 		} finally{
 			try{if(null!=rs)rs.close(); if(null!=pstmt) pstmt.close();if(conn!=null) conn.close();
 			}catch(SQLException e){e.getMessage();}
@@ -41,20 +41,26 @@ public class Category_1DAO {
 		return 1;
 	}
 
-	public ArrayList<Category1Bean> select(){
+	public ArrayList<Category2Bean> select(String cat1No){
 		try{
 			conn = new DBManager().getConnection();
-			pstmt=conn.prepareStatement("SELECT no, name, orderidx FROM t_category1 WHERE use='Y' order by orderidx");
+			pstmt=conn.prepareStatement("SELECT no,name, orderidx FROM t_category2 WHERE use='Y' and ctg1=? order by orderidx");
+	
+			pstmt.setString(1, cat1No);
 			rs = pstmt.executeQuery();
-			ArrayList<Category1Bean> arrcat1 = new ArrayList<Category1Bean>();
+			ArrayList<Category2Bean> arrcat2 = new ArrayList<Category2Bean>();
+			
 			while(rs.next()){
-				Category1Bean bean = new Category1Bean();
+				Category2Bean bean = new Category2Bean();
 				bean.setNo(rs.getInt("no"));
+				System.out.println(bean.getNo());
 				bean.setName(rs.getString("name"));
+				System.out.println(bean.getName());
 				bean.setOrderidx(rs.getInt("Orderidx"));
-				arrcat1.add(bean);
+				System.out.println(bean.getOrderidx());
+				arrcat2.add(bean);
 			}
-			return arrcat1;
+			return arrcat2;
 		}catch(Exception e){ 
 			System.out.println("Dao.select() 에러"+e.getMessage());
 		}finally{
@@ -64,27 +70,23 @@ public class Category_1DAO {
 		return null;
 	}
 	
-	public int update(Category1Bean c1b) {
+	public int update(Category2Bean c2b) {
 		try {
 			conn = new DBManager().getConnection();
-			String sql ="update t_category1 set name=? where no=?";
+			String sql ="update t_category2 set name=? where no=?";
 			pstmt = conn.prepareStatement(sql);
-			System.out.println(c1b.getName());
-			pstmt.setString(1, c1b.getName());
-			pstmt.setInt(2, c1b.getNo());
+			System.out.println(c2b.getName());
+			pstmt.setString(1, c2b.getName());
+			pstmt.setInt(2, c2b.getNo());
 			pstmt.executeUpdate();
-			System.out.println(c1b.getNo() + "update 성공");
+			System.out.println(c2b.getNo() + "update 성공");
 			return 0;
 		} catch (Exception e) {
-			System.out.println("카테고리 1 수정에러" + e.getMessage());
+			System.out.println("카테고리 2 수정에러" + e.getMessage());
 		} finally{
 			try{if(null!=rs)rs.close(); if(null!=pstmt) pstmt.close();if(conn!=null) conn.close();
 			}catch(SQLException e){e.getMessage();}
 		}
 		return 1;
 	}
-
-	
-	
-	
 }	

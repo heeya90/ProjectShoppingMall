@@ -62,8 +62,7 @@ public class GoodsDao {
 		try{
 			conn = new DBManager().getConnection();
 			pstmt=conn.prepareStatement("SELECT last_number " +
-					"FROM seq WHERE sequence_name=?");
-			pstmt.setString(1, "SEQ_GOODS");
+					"FROM seq WHERE sequence_name='seq_goods'");
 			rs = pstmt.executeQuery();
 			String seq=null;
 			while(rs.next()){

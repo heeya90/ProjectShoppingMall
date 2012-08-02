@@ -11,12 +11,12 @@ a:hover,a:active,a:focus{text-decoration:none}
 
 img{border:0}
 
-#wrap{width:100%;margin:0 auto}
-#head{width:100%;margin:0 auto}
-#header{width:950px;margin:0 auto}
+#wrap{width:100%;margin:0 auto;}
+#head{width:100%; margin:0 auto;}
+#header{width:950px;margin:0 auto;}
 
 
-#content .sub_v_tt{border-bottom:2px solid #e54430;height:29px;display:block;padding-top:14px;padding-left:13px}
+#content .sub_v_tt{border-bottom:2px solid #e54430; height:29px;display:block;padding-top:14px;padding-left:13px}
 #content .sub_v_tt h2{padding-top:3px;float:left;color:#777;font-size:14px;font-family:'µ¸¿ò',Dotum,verdana,sans-serif;line-height:17px;letter-spacing:-0.5px;font-weight:bold}
 #content .sub_v_tt span{float:right;}
 
