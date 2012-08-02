@@ -71,11 +71,13 @@ jQuery(function(){
 /*카테고리2 등록  버튼 시작*/
 jQuery(function(){
 	$("#newbutton2").bind("click",function(){
-		$.post("Category2Insert.do",{"categoryName":$("#categoryName2").val()},function(data){
+		alert($("#categoryName2").val());
+		alert($("#categoryA option:selected").val());
+		$.post("Category2Insert.do",{"categoryName2":$("#categoryName2").val(),"category1No":$("#categoryA option:selected").val()},function(data){
 			if(data==0){
 				getcategory2();
 			}else{
-				alert("카테고리 대분류 입력에 실패 하였습니다.");
+				alert("카테고리 중분류 입력에 실패 하였습니다.");
 			}			
 		});
 	});
@@ -88,17 +90,39 @@ jQuery(function(){
 			getcategory2();
 	});
 });
+/*카테고리2 셀렉박스 선택하기*/
+jQuery(function(){
+	$("#categoryB").bind("click",function(){
+		$("#categoryName2").val($("#categoryB option:selected").text());
+	});
+});
 
 /*카테고리1 수정 버튼 시작*/
 jQuery(function(){
 	$("#updatebutton1").bind("click",function(){		
 		if($("#categoryA option").is(":selected")){
-
 			$.post("Category1Insert.do",{"categoryNo":$("#categoryA option:selected").val(),"categoryName":$("#categoryName1").val()},function(data){
 				if(data==0){
 					getcategory1();
 				}else{
-					alert("카테고리 대분류 입력에 실패 하였습니다.");
+					alert("카테고리 대분류 수정에 실패 하였습니다.");
+				}			
+			});	
+		}else{
+			alert("수정하실 카테고리를 먼저 선택하세요");
+		}
+	});
+});
+
+/*카테고리2 수정 버튼 시작*/
+jQuery(function(){
+	$("#updatebutton2").bind("click",function(){		
+		if($("#categoryB option").is(":selected")){
+			$.post("Category2Insert.do",{"categoryNo":$("#categoryB option:selected").val(),"categoryName":$("#categoryName2").val()},function(data){
+				if(data==0){
+					getcategory2();
+				}else{
+					alert("카테고리 중분류 수정에 실패 하였습니다.");
 				}			
 			});	
 		}else{

@@ -26,14 +26,13 @@ public class Category_1DAO {
 			sql = "INSERT INTO t_category1(no, name, use, orderidx) "
 					+ " values (seq_category1.NEXTVAL ,? ,? ,? )";
 			pstmt = conn.prepareStatement(sql);
-			System.out.println(c1b.getName());
 			pstmt.setString(1, c1b.getName());
 			pstmt.setString(2, "Y");
 			pstmt.setInt(3, ++orderidx);
 			pstmt.executeUpdate();
 			return 0;
 		} catch (Exception e) {
-			System.out.println("카테고리 1 입력에러" + e.getMessage());
+			System.out.println("카테고리 1 입력에러 :" + e.getMessage());
 		} finally{
 			try{if(null!=rs)rs.close(); if(null!=pstmt) pstmt.close();if(conn!=null) conn.close();
 			}catch(SQLException e){e.getMessage();}
@@ -56,7 +55,7 @@ public class Category_1DAO {
 			}
 			return arrcat1;
 		}catch(Exception e){ 
-			System.out.println("Dao.select() 에러"+e.getMessage());
+			System.out.println("카테고리1 업데이트 에러 :"+e.getMessage());
 		}finally{
 			try{if(null!=rs) rs.close(); if(null!=pstmt) pstmt.close();if(conn!=null) conn.close();
 			}catch(SQLException e){e.getMessage();}
