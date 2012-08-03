@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-    
+<script type="text/javascript" src="./user/js/user_list.js"></script>    
 <title>관리자모드(사용자 리스트)</title>
 
 <div id="sub_contents">
@@ -75,7 +75,8 @@
 					<th class="th_center">회원번호</th>
 					<th class="th_center">ID/PASS</th>
 					<th class="th_center">성명</th>
-					<th class="th_center">회원구분</th>
+					<th class="th_center">회원등급</th>
+					<th class="th_center">회원포인트</th>					
 					<th class="th_center">휴대폰</th>
 					<th class="th_center">회원주소</th>
 					<th class="th_center">E_mail</th>
@@ -83,20 +84,9 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<td class="td_cen">
-					<a href="view.asp"></a>회원번호
-					</td>
-					<td class="td_cen">ID/PASS</td>
-					<td class="td_cen">성명</td>
-					<td class="td_cen">개인회원 </td>
-					<td class="td_cen" style="white-space:nowrap">휴대폰<br></td>
-					<td class="td_cen">상세주소</td>
-					<td class="td_cen">E_mail</td>
-					<td class="td_cen">가입일자</td>
-				</tr>			
 			</tbody>
 		</table>
+
 		<div class="admin_list">
 		<span><a href="">이전10개</a></span>  
 		<span><a href="">이전</a></span>  

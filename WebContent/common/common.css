@@ -10,11 +10,9 @@ em,address{font-style:normal}
 a{outline:none;select-dummy:expression(this.hideFocus=true);text-decoration:none}
 a:hover,a:active,a:focus{text-decoration:none}
 img{border:0}
-
 #wrap{width:100%;margin:0 auto;}
 #head{width:100%; margin:0 auto;}
 #header{width:950px;margin:0 auto;}
-
 #content .sub_v_tt{border-bottom:2px solid #e54430; height:29px;display:block;padding-top:14px;padding-left:13px}
 #content .sub_v_tt h2{padding-top:3px;float:left;color:#777;font-size:14px;font-family:'µ¸¿ò',Dotum,verdana,sans-serif;line-height:17px;letter-spacing:-0.5px;font-weight:bold}
 #content .sub_v_tt span{float:right;}
@@ -61,7 +59,6 @@ img{border:0}
 .lg_join00_n{display:block;margin:0 auto;padding-top:16px;width:300px;padding-bottom:7px}
 .sub_v_tb{color:#777;font-size:11px;font-family:'µ¸¿ò',Dotum,verdana,sans-serif;letter-spacing:0px;text-decoration:none;font-weight:normal;text-align:center;width:84px;border-left:1px solid #c1c1c1;border-top:0;border-right:1px solid #c1c1c1;border-bottom:1px solid #c1c1c1;border-spacing:0;padding:0}
 .sub_v_tb1{color:#777;font-size:11px;font-family:'µ¸¿ò',Dotum,verdana,sans-serif;letter-spacing:0px;text-decoration:none;font-weight:normal;text-align:center;width:84px;border-top:0;border-bottom:1px solid #c1c1c1;border-spacing:0;padding:0}
-
 /* Àç¿ìÇü²¨ */
 .jw_normal_table{
 	padding:0;
@@ -214,8 +211,6 @@ div.tgnb .upload a{background:url(../img/bg_gnb.gif) no-repeat left top;padding:
 #gnb .gnb .menu_08 ul{float:left;height:37px;margin:0;padding:0;display:block;list-style:none}
 #gnb .gnb .menu_08 ul li a{overflow:hidden:display:block;_float:left;height:37px}
 #gnb .gnb .menu_08 ul li .selected a img, #gnb .gnb .menu_08 ul li a:hover img{margin-top:-37px}
-.reg_star{float:right;padding-right:150px; padding-top:5px;height:21px;color:#888;font-size:11px;font-family:'µ¸¿ò',Dotum,verdana,sans-serif;line-height:19px}
-.reg_star b{color:#da351f;font-size:11px;font-family:'µ¸¿ò',Dotum,verdana,sans-serif;line-height:19px;font-weight:bold;}
 
 /* Main_footer */
 footer{clear:both;background:url(../img/f_ttbg.gif) repeat-x top left;width:100%;margin:0 auto;text-align:center;}
@@ -224,5 +219,5 @@ footer{clear:both;background:url(../img/f_ttbg.gif) repeat-x top left;width:100%
 .f_copy{width:950px;margin:0 auto;text-align:center}
 .f_logo{float:left;padding-left:17px;padding-top:29px}
 .f_cp{padding-top:7px;padding-left:58px;float:left;font-size:11px;color:#878787;text-align:left;font-family:Dotum,'µ¸¿ò',sans-serif;letter-spacing:-0.3px;line-height:17px}
-
 .f_cp a{padding:3px 10px 3px 9px;background:url(../img/f_txtbg.gif) no-repeat top left;width:108px;height:16px;font-size:11px;color:#fff;text-align:left;font-family:Dotum,'µ¸¿ò',sans-serif;letter-spacing:-1px;line-height:17px}
+
