@@ -10,13 +10,13 @@
 		<div id="head">
 			<tiles:insertAttribute name="header" />
 		</div>
-
-		<div id="menu" style="width:200px; posion:absolut; float:left; border: 1px solid black">
+		<div id="allcontainer" style="width:950px;margin:0 auto;">
+		<div id="menu" style="width:245px; height:200px; posion:absolut; float:left; ">
 			<tiles:insertAttribute name="menu" />
 		</div>
-		<div id="container" style="width:950px; posion:absolut; float:center; border: 1px solid black">
+		<div id="container" style="width:700px; height:200px; posion:absolut; float:right;">
 			<tiles:insertAttribute name="body" />
-
+		</div>
 		</div>
 		<tiles:insertAttribute name="footer" />
 	</div>
