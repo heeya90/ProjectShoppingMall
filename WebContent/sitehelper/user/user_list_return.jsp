@@ -1,4 +1,3 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
-
-¹Ùµð1
+${xml}
