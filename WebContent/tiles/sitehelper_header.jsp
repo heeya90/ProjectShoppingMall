@@ -16,7 +16,7 @@
             </div>
             <div class="admin_tright">
                 <span class="admin_ttxt">
-                    <b>관리자</b>님의
+                    <b>${ sessionScope.admin }</b>님의
                     <b>1,212</b>번째 방문입니다.</span>
                 <span class="admin_btn_logout">
                     <a href="#" id="logout">

@@ -37,9 +37,12 @@ public class LoginCheck implements CommandHandler{
 		//2.뷰 페이지에서 사용할 정보 저장
 		System.out.println("status(ok, id, pw):"+status);
 		request.setAttribute("status", status);
-		HttpSession session = request.getSession();
-		session.setAttribute("ADMINID", "admin");
-		session.setMaxInactiveInterval(60*30);// 세션 유휴시간(마지막 접근으로부터 30분)
+		if(status.equals("ok")){
+			HttpSession session = request.getSession();
+			session.setAttribute("admin", id);
+			session.setMaxInactiveInterval(60*30);// 세션 유휴시간(마지막 접근으로부터 30분)
+		}
+		
 		//3.뷰 페이지의 URI 리턴
 		return "../common/ajaxreturn/sitehelper_login_return.jsp";
 	}

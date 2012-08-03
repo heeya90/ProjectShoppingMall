@@ -13,6 +13,16 @@ public abstract class DaoTemplate {
 	PreparedStatement pstmt=null;
 	ResultSet rs=null;
 	
+	public void close(){
+		try {
+			if(null!=rs) rs.close();
+			if(null!=pstmt) pstmt.close();
+			if(null!=conn) conn.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	public Object select(int seq){
 		
 		try{
@@ -87,13 +97,5 @@ public abstract class DaoTemplate {
 			close();
 		}
 	}
-	public void close(){
-		try {
-			if(null!=rs) rs.close();
-			if(null!=pstmt) pstmt.close();
-			if(null!=conn) conn.close();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-	}
+	
 }

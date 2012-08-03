@@ -1,19 +1,19 @@
 package model.beans;
 
-public class ColorBean {
+public class GoodsColorBean {
 	private int no;
 	private int goods_no;
 	private String color;
 	
 	
-	public ColorBean(int no, int goods_no, String color) {
+	public GoodsColorBean(int no, int goods_no, String color) {
 		super();
 		this.no = no;
 		this.goods_no = goods_no;
 		this.color = color;
 	}
 	
-	public ColorBean() {
+	public GoodsColorBean() {
 		super();
 	}
 
