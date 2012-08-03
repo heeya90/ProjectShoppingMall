@@ -1,22 +1,22 @@
 package model.beans;
 
 public class UserBean {
-	int no;
-	String id;
-	String pw;
-	String name;
-	String tel;
-	String cell;
-	String zipcode;
-	String addr;
-	String detailaddr;
-	String email;
-	String use;
-	int logincnt;
-	int point;
-	String grade;
-	String lastlogin;
-	String regdate;
+	private int no;
+	private String id;
+	private String pw;
+	private String name;
+	private String tel;
+	private String cell;
+	private String zipcode;
+	private String addr;
+	private String detailaddr;
+	private String email;
+	private String use;
+	private int logincnt;
+	private int point;
+	private String grade;
+	private String lastlogin;
+	private String regdate;
 	
 	public UserBean(int no, String id, String pw, String name, String tel,
 			String cell, String zipcode, String addr, String detailaddr,

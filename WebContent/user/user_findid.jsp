@@ -11,24 +11,25 @@
 <%
 	String name = request.getParameter("name");
 	String id = request.getParameter("id");
+	String email = request.getParameter("email");
 %>
-<div class="sub_loca"><img src="./img/icon_home.gif" alt="현재위치" />홈 > 로그인 완료</div>
+<div class="sub_loca"><img src="./img/icon_home.gif" alt="현재위치" />홈 > 아이디 찾기</div>
 <table align="center" style="text-align:center; width:50%; margin-top:50px; border:1px solid black" >
 	<tr>
-		<td colspan="2"> 회원가입이 완료되었습니다 </td>
+		<td colspan="2"> 아이디 찾기 </td>
 	</tr>
 	
 	<tr>
 		<td style="width:40%">
 			<label>이름</label> </td>
 		<td>
-			<label><%= name %> </label></td>
+			<label><%= id %> </label></td>
 	</tr>
 	
 	<tr>
 		<td>
 			<label>아이디 </label></td>
 		<td>
-			<label><%= id %> </label></td>
+			<label>아이디디 </label></td>
 	</tr>
 </Table>

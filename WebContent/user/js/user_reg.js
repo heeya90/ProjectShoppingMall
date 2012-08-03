@@ -3,8 +3,30 @@ $(document).ready(function(){
 	$("#name").css("ime-mode","disabled");
 	$("#name").focus();
 	
+	$("#id").bind("blur",function(){
+		if($.trim($("#id").val()) != ""){
+			$.post("SignUpCheck.do",{"id":$.trim($("#id").val())},function(result){			
+				if (result > 0){
+					alert("이미 존재하는 아이디입니다");
+					$("#id").val("");
+					$("#id").focus();
+					return false;
+				}else{
+					alert("회원가입 가능한 아이디입니다");
+				}
+			});
+		}
+	});
+	
+
+	
 	$("#button").bind("click",function(){
 
+		if($("#chk").is(':checked')){
+		}else{
+			alert("약관에 동의하세요");
+			return false;
+		}
 		$("label b").each(function(){
 			var $this = $(this);
 			if($this.text() == "*"){

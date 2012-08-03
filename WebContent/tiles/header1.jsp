@@ -5,15 +5,15 @@
 	<tr>
 		<td>
 		
-<div id="head">
-
 <div id="header">
 <!-- TOP GNB -->
 <!-- http://renewal.itcenter.co.kr/upload/logo/logo_28_2.gif -->
 
 	<div class="tgnb">
 	<ul>
+	<li><span>${user}님 환영합니다^^</span></li>
 	<li><span class="log"><a href="no_user_login.tiles" id="topLogin">로그인</a></span></li>
+	<li><span class="logout"><a href="로그아웃.두" id="topLogout">로그아웃</a></span></li>
 	<li><span class="mem"><a href="no_user_reg.tiles" id="topMember">회원가입</a></span></li>
 	<li><span class="cart">|<a href="m_order_cart.tiles" id="topCart">장바구니</a></span></li>
 	<li><span class="center">|<a href="#" id="board">고객센터</a></span></li>

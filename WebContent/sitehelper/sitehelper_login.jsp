@@ -10,11 +10,7 @@
 <title>관리자 로그인</title>
 </head>
 <body>
-<% 
-if(null!=session.getAttribute("ADMINID")||""!=session.getAttribute("ADMINID")){
-    response.sendRedirect("order_list.tiles");
-}
-%>
+
 	<div id="login_main">
 		<div class="login_img">
 			<div class="login_left"><img src="./img/admin_login_ltt.gif" /></div>
