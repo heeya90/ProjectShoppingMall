@@ -1,15 +1,18 @@
+
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-<script type="text/javascript" src="../common/jquery/jquery-1.7.2.js"></script>
-<script type="text/javascript" src="./js/sitehelper_login.js"></script>
+<script type="text/javascript" src="./common/jquery/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="user/js/user_reg.js"></script>
 <style type="text/css">
 
 td{
 	text-align:center;
 }
 </style>
-<div class="sub_loca"><img src="./img/icon_home.gif" alt="현재위치" />홈-회원가입</div>
-<form action="SignUp.do">
+<%String id=(String)session.getAttribute("user");
+	boolean login = id == null? false:true; %>
+<div class="sub_loca"><img src="./img/icon_home.gif" alt="현재위치" />홈 > 회원가입<%= id %></div>
+<form action="SignUp.do" method="post" name="frm">
 	<div class="join01_tt">
 
 		<span class="join01_tt01"><img src="./img/join01_timg.gif" alt="정보입력" /></span>
@@ -99,8 +102,9 @@ PShoppingMall은 공정거래위원회가 승인한 표준약관을 사용합니다.
 		</tr>
 	</table>
 	</div>
-	<div style="width:60%; text-align:right; align:center">
-		<input type="checkbox">
+	<center>
+	<div style="width:60%; text-align:right">
+		<input type="checkbox" id="chk">
 		<label>동의합니다</label>
 	</div>
 	<div class="sub_v_tt">
@@ -134,56 +138,56 @@ PShoppingMall은 공정거래위원회가 승인한 표준약관을 사용합니다.
 			<td style="width:40%" class="join02_left01">
 				<label><b>*</b>이름</label></td>
 			<td class="join02_right">
-				<INPUT type="text" name="name"> </td>
+				<INPUT type="text" name="name" id="name"> </td>
 		</tr>
 		
 		<tr class="join02_tr">
 			<td class="join02_left01"> 
 				<label><b>*</b>아이디</label></td>
 			<td class="join02_right">
-				<INPUT type="text" name="id"> </td>
+				<INPUT type="text" name="id" id="id"> </td>
 		</tr>
 		
 		<tr class="join02_tr">
 			<td class="join02_left01">
 				<label><b>*</b>비밀번호</label></td>
 			<td class="join02_right">
-				<INPUT type="password" name="pw"></td>
+				<INPUT type="password" name="pw" id="pw"></td>
 		</tr>
 		
 		<tr class="join02_tr">
 			<td class="join02_left01">
 				<label><b>*</b>비밀번호확인</label></td>
 			<td class="join02_right">
-				<INPUT type="password" name="rpw"> </td>
+				<INPUT type="password" name="rpw" id="rpw"> </td>
 		</tr>
 		
 		<tr class="join02_tr">
 			<td class="join02_left01">
 				<label><b>*</b>전화번호</label></td>
 			<td class="join02_right">
-				<INPUT type="text" name="tel"> </td>
+				<INPUT type="text" name="tel" id="tel"> </td>
 		</tr>
 		
 		<tr class="join02_tr">
 			<td class="join02_left01">
 				<label>휴대폰</label></td>
 			<td class="join02_right">
-				<INPUT type="text" name="cell"> </td>
+				<INPUT type="text" name="cell" id="cell"> </td>
 		</tr>
 		
 		<tr class="join02_tr">
 			<td class="join02_left01">
 				<label><b>*</b>우편번호</label></td>
-			<td class="join02_right"> <input type="text" name="zipcode" size="7"> </td>
+			<td class="join02_right"> <input type="text" name="zipcode" id="zipcode" size="7"> </td>
 		</tr>
 		
 		<tr class="join02_tr">
 			<td class="join02_left01">
 				<label><b>*</b>주소</label></td>
 			<td class="join02_right">
-				<INPUT type="text" name="addr"> <br/> 
-				<INPUT type="text" name="detailaddr">
+				<INPUT type="text" name="addr" id="addr"> <br/> 
+				<INPUT type="text" name="detailaddr" id="detailaddr">
 			</td>
 		</tr>
 		
@@ -191,12 +195,12 @@ PShoppingMall은 공정거래위원회가 승인한 표준약관을 사용합니다.
 			<td class="join02_left01">
 				<label><b>*</b>이메일</label></td>
 			<td class="join02_right">
-				<INPUT type="text" name="email" size="25"> </td>
+				<INPUT type="text" name="email" id="email" size="25"> </td>
 		</tr>
 		
 		<tr>
 			<td colspan="2" align="right">
-				<input type="submit" value="가입">
+				<input type="button" value="가입" id="button">
 				<input type="reset" value="취소">
 			</td>
 		</tr>

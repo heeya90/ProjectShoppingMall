@@ -1,73 +1,88 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-
-	<div class="sub_loca">
-		<img src="./img/icon_home.gif" alt="현재위치" />홈-마이페이지-개인정보 수정
-	</div>
-	
-	<table class="jw_normal_table" style="align:center; width:70%">
+<script type="text/javascript" src="./common/jquery/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="mypage/js/mypage_modify.js"></script>
+<style type="text/css">
+.tab{
+	border:1px solid black; 
+	margin-top:50px; 
+	padding:10px; 
+}
+.lbl_title{
+	font-size:large;
+	font-weight:bold;
+}
+</style>
+<form action="InformUpdate.do" method="post" name="frm">
+<div class="sub_loca"><img src="./img/icon_home.gif" alt="현재위치" />홈 > 마이페이지 > 개인정보 수정</div>
+<span class="reg_star"><b>*</b> 는 필수 정보입력 항목입니다.</span>
+	<div class="join02_form01">
+	<table width="70%" class="join02_form02">
 		<tr>
 			<td colspan="2">
 				<label class="jw_lbl_title">회원정보 수정</label></td>
 		</tr>
 		<tr>
-			<td class="jw_lheader" style="width:25%">
-				<label class="jw_lbl_title">이름</label></td>
-			<td>
-				<input type="text" name="name" value=""></td>
+			<td class="join02_left01">
+				<label><b>*</b>이름</label></td>
+			<td class="join02_right">
+				<label><input type="text" name="name" id="name"></label></td>
 		</tr>
 		<tr>
-			<td class="jw_lheader">
-				<label class="jw_lbl_title">아이디</label></td>
-			<td>
-				<label>아이디디디</label></td>
+			<td class="join02_left01">
+				<label>아이디</label></td>
+			<td class="join02_right">
+				<label>${user}</label></td>
 		</tr>
 		<tr>
-			<td class="jw_lheader">
-				<label class="jw_lbl_title">비밀번호</label></td>
-			<td>
-				<input type="password" name="pw">
+			<td class="join02_left01">
+				<label><b>*</b>비밀번호</label></td>
+			<td class="join02_right">
+				<input type="password" name="pw" id="pw">
 		</tr>
 		<tr>
-			<td class="jw_lheader">	
-				<label class="jw_lbl_title"> 비밀번호 확인</label></td>
-			<td>
-				<input type="password" name="rpw"></td>
+			<td class="join02_left01">	
+				<label><b>*</b>비밀번호 확인</label></td>
+			<td class="join02_right">
+				<input type="password" name="rpw" id="rpw"></td>
 		</tr>
 		<tr>
-			<td class="jw_lheader">
-				<label class="jw_lbl_title">전화번호</label></td>
-			<td>
-				<input type="text" name="tel" value=""></td>
+			<td class="join02_left01">
+				<label><b>*</b>전화번호</label></td>
+			<td class="join02_right">
+				<input type="text" name="tel" id="tel"></td>
 		</tr>
 		<tr>
-			<td class="jw_lheader">
-				<label class="jw_lbl_title">휴대전화</label></td>
-			<td>
-				<input type="text" name="cell" value=""></td>
+			<td class="join02_left01">
+				<label>휴대전화</label></td>
+			<td class="join02_right">
+				<input type="text" name="cell" id="cell"></td>
 		</tr>
 		<tr>
-			<td class="jw_lheader">
-				<label class="jw_lbl_title">우편번호</label></td>
-			<td>
-				<input type="text" name="zipcode" size="7"></td>
+			<td class="join02_left01">
+				<label><b>*</b>우편번호</label></td>
+			<td class="join02_right">
+				<input type="text" name="zipcode" id="zipcode" size="7"></td>
 		</tr>
 		<tr>
-			<td class="jw_lheader">
-				<label class="jw_lbl_title">주소</label></td>
-			<td>
-				<INPUT type="text" name="addr" size="25"> <br/>
-				<INPUT type="text" name="detailaddr" size="50"></td>
+			<td class="join02_left01">
+				<label><b>*</b>주소</label></td>
+			<td class="join02_right">
+				<INPUT type="text" name="addr" id="addr" size="25"> <br/>
+				<INPUT type="text" name="detailaddr" id="detailaddr" size="50"></td>
 		</tr>
 		<tr>
-			<td class="jw_lheader">
-				<label class="jw_lbl_title">이메일</label></td>
-			<td>
-				<input type="text" name="email" value=""></td>
+			<td class="join02_left01">
+				<label><b>*</b>이메일</label></td>
+			<td class="join02_right">
+				<input type="text" name="email" id="email"></td>
 		</tr>
+		<tr>
+			<td colspan="2" align="center">
+				<input type="button" value="수정완료" id="button">
+				<input type="reset"  value="수정취소"></td>
+		</tr>
+		
 	</table>
-	
-	<div class="jw_div_right">
-		<input type="submit" value="수정완료">
-		<input type="reset"  value="수정취소"> 
 	</div>
+</form>

@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<script type="text/javascript" src="./common/jquery/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="user/js/user_login.js"></script>
 <style type="text/css">
 
 .tab{
@@ -8,6 +10,7 @@
 }
 
 </style>
+<div id="login_main">
 <div class="sub_loca"><img src="./img/icon_home.gif" alt="현재위치" />홈 > 로그인</div>
                 <div class="lg_box00">
 
@@ -19,9 +22,9 @@
 
                             <div class="lg_id00">
 
-                                <span class="lg_sid">아이디<input type="text" name="id" title="아이디" class="log_input_sid"></span>
+                                <span class="lg_sid">아이디<input type="text" name="id" id="id" title="아이디" class="log_input_sid"></span>
 
-                                <span class="lg_spw">비밀번호<input type="password" name="pw" title="비밀번호" class="log_input_spw"></span>
+                                <span class="lg_spw">비밀번호<input type="password" name="pw" id="pw" title="비밀번호" class="log_input_spw"></span>
 
                             </div>
 
@@ -32,7 +35,7 @@
 
                                 <span class="lg_txt_sid"><img src="./img/txt_idpw.gif" alt="아이디/비밀번호 찾기" /></span>
 
-                                <span class="lg_btn_sid"><a href="#"><img src="./img/btn_idpw.gif" alt="아이디/비밀번호 찾기" /></a></span>
+                                <span class="lg_btn_sid"><a href="no_user_find.tiles"><img src="./img/btn_idpw.gif" alt="아이디/비밀번호 찾기" /></a></span>
 
                             </div>
 
@@ -42,7 +45,7 @@
 
                         <div class="login_btn">
 
-                            <a href="#"><img src="./img/btn_mlogin.gif" alt="회원로그인" id="btnLogin" /></a>
+                            <a href="#"><img src="./img/btn_mlogin.gif" alt="회원로그인" id="btnlogin" /></a>
 
                         </div>
 
@@ -75,7 +78,7 @@
 
                                 <span class="lg_txt_sjoin"><img src="./img/txt_join.gif" alt="회원가입을 하시면 많은 혜택을 누리실 수 있습니다." /></span>
 
-                                <span class="lg_btn_sjoin"><a href="#"><img src="./img/btn_join.gif" alt="회원가입" /></a></span>
+                                <span class="lg_btn_sjoin"><img src="./img/btn_join.gif" alt="회원가입" id="btnLogin" /></span>
 
                             </div>
 
@@ -90,4 +93,5 @@
                         </div>
 
                     </div>
+</div>
 </div>
