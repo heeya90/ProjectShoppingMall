@@ -13,6 +13,7 @@ public class UserListDAO {
 	Connection conn=null;
 	PreparedStatement pstmt=null;
 	ResultSet rs = null; 
+
 	public ArrayList<UserBean> select(){
 		try{
 			conn = new DBManager().getConnection();
@@ -42,6 +43,123 @@ public class UserListDAO {
 			return user;
 		}catch(Exception e){ 
 			System.out.println("사용자 리스트 에러 :"+e.getMessage());
+		}finally{
+			try{if(null!=rs) rs.close(); if(null!=pstmt) pstmt.close();if(conn!=null) conn.close();
+			}catch(SQLException e){e.getMessage();}
+		}
+		return null;
+	}
+	
+	public ArrayList<UserBean> nameselect(String gname){
+		try{
+			conn = new DBManager().getConnection();
+			pstmt=conn.prepareStatement("SELECT no,id,pw,name,tel,cell,zipcode,addr,detailaddr,email,use,point,grade,logincnt,lastlogin,regdate FROM t_user where name=? order by no");
+
+			pstmt.setString(1, gname);
+			rs = pstmt.executeQuery();
+			ArrayList<UserBean> user = new ArrayList<UserBean>();
+
+			while(rs.next()){
+				UserBean bean = new UserBean();
+				bean.setNo(rs.getInt("no"));
+				bean.setId(rs.getString("id"));
+				bean.setPw(rs.getString("pw"));
+				bean.setName(rs.getString("name"));				
+				bean.setTel(rs.getString("tel"));
+				bean.setCell(rs.getString("cell"));
+				bean.setZipcode(rs.getString("zipcode"));
+				bean.setAddr(rs.getString("addr"));
+				bean.setDetailaddr(rs.getString("detailaddr"));
+				bean.setEmail(rs.getString("email"));
+				bean.setUse(rs.getString("use"));
+				bean.setPoint(rs.getInt("point"));
+				bean.setGrade(rs.getString("grade"));
+				bean.setLogincnt(rs.getInt("logincnt"));
+				bean.setLastlogin(rs.getString("lastlogin"));
+				bean.setRegdate(rs.getString("regdate"));
+				user.add(bean);
+			}
+			return user;
+		}catch(Exception e){ 
+			System.out.println("사용자  이름별 리스트 에러 :"+e.getMessage());
+		}finally{
+			try{if(null!=rs) rs.close(); if(null!=pstmt) pstmt.close();if(conn!=null) conn.close();
+			}catch(SQLException e){e.getMessage();}
+		}
+		return null;
+	}
+	
+	public ArrayList<UserBean> idselect(String gid){
+		try{
+			conn = new DBManager().getConnection();
+			pstmt=conn.prepareStatement("SELECT no,id,pw,name,tel,cell,zipcode,addr,detailaddr,email,use,point,grade,logincnt,lastlogin,regdate FROM t_user where id=? order by no");
+
+			pstmt.setString(1, gid);
+			rs = pstmt.executeQuery();
+			ArrayList<UserBean> user = new ArrayList<UserBean>();
+
+			while(rs.next()){
+				UserBean bean = new UserBean();
+				bean.setNo(rs.getInt("no"));
+				bean.setId(rs.getString("id"));
+				bean.setPw(rs.getString("pw"));
+				bean.setName(rs.getString("name"));				
+				bean.setTel(rs.getString("tel"));
+				bean.setCell(rs.getString("cell"));
+				bean.setZipcode(rs.getString("zipcode"));
+				bean.setAddr(rs.getString("addr"));
+				bean.setDetailaddr(rs.getString("detailaddr"));
+				bean.setEmail(rs.getString("email"));
+				bean.setUse(rs.getString("use"));
+				bean.setPoint(rs.getInt("point"));
+				bean.setGrade(rs.getString("grade"));
+				bean.setLogincnt(rs.getInt("logincnt"));
+				bean.setLastlogin(rs.getString("lastlogin"));
+				bean.setRegdate(rs.getString("regdate"));
+				user.add(bean);
+			}
+			return user;
+		}catch(Exception e){ 
+			System.out.println("사용자  이름별 리스트 에러 :"+e.getMessage());
+		}finally{
+			try{if(null!=rs) rs.close(); if(null!=pstmt) pstmt.close();if(conn!=null) conn.close();
+			}catch(SQLException e){e.getMessage();}
+		}
+		return null;
+	}
+	
+	public ArrayList<UserBean> emailselect(String gemail){
+		try{
+			conn = new DBManager().getConnection();
+			pstmt=conn.prepareStatement("SELECT no,id,pw,name,tel,cell,zipcode,addr,detailaddr,email,use,point,grade,logincnt,lastlogin,regdate FROM t_user where id=? order by no");
+
+			pstmt.setString(1, gemail);
+			rs = pstmt.executeQuery();
+			ArrayList<UserBean> user = new ArrayList<UserBean>();
+
+			while(rs.next()){
+				UserBean bean = new UserBean();
+				bean.setNo(rs.getInt("no"));
+				bean.setId(rs.getString("id"));
+				bean.setPw(rs.getString("pw"));
+				bean.setName(rs.getString("name"));				
+				bean.setTel(rs.getString("tel"));
+				bean.setCell(rs.getString("cell"));
+				bean.setZipcode(rs.getString("zipcode"));
+				bean.setAddr(rs.getString("addr"));
+				bean.setDetailaddr(rs.getString("detailaddr"));
+				bean.setEmail(rs.getString("email"));
+				bean.setUse(rs.getString("use"));
+				bean.setPoint(rs.getInt("point"));
+				bean.setGrade(rs.getString("grade"));
+				bean.setLogincnt(rs.getInt("logincnt"));
+				bean.setLastlogin(rs.getString("lastlogin"));
+				bean.setRegdate(rs.getString("regdate"));
+				user.add(bean);
+			}
+			return user;
+		}catch(Exception e){ 
+			System.out.println("사용자  이름별 리스트 에러 :"+e.getMessage());
 		}finally{
 			try{if(null!=rs) rs.close(); if(null!=pstmt) pstmt.close();if(conn!=null) conn.close();
 			}catch(SQLException e){e.getMessage();}

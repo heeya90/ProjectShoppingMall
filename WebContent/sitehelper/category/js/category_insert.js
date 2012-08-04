@@ -18,8 +18,6 @@ var categoryBReset = function(){
 var getcategory1 = function(){
 	categoryAReset();
 	$.post("Category1List.do", function(result){
-		//$("#categoryA").html("<option value='1(번째idx)'>등산복</option>");
-		//$("#categoryA").append("<option>휴 이렇게 들가네</option>");
 		$(result).find("group").each(function(){
 			$("#categoryA").append("<option></option>");
 			$(this).find("item").each(function(){
