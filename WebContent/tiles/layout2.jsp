@@ -3,17 +3,18 @@
 <html>
 <head>
 <title><tiles:getAsString name="title" /></title>
-<link href="./common/common.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 	<div id="wrap">
 		<div id="head">
 			<tiles:insertAttribute name="header" />
 		</div>
-		<div id="container" style="width:950px;margin:0 auto;">
+		<div id="container">
 			<tiles:insertAttribute name="body" />
 		</div>
-		<tiles:insertAttribute name="footer" />
+		<div>
+			<tiles:insertAttribute name="footer" />
+		</div>
 	</div>
 </body>
 </html>
