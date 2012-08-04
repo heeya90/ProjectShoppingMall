@@ -4,8 +4,10 @@
 <head>
 <title><tiles:getAsString name="title" /></title>
 <link href="./common/style_list.css" rel="stylesheet" type="text/css" />
+<link href="../common/jquery-ui-1.8.22.custom.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../common/jquery/jquery-1.7.2.js"></script>
 <script type="text/javascript" src="./common/common.js"></script>
+<script type="text/javascript" src="../common/jquery/jquery-ui-1.8.22.custom.min.js"></script>
 </head>
 <body class="body">
 	<div id="wrap00">

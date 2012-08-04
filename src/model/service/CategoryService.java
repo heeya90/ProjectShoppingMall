@@ -1,7 +1,6 @@
 package model.service;
 
 import java.util.ArrayList;
-
 import model.beans.Category1Bean;
 import model.beansdao.Category_1DAO;
 

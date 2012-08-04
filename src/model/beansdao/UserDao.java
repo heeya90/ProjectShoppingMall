@@ -159,29 +159,27 @@ public class UserDao {
 			e.printStackTrace();
 		}
 	}
-	public UserBean findId(String name,String email){
+	public int findId(String name,String email){
 
 		Connection conn=null;
 		PreparedStatement pstmt=null;
 		ResultSet rs=null;
-		
+		int result =0;
 		try{
 			conn = new DBManager().getConnection();
 			
-			pstmt=conn.prepareStatement("SELECT id FROM t_user where name=? and email = ? and use='Y' ");
+			pstmt=conn.prepareStatement("SELECT count(*) FROM t_user where name=? and email = ? and use='Y' ");
 			pstmt.setString(1, name);
+			pstmt.setString(2, email);
 			rs = pstmt.executeQuery();
-			user = new UserBean();
-			rs.next();
 			
-			user.setId(rs.getString("id"));
-			user.setPw(rs.getString("pw"));
-		
-			return user;
+			rs.next();
+			result = rs.getInt(1);
+					
 			
 		}catch(Exception e){ 
-			System.out.println("UserDao.selectUser() 에러"+e.getMessage());
+			System.out.println("UserDao.findId() 에러"+e.getMessage());
 		}
-		return null;
+		return result;
 	}
 }

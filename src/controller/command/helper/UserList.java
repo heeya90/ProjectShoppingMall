@@ -20,6 +20,7 @@ public class UserList implements CommandHandler{
 		//2.뷰 페이지에서 사용할 정보 저장
 		String XML =null;
 		XML="<? xml version=\"1.0\" encoding=\"UTF-8\" ?>";
+		
 		for(UserBean ub : arruse){
 			XML+="<tr>";
 				XML+="<td>"+ub.getNo()+"</td>";
@@ -28,7 +29,7 @@ public class UserList implements CommandHandler{
 				XML+="<td>"+ub.getGrade()+"</td>";
 				XML+="<td>"+ub.getPoint()+"</td>";
 				XML+="<td>"+ub.getCell()+"</td>";
-				XML+="<td>"+ub.getDetailaddr()+"</td>";
+				XML+="<td>"+ub.getAddr()+ub.getDetailaddr()+"</td>";
 				XML+="<td>"+ub.getEmail()+"</td>";
 				XML+="<td>"+ub.getRegdate()+"</td>";
 			XML+="</tr>";	

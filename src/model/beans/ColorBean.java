@@ -5,7 +5,7 @@ public class ColorBean {
 	private int goods_no;
 	private String color;
 	
-	
+
 	public ColorBean(int no, int goods_no, String color) {
 		super();
 		this.no = no;
