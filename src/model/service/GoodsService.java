@@ -58,7 +58,7 @@ public class GoodsService {
 		//ServletContext context = request.getServletContext();
 		//String realFolder = context.getRealPath(saveFolder);
 
-		String SAVEDIR="C:/files";		// 저장할위치
+		String SAVEDIR="C:\\files";		// 저장할위치
 		File file = new File(SAVEDIR);
 		if(!file.isFile()){				// 파일이 존재하지않으면(지금은 폴더)
 			if(!file.isDirectory()){	// 디렉토리가 존재하지않으면
@@ -74,7 +74,7 @@ public class GoodsService {
 		return multi;
 	}
 
-	public ArrayList<String> getFilepath(MultipartRequest multi, String SAVEDIR){
+	public ArrayList<String> getFilepath(MultipartRequest multi){
 		int i=0;
 		ArrayList<String> filePathArr = new ArrayList<String>();
 		Enumeration<?> files = multi.getFileNames();
@@ -83,10 +83,12 @@ public class GoodsService {
 			System.out.println(name);
 			//System.out.println(multi.getFilesystemName(name));	//올려진 파일명
 			//System.out.println(multi.getOriginalFileName(name));	//올려지기전 파일명
+			
+			String SAVEDIR="C:\\files\\";
 			if(null == multi.getFilesystemName(name)){
 				continue;									//올려진 파일명이 널이라면 반복문 건너뛰기
 			}else{
-				SAVEDIR+="/"+multi.getFilesystemName(name);//널이 아니라면 저장폴더+경로로 DB에 올릴 파일 경로 생성하기 
+				SAVEDIR+=multi.getFilesystemName(name);//널이 아니라면 저장폴더+경로로 DB에 올릴 파일 경로 생성하기 
 			}
 			filePathArr.add(SAVEDIR);					//파일 경로 arraylist 에 저장
 			System.out.println(filePathArr.get(i));

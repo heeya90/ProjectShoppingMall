@@ -35,7 +35,7 @@ public class LoginCheck implements CommandHandler{
 		}
 
 		//2.뷰 페이지에서 사용할 정보 저장
-		System.out.println("status(ok, id, pw):"+status);
+		System.out.println("status:"+status);
 		request.setAttribute("status", status);
 		if(status.equals("ok")){
 			HttpSession session = request.getSession();
@@ -44,7 +44,7 @@ public class LoginCheck implements CommandHandler{
 		}
 		
 		//3.뷰 페이지의 URI 리턴
-		return "../common/ajaxreturn/sitehelper_login_return.jsp";
+		return "sitehelper_login_return.jsp";
 	}
 
 }

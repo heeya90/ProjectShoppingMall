@@ -17,9 +17,9 @@ public class DBManager {
 	}
 	
 	public Connection getConnection(){
-		String url = "jdbc:oracle:thin:@localhost:1521:orcl";
-		String userid = "a";
-		String userpw = "a";
+		String url = "jdbc:oracle:thin:@58.233.27.123:1521:orcl";
+		String userid = "smp";
+		String userpw = "test";
 		Connection conn=null;
 		try {
 			
