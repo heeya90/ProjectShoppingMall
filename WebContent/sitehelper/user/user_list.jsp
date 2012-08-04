@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-<script type="text/javascript" src="./user/js/user_list.js"></script>    
+<script type="text/javascript" src="./user/js/user_list.js"></script>
 <title>관리자모드(사용자 리스트)</title>
 
 <div id="sub_contents">
@@ -18,24 +18,23 @@
 						</select>
 						<select name="smonth" class="admin_select_month">
 							<option value=""selected="selected">월</option>
-							</select>
+						</select>
 						<select name="sday" class="admin_select_day">
 							<option value="" selected="selected">일</option>
-							</select> ~ 
+						</select> ~ 
 						<select name="eyear" class="admin_select_year">
 							<option value="" selected="selected">년</option>
-							</select>
-				
+						</select>
 						<select name="emonth" class="admin_select_month">
 							<option value="" selected="selected">월</option>
-							</select>
+						</select>
 						<select name="eday" class="admin_select_day">
 							<option value="" selected="selected">일</option>
-							</select>
-						<select name="shop" class="admin_select_site" disabled>
-							<option value="" selected="selected">전체사이트</option>
-							<option value="" selected="selected"></option>
 						</select>
+						<input class="admin_select_site" type="text" id="datepicker">
+						<!-- <select name="shop" class="admin_select_site" disabled>
+							<option value="" selected="selected">달력으로검색</option>
+						</select> -->
 					</span>
 					<span class="admin_tss_02">
 						<select name="status" class="admin_select_mem">
@@ -43,9 +42,9 @@
 							<option value="N" selected="selected" >탈퇴회원제외</option>			
 						</select>
 						<select name="sType" class="admin_select_sel">
-							<option value="name" selected="selected">이름</option>
 							<option value="userid" selected="selected">아이디</option>			
-							<option value="juso" selected="selected">주소</option>			
+							<option value="email" selected="selected">이메일</option>
+							<option value="name" selected="selected" >이름</option>			
 						</select>
 						<input type="text" name="sKey" class="input_box_sel" />
 					</span>
@@ -75,10 +74,10 @@
 					<th class="th_center">회원번호</th>
 					<th class="th_center">ID/PASS</th>
 					<th class="th_center">성명</th>
-					<th class="th_center">회원등급</th>
-					<th class="th_center">회원포인트</th>					
+					<th class="th_center">등급</th>
+					<th class="th_center">포인트</th>
 					<th class="th_center">휴대폰</th>
-					<th class="th_center">회원주소</th>
+					<th class="th_center">주소</th>
 					<th class="th_center">E_mail</th>
 					<th class="th_center">가입일자</th>
 				</tr>
@@ -86,13 +85,13 @@
 			<tbody>
 			</tbody>
 		</table>
-
-		<div class="admin_list">
+<!-- 		<div class="admin_list">
+>>>>>>> refs/remotes/origin/projectsun
 		<span><a href="">이전10개</a></span>  
 		<span><a href="">이전</a></span>  
 		<span><a href="">다음</a></span>  
 		<span><a href="">다음10개</a></span>  
-		</div>
+		</div> -->
 <!-- 리스트 끝  -->	
 	</div>
 </div>

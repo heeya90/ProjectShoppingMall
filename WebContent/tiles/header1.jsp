@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+ <script type="text/javascript" src="./common/jquery/jquery-ui-1.8.22.custom.min.js"></script>
 <div id="header">
 	<!-- TOP GNB -->
 	<div class="tgnb">

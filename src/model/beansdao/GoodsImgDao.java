@@ -53,7 +53,6 @@ public class GoodsImgDao {
 			
 			for(GoodsImgBean gib : gImgArr){
 				pstmt.setInt(1, gib.getGoodsNo());
-				System.out.println(gib.getGoodsNo());
 				pstmt.setString(2, gib.getImage());
 				pstmt.setString(3, gib.getThumb1());
 				pstmt.setString(4, gib.getThumb2());
