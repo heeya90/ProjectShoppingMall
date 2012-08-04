@@ -85,8 +85,8 @@
 			<tbody>
 			</tbody>
 		</table>
+
 <!-- 		<div class="admin_list">
->>>>>>> refs/remotes/origin/projectsun
 		<span><a href="">이전10개</a></span>  
 		<span><a href="">이전</a></span>  
 		<span><a href="">다음</a></span>  

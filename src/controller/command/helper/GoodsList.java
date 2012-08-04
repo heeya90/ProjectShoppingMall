@@ -50,6 +50,7 @@ public class GoodsList implements CommandHandler {
 		}
 		//request.setCharacterEncoding("EUC-KR");	//이거해도 한글깨짐
 		response.setCharacterEncoding("euc-kr");	//ajax, jQuery는 response 캐릭터 인코딩을 한글로 해야 한글이 안깨진다 
+
 		request.setAttribute("XML", XML);
 		System.out.println(XML);
 		

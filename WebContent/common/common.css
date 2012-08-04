@@ -13,6 +13,8 @@ img{border:0}
 #wrap{width:100%;margin:0 auto;}
 #head{width:100%; margin:0 auto;}
 #header{width:950px;margin:0 auto;}
+#container{width:950px;margin:0 auto;}
+#footer{width:950px;margin:0 auto;}
 #content .sub_v_tt{border-bottom:2px solid #e54430; height:29px;display:block;padding-top:14px;padding-left:13px}
 #content .sub_v_tt h2{padding-top:3px;float:left;color:#777;font-size:14px;font-family:'µ¸¿ò',Dotum,verdana,sans-serif;line-height:17px;letter-spacing:-0.5px;font-weight:bold}
 #content .sub_v_tt span{float:right;}
@@ -164,8 +166,8 @@ div.tgnb .upload a{background:url(../img/bg_gnb.gif) no-repeat left top;padding:
 .sta h1 a img{margin-right:50px;margin-left:13px;_margin-right:47px}
 .sta a{color:#646464;text-decoration:none}
 .sta .search_box{float:left;position:relative;margin-top:7px;padding-left:80px}
-.sta .search_box .search_text{line-height:14px;padding:9px 7px 9px 7px;margin-right:5px;float:left;width:296px;height:14px;border:1px solid #fa1900;color:#000;font-size:12px;font-family:'µ¸¿ò',Dotum,sans-serif;background:url(../img/bg_srch.gif) no-repeat left top}
-:root .sta .search_box .search_text{line-height:14px;padding:4px 7px 1px 7px;width:296px;height:34px}
+.sta .search_box .search_text{line-height:14px;padding:9px 7px 9px 7px;margin-right:5px;float:left;width:312px;height:14px;border:1px solid #fa1900;color:#000;font-size:12px;font-family:'µ¸¿ò',Dotum,sans-serif;background:url(../img/bg_srch.gif) no-repeat left top}
+:root .sta .search_box .search_text{line-height:14px;padding:4px 7px 1px 7px;width:312px;height:34px}
 .sta .search_box .btn_search{font-size:0;zoom:1}
 .sta h2{float:right;margin-top:-35px;margin-right:37px;_margin-top:-38px;_margin-right:17px;#margin-top:-38px}
 
@@ -216,8 +218,11 @@ div.tgnb .upload a{background:url(../img/bg_gnb.gif) no-repeat left top;padding:
 footer{clear:both;background:url(../img/f_ttbg.gif) repeat-x top left;width:100%;margin:0 auto;text-align:center;}
 .f_menu{height:20px;width:950px;margin:0 auto;text-align:center;padding-top:9px}
 .f_mu_left{float:left;padding-left:15px}
-.f_copy{width:950px;margin:0 auto;text-align:center}
-.f_logo{float:left;padding-left:17px;padding-top:29px}
-
+.f_copy{posion:absolut;width:950px;margin:0 auto;text-align:center}
+.f_logo{posion:absolut;float:left;padding-left:10px;padding-top:29px}
 .f_cp{padding-top:7px;padding-left:58px;float:left;font-size:11px;color:#878787;text-align:left;font-family:Dotum,'µ¸¿ò',sans-serif;letter-spacing:-0.3px;line-height:17px}
 .f_cp a{padding:3px 10px 3px 9px;background:url(../img/f_txtbg.gif) no-repeat top left;width:108px;height:16px;font-size:11px;color:#fff;text-align:left;font-family:Dotum,'µ¸¿ò',sans-serif;letter-spacing:-1px;line-height:17px}
+
+/* 1Á¶ Ãß°¡ ÀÔ·Â :°Ë»ö¹öÆ° */
+.clickbutton{cursor:pointer;height:24px;border:none;font-size:12px;width:54px;color:#fff;font-family:dotum,verdana;background:url(../img/lnb_sbg.gif) repeat;padding-bottom:2px;font-weight:bold}
+.clickbutton:hover {border-right: 1px solid #BCBCBC;padding-top: 5px;float: left;width: 76px;height: 22px;background: url(../img/gnb_line.gif) repeat-x left top;text-align: center;color: white;font-size: 11px;font-family: 'µ¸¿ò',Dotum,sans-serif;letter-spacing: -1px;font-weight: bold;display: inline;}

@@ -1,6 +1,5 @@
 $(document).ready(function(){
 	getuserlist();
-
 	$(function() {
 		$( "#datepicker" ).datepicker();
 	});

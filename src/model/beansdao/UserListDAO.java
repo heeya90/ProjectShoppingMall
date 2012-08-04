@@ -12,7 +12,7 @@ public class UserListDAO {
 
 	Connection conn=null;
 	PreparedStatement pstmt=null;
-	ResultSet rs = null; 
+	ResultSet rs = null;
 
 	public ArrayList<UserBean> select(){
 		try{

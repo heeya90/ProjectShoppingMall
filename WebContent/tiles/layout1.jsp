@@ -3,22 +3,23 @@
 <html>
 <head>
 <title><tiles:getAsString name="title" /></title>
-<link href="./common/common.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 	<div id="wrap">
-		<div id="head">
-			<tiles:insertAttribute name="header" />
+		<div id="head" style="border:1 solid black">
+			<tiles:insertAttribute name="header"   />
 		</div>
-		<div id="allcontainer" style="width:950px;margin:0 auto;">
-		<div id="menu" style="width:245px; height:200px; posion:absolut; float:left; ">
-			<tiles:insertAttribute name="menu" />
+		<div id="container">
+			<div id="menu" style="width:245px; float:left;">
+				<tiles:insertAttribute name="menu" />
+			</div>
+			<div id="body" style="width:700px; float:right;">
+				<tiles:insertAttribute name="body" />
+			</div>
 		</div>
-		<div id="container" style="width:700px; height:200px; posion:absolut; float:right;">
-			<tiles:insertAttribute name="body" />
+		<div style="border:1 solid black">
+			<tiles:insertAttribute name="footer"  />
 		</div>
-		</div>
-		<tiles:insertAttribute name="footer" />
 	</div>
 </body>
 </html>

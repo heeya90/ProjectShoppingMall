@@ -20,6 +20,7 @@ public class UserList implements CommandHandler{
 		//2.뷰 페이지에서 사용할 정보 저장
 		String XML =null;
 		XML="<? xml version=\"1.0\" encoding=\"UTF-8\" ?>";
+		
 		for(UserBean ub : arruse){
 			XML+="<tr>";
 				XML+="<td>"+ub.getNo()+"</td>";
