@@ -110,8 +110,8 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class='trClass'>
-                        <!--td><input type="checkbox" name="" class="" value="" /></td-->
+                    <!-- <tr class='trClass'>
+                        <td><input type="checkbox" name="" class="" value="" /></td>
                         <td style="text-align: left;">
                             <span class='category_map_list'></span>
                         </td>
@@ -153,7 +153,7 @@
                         <td>
                             <span class='datetime_list'></span>
                         </td>
-                    </tr>
+                    </tr> -->
                 </tbody>
                 <tfoot>
                     <tr>

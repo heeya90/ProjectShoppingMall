@@ -7,6 +7,7 @@
 <link href="../common/jquery-ui-1.8.22.custom.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../common/jquery/jquery-1.7.2.js"></script>
 <script type="text/javascript" src="./common/common.js"></script>
+<script type="text/javascript" src="./category/js/category_insert.js"></script>
 <script type="text/javascript" src="../common/jquery/jquery-ui-1.8.22.custom.min.js"></script>
 </head>
 <body class="body">

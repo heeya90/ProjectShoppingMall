@@ -13,7 +13,7 @@
 			<div class="admin_tss00">
 				<div class="admin_tss">
 					<span class="admin_tss_01">
-						<select name="syear" class="admin_select_year">
+						<!-- <select name="syear" class="admin_select_year">
 							<option value="" selected="selected">년</option>
 						</select>
 						<select name="smonth" class="admin_select_month">
@@ -21,8 +21,11 @@
 						</select>
 						<select name="sday" class="admin_select_day">
 							<option value="" selected="selected">일</option>
-						</select> ~ 
-						<select name="eyear" class="admin_select_year">
+						</select> -->
+						<input class="admin_select_site" type="text" id="datepicker1">부터
+						 ~ 
+						 <input class="admin_select_site" type="text" id="datepicker2">까지
+						<!-- <select name="eyear" class="admin_select_year">
 							<option value="" selected="selected">년</option>
 						</select>
 						<select name="emonth" class="admin_select_month">
@@ -30,10 +33,6 @@
 						</select>
 						<select name="eday" class="admin_select_day">
 							<option value="" selected="selected">일</option>
-						</select>
-						<input class="admin_select_site" type="text" id="datepicker">
-						<!-- <select name="shop" class="admin_select_site" disabled>
-							<option value="" selected="selected">달력으로검색</option>
 						</select> -->
 					</span>
 					<span class="admin_tss_02">
@@ -58,6 +57,7 @@
 <!-- 검색 부분 끝 -->
 <!-- 리스트 시작  -->
 		<div class="admin_lst">
+		
 			<span class="admin_lst01"><a href="#" id="nameDesc">이름순(내림)</a> | <a href="#" id="nameAsc">이름순(올림)</a> | <a href="#" id="inputdayDesc">가입일순(내림)</a> | <a href="#" id="inputdayAsc">가입일순(올림)</a>    
 				<select name="nPageSize" class="admin_select_lst">					
 					<option value="10"  selected="selected" >10개</option>

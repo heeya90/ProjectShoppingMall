@@ -1,21 +1,22 @@
-$(document).ready(function(){
+$(document).ready(function(){	//페이지 로딩할때 function 실행해라
 	
-	getcategory1();
+	getcategory1();	
 	$("#categoryName1").val("");
+	
 });
 
 /*카테고리  셀렉박스 초기화 시키기*/
-var categoryAReset = function(){
+function categoryAReset(){
 	$("#categoryA option").remove();
 	$("#categoryA").parent().parent().find("input[type=text][id=categoryName]").val("");
 };
-var categoryBReset = function(){
+function categoryBReset(){
 	$("#categoryB option").remove();
 	$("#categoryB").parent().parent().find("input[type=text][id=categoryName]").val("");
 };
 
 /*카테고리 대분류 불러와서 셀렉박스에 집어넣기*/
-var getcategory1 = function(){
+function getcategory1(){
 	categoryAReset();
 	$.post("Category1List.do", function(result){
 		$(result).find("group").each(function(){
@@ -34,7 +35,7 @@ var getcategory1 = function(){
 };
 
 /*카테고리 중분류 불러와서 셀렉박스에 집어넣기*/
-var getcategory2 = function(){
+function getcategory2(){
 	categoryBReset();
 	$.post("Category2List.do",{"category1No":$("#categoryA option:selected").val()}, function(result){
 		$(result).find("group").each(function(){
@@ -51,8 +52,6 @@ var getcategory2 = function(){
 		});
 	});
 };
-
-
 /*카테고리1 등록  버튼 시작*/
 jQuery(function(){
 	$("#newbutton1").bind("click",function(){

@@ -66,7 +66,7 @@ public class GoodsImgDao {
 		}finally{
 			close();
 		}
-		return 1;
+		return -1;
 	}
 
 	public void close(){

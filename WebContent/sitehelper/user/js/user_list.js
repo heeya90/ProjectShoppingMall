@@ -1,21 +1,21 @@
 $(document).ready(function(){
 	getuserlist();
 	$(function() {
-		$( "#datepicker" ).datepicker();
+		$( "#datepicker1, #datepicker2" ).datepicker({ dateFormat: "yy-mm-dd" });
 	});
 
 
 });
 
 /*유저리스트 불러와서 테이블에 집어 넣기*/
-var getuserlist = function(){
+function getuserlist(){
 	$.post("UserList.do", function(result){
 		$("#mainNotice").append(result);
 	});
 };
 
 /*이름으로 검색하기*/
-var getusername = function(){
+function getusername(){
 	$.post("UserListName.do",{"name":$(".input_box_sel").val(),}, function(result){
 		if(result==0){
 			$("#mainNotice").append(result);
@@ -27,7 +27,7 @@ var getusername = function(){
 };
 
 /*아이디로 검색하기*/
-var getuserid = function(){
+function getuserid(){
 	$.post("UserListId.do",{"id":$(".input_box_sel").val(),}, function(result){
 		if(result==0){
 			$("#mainNotice").append(result);
@@ -39,7 +39,7 @@ var getuserid = function(){
 };
 
 /*이메일로 검색하기*/
-var getuseremail = function(){
+function getuseremail(){
 	$.post("UserListEmail.do",{"email":$(".input_box_sel").val(),}, function(result){
 		if(result==0){
 			$("#mainNotice").append(result);

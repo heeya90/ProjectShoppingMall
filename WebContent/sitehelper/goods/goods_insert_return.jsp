@@ -1,1 +1,1 @@
-<% response.sendRedirect("goods_insert.tiles"); %>
+${isSuccess}

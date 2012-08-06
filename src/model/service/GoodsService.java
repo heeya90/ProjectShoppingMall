@@ -15,9 +15,50 @@ import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
 public class GoodsService {
-	
-	public int goodsImgInsert(ArrayList<String> filePathArr, int goodsNo){
+
+	public int goodsInsert(MultipartRequest multiReq){
+		///////////////////////////////////다른 파라미터////////////////////////////////////
+		GoodsBean goodsBean = new GoodsBean();
+		GoodsDao goodsDao = new GoodsDao();
+		String cat1 = multiReq.getParameter("categoryA");
+		String cat2 = multiReq.getParameter("categoryB");
+		String price = multiReq.getParameter("price");
+		String prime = multiReq.getParameter("prime_price");
+		if(cat1==null || cat2==null || price==null || prime==null){	//parseInt 해야해서 널값체크
+			return -1;
+		}
 		
+		goodsBean.setCode		(multiReq.getParameter("p_code"));				// 상품코드
+		goodsBean.setCategory1	(Integer.parseInt(cat1));						// 카테고리 대분류
+		goodsBean.setCategory2	(Integer.parseInt(cat2));						// 카테고리 중분류
+		goodsBean.setName		(multiReq.getParameter("p_name"));				// 상품이름
+		goodsBean.setPrice		(Integer.parseInt(price));						// 판매가
+		goodsBean.setPrime		(Integer.parseInt(prime));						// 원가
+		goodsBean.setSales		(0);											// 판매량
+		goodsBean.setRegion		(multiReq.getParameter("origin_place_radio"));	// 원산지
+		goodsBean.setCompany	(multiReq.getParameter("company"));				//납품회사
+		goodsBean.setContent	(multiReq.getParameter("prd_content"));			// 상세설명
+		goodsBean.setRecommand	(multiReq.getParameter("recommand_product"));	// 추천상품
+		goodsBean.setBest		(multiReq.getParameter("new_product"));			// 인기상품
+		goodsBean.setReadcnt	(0);											// 상품입력이므로 읽은횟수 0
+		goodsBean.setUse		(multiReq.getParameter("useType"));				// Y, N, P(일시품절)
+		
+		//gb.setInventory("속성없음");	// 재고
+		
+		System.out.println(goodsBean.toString());
+		//값 검사해서 빈값있으면 -1 리턴(return 받는곳에서 -1인지 체크)
+		if(goodsBean.getCode().equals("") || goodsBean.getName().equals("")		//코드, 이름 체크
+			|| goodsBean.getCategory1() == 0 || goodsBean.getCategory2() == 0	//카테고리 대,중분류 체크
+			|| goodsBean.getPrice() == 0 || goodsBean.getPrime() == 0			//가격,원가 체크
+			|| goodsBean.getContent().equals("")){
+			return -1;
+		}
+
+		return goodsDao.insertGoods(goodsBean);		//DB에 넣으면서 시퀀스 반환
+	}
+
+	public int goodsImgInsert(ArrayList<String> filePathArr, int goodsNo){
+
 		ArrayList<GoodsImgBean> goodsImgArr = new ArrayList<GoodsImgBean>(); 
 		for(String s : filePathArr){
 			GoodsImgBean goodsImg = new GoodsImgBean();
@@ -30,29 +71,7 @@ public class GoodsService {
 
 		return new GoodsImgDao().insertGoodsImg(goodsImgArr);
 	}
-	public String goodsInsert(MultipartRequest multiReq){
-		///////////////////////////////////다른 파라미터////////////////////////////////////
-		GoodsBean goodsBean = new GoodsBean();
-		GoodsDao goodsDao = new GoodsDao();
 
-		goodsBean.setCode		(multiReq.getParameter("p_code"));					// 상품코드
-		goodsBean.setCategory1	(Integer.parseInt(multiReq.getParameter("categoryA")));	// 카테고리 대분류
-		goodsBean.setCategory2	(Integer.parseInt(multiReq.getParameter("categoryB")));	// 카테고리 중분류
-		goodsBean.setName		(multiReq.getParameter("p_name"));					// 상품이름
-		goodsBean.setPrice		(Integer.parseInt(multiReq.getParameter("price")));			// 판매가
-		goodsBean.setPrime		(Integer.parseInt(multiReq.getParameter("prime_price")));	// 원가
-		goodsBean.setRegion		(multiReq.getParameter("origin_place_radio"));		// 원산지
-		goodsBean.setContent	(multiReq.getParameter("prd_content"));				// 상세설명
-		goodsBean.setRecommand	(multiReq.getParameter("recommand_product"));		// 추천상품
-		goodsBean.setBest		(multiReq.getParameter("new_product"));				// 인기상품
-		goodsBean.setReadcnt	(0);												// 상품입력이므로 읽은횟수 0
-		goodsBean.setUse		(multiReq.getParameter("useType"));					// Y, N, P(일시품절)
-		//gb.setInventory("속성없음");	// 재고
-		//gb.setCompany	 ("속성없음");	//납품회사
-		
-		return goodsDao.insertGoods(goodsBean);		//DB에 넣으면서 시퀀스 반환
-	}
-	
 	public MultipartRequest fileUpload(HttpServletRequest request) throws Throwable {
 		////////////////////////////////////파일 업로드////////////////////////////////////
 		//ServletContext context = request.getServletContext();
@@ -67,8 +86,9 @@ public class GoodsService {
 		}
 
 		//request.setCharacterEncoding("EUC-KR");
-		Integer FILEMAXSIZE = 10*1024*1024;		//10Mbyte
-		MultipartRequest multi = new MultipartRequest(request, SAVEDIR, FILEMAXSIZE, "EUC-KR", new DefaultFileRenamePolicy());	//실제 업로드는 여기서
+		Integer FILEMAXSIZE = 10*1024*1024;		//업로드 용량 제한 10Mbyte
+		//form submit이 아니라 ajax로 보냈으므로 인코딩을 UTF-8로 해준다(ajax는 UTF-8로 인코딩해서 보낸다) 
+		MultipartRequest multi = new MultipartRequest(request, SAVEDIR, FILEMAXSIZE, "utf-8", new DefaultFileRenamePolicy());	//실제 업로드는 여기서
 
 		////////////////////////////////////파일 업로드////////////////////////////////////
 		return multi;
@@ -83,7 +103,7 @@ public class GoodsService {
 			System.out.println(name);
 			//System.out.println(multi.getFilesystemName(name));	//올려진 파일명
 			//System.out.println(multi.getOriginalFileName(name));	//올려지기전 파일명
-			
+
 			String SAVEDIR="C:\\files\\";
 			if(null == multi.getFilesystemName(name)){
 				continue;									//올려진 파일명이 널이라면 반복문 건너뛰기

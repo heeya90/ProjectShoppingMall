@@ -50,52 +50,54 @@ public class GoodsDao {
 		
 		return null;
 	}
-	public String insertGoods(GoodsBean gb){
+	public int insertGoods(GoodsBean gb){
 		try{
 			String sql="INSERT INTO t_goods (" +
-					"no, code, category1, category2, name," +
-					"price, prime, company, region, recommand," +
-					"best, sales, inventory, readcnt, redate," +
-					"inputdate, use, content) " +
-					"VALUES (seq_goods.nextval, ?, ?, ?, ?," +
-					"?, ?, ?, ?, ?," +
-					"?, ?, ?, ?, sysdate, " +
-					"sysdate, ?, ?)";
+					"no, 		code, 	category1,	 category2, name," +
+					"price, 	prime, 	company,	 region, 	recommand," +
+					"best, 		sales, 	inventory,	 readcnt,	redate," +
+					"inputdate, use, 	content) " +
+					"VALUES (seq_goods.nextval, ?, ?, ?, ?," +	//1~4
+					"?, ?, ?, ?, ?," +							//4~9
+					"?, ?, ?, ?, sysdate, " +					//10~13
+					"sysdate, ?, ?)";							//14, 15
 			conn = new DBManager().getConnection();
 			//pstmt=conn.prepareStatement(sql);
-			pstmt= new LoggableStatement(conn, sql);	//SQL 문 추출 가능
+			pstmt= new LoggableStatement(conn, sql);				//SQL 문 추출 가능
+			
+			System.out.println(gb.toString());
+			
+			pstmt.setString( 1, 	gb.getCode());		//NOT NULL
+			pstmt.setInt(	 2, 	gb.getCategory1());	//NOT NULL
+			pstmt.setInt(	 3, 	gb.getCategory2());	//NOT NULL
+			pstmt.setString( 4, 	gb.getName());		//NOT NULL
 
-			pstmt.setString(1, 	gb.getCode());
-			pstmt.setInt(	2, 	gb.getCategory1());
-			pstmt.setInt(	3, 	gb.getCategory2());
-			pstmt.setString(4, 	gb.getName());
+			pstmt.setInt(	 5, 	gb.getPrice());		//NOT NULL
+			pstmt.setInt(	 6,		gb.getPrime());		//NOT NULL
+			pstmt.setString( 7, 	gb.getCompany());
+			pstmt.setString( 8, 	gb.getRegion());
+			pstmt.setString( 9,		gb.getRecommand());
 
-			pstmt.setInt(	5, 	gb.getPrice());
-			pstmt.setInt(	6,	gb.getPrime());
-			pstmt.setString(7, 	gb.getCompany());
-			pstmt.setString(8, 	gb.getRegion());
-			pstmt.setString(9,	gb.getRecommand());
+			pstmt.setString( 10,	gb.getBest());
+			pstmt.setInt(	 11,	gb.getSales());		//NOT NULL
+			pstmt.setInt(	 12,	gb.getInventory());	//NOT NULL
+			pstmt.setInt(	 13,	gb.getReadcnt());	//NOT NULL
 
-			pstmt.setString(10,	gb.getBest());
-			pstmt.setInt(	11, gb.getSales());
-			pstmt.setInt(	12, gb.getInventory());
-			pstmt.setInt(	13, gb.getReadcnt());
-
-			pstmt.setString(14,	gb.getUse());
-			pstmt.setString(15,	gb.getContent());
+			pstmt.setString( 14,	gb.getUse());		//NOT NULL
+			pstmt.setString( 15,	gb.getContent());	//NOT NULL
 
 			System.out.println("Executing query: "+
-					((LoggableStatement)pstmt).getQueryString());	//이렇게 SQL문을 추출 가능
+					((LoggableStatement)pstmt).getQueryString());	//이렇게 SQL문을 추출
 			pstmt.executeUpdate();
 
-			return this.getSeq(); 
+			return Integer.parseInt(this.getSeq()); 
 
 		}catch(Exception e){ 
 			System.out.println("Dao.insert() 에러"+e.getMessage());
 		}finally{
 			close();
 		}
-		return null;
+		return -1;
 	}
 
 	public String getSeq(){

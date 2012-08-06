@@ -1,15 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"
 %>
-    <!DOCTYPE html">
+    <!DOCTYPE html>
     <script type="text/javascript" src="goods/js/goods_insert.js"></script>
+    <script type="text/javascript" src="../common/jquery.form.js"></script>
     <title>관리자모드(상품등록/수정)</title>
     <div id="content">
-        <div class="admin_loca">HOME - 상품관리 - 상품등록/수정 -
-            <b>[
-                <span class="productListTitle"></span>]상품</b>
-        </div>
-        <div class="admin_title">[
-            <span class="productListTitle"></span>]상품 등록</div>
+        <div class="admin_loca">HOME - 상품관리 - 상품등록/수정 - <b>상품<!-- [<span class="productListTitle"></span>] --></b></div>
+        <div class="admin_title">
+            <!-- [<span class="productListTitle"></span>] -->상품 등록</div>
         <!-- <form name="frmMove" method="post">
             <input type="hidden" name="sKey" id="sKey" value="" />
             <input type="hidden" name="sType" id="sType" value="" />
@@ -41,13 +39,13 @@
                             <td class="td_cen" colspan="4">
                                 <span class="action">
                                     <img src="./img/admin_btn_enter.gif" class="clickbutton" id="submitbutton1"
-                                    STYLE="type:button; value:입력" />
+                                    STYLE="type: button; value: 입력" />
                                     <img src="./img/admin_btn_list.gif" class="clickbutton" id="listbutton1"
-                                    STYLE="type:button; value:리스트" />
+                                    STYLE="type: button; value: 리스트" />
                                     <img src="./img/admin_btn_del.gif" class="clickbutton" id="deletebutton1"
-                                    STYLE="type:button; value:삭제" />
+                                    STYLE="type: button; value: 삭제" />
                                     <img src="./img/admin_btn_zero.gif" class="clickbutton" id="resetbutton1"
-                                    STYLE="type:button; value:초기화" />
+                                    STYLE="type: button; value: 초기화" />
                                 </span>
                             </td>
                         </tr>
@@ -94,7 +92,7 @@
                         <tr>
                             <th class="th_center">옵션</th>
                             <td class="left" colspan="3">
-                                <table style="border:0; cellpadding:0; cellspacing:0" class="admin_table03">
+                                <table style="border: 0; cellpadding: 0; cellspacing: 0" class="admin_table03">
                                     <tr>
                                         <th class="th_center">
                                             <input type="text" name="optionText1" id="optionText1" value="color" class="optionText"
@@ -138,7 +136,7 @@
                         <tr>
                             <th class="th_center">상품구분</th>
                             <td class="left" colspan="3">
-                                <table style="border:0; cellpadding:0; cellspacing:0" class="admin_table03">
+                                <table style="border: 0; cellpadding: 0; cellspacing: 0" class="admin_table03">
                                     <tr>
                                         <th class="th_center">추천상품</th>
                                         <th class="th_center">인기상품</th>
@@ -191,6 +189,13 @@
                             </td>
                         </tr>
                         <tr>
+                            <th class="th_center">회사</th>
+                            <td class="left" colspan="3">
+                            <span>납품하는 회사명 :</span>
+                            <input type="text" name="company" id="company" value="옷가게" />
+                            </td>
+                        </tr>
+                        <tr>
                             <th class="th_center">가격</th>
                             <td class="left" colspan="3">
                                 <span>상품원가 :</span>
@@ -222,35 +227,35 @@
                                 <span id="img1">
                                     <input type="file" name="file" class="inputbox01" />
                                     <img src="/upload/product/" border="0" />&nbsp;
-                                    <img src="./img/admin_btn_del.gif" style="type:button" class="clickbutton"
+                                    <img src="./img/admin_btn_del.gif" style="type: button" class="clickbutton"
                                     id="delimg1" />
                                 </span>
                                 <br />
                                 <span id="img2">
                                     <input type="file" name="file2" class="inputbox01" />
                                     <img src="/upload/product/" border="0" />&nbsp;
-                                    <img src="./img/admin_btn_del.gif" style="type:button" class="clickbutton"
+                                    <img src="./img/admin_btn_del.gif" style="type: button" class="clickbutton"
                                     id="delimg2" />
                                 </span>
                                 <br />
                                 <span id="img3">
                                     <input type="file" name="file3" class="inputbox01" />
                                     <img src="/upload/product/" border="0" />&nbsp;
-                                    <img src="./img/admin_btn_del.gif" style="type:button" class="clickbutton"
+                                    <img src="./img/admin_btn_del.gif" style="type: button" class="clickbutton"
                                     id="delimg3" />
                                 </span>
                                 <br />
                                 <span id="img4">
                                     <input type="file" name="file4" class="inputbox01" />
                                     <img src="/upload/product/" border="0" />&nbsp;
-                                    <img src="./img/admin_btn_del.gif" style="type:button" class="clickbutton"
+                                    <img src="./img/admin_btn_del.gif" style="type: button" class="clickbutton"
                                     id="delimg4" />
                                 </span>
                                 <br />
                                 <span id="img5">
                                     <input type="file" name="file5" class="inputbox01" />
                                     <img src="/upload/product/" border="0" />&nbsp;
-                                    <img src="./img/admin_btn_del.gif" style="type:button" class="clickbutton"
+                                    <img src="./img/admin_btn_del.gif" style="type: button" class="clickbutton"
                                     id="delimg5" />
                                 </span>
                             </td>
@@ -266,7 +271,7 @@
                             <th class="th_center">상세설명</th>
                             <td class="left" colspan="3">
                                 <div id="contentTab">
-                                    <textarea id="prd_content" name="prd_content" style="width:100%; height:100px; /* display:none; */"></textarea>
+                                    <textarea id="prd_content" name="prd_content" style="width: 100%; height: 100px;"></textarea>
                                 </div>
                                 <br>
                                 <input type="button" value="이미지첨부" id="imgPluse" name="imgPluse" class="clickbutton01"
@@ -276,20 +281,20 @@
                         <tr>
                             <th class="th_center">메모</th>
                             <td class="left" colspan="3">
-                                <textarea id="prd_memo" name="prd_memo" class="textarea" style="width:100%; height: 150px;"></textarea>
+                                <textarea id="prd_memo" name="prd_memo" class="textarea" style="width: 100%; height: 150px;"></textarea>
                             </td>
                         </tr>
                         <tr>
                             <td class="td_cen" colspan="4">
                                 <span class="action">
                                     <img src="./img/admin_btn_enter.gif" class="clickbutton" id="submitbutton2"
-                                    STYLE="type:button; value:입력" />
+                                    STYLE="type: button; value: 입력" />
                                     <img src="./img/admin_btn_list.gif" class="clickbutton" id="listbutton2"
-                                    STYLE="type:button; value:리스트" />
+                                    STYLE="type: button; value: 리스트" />
                                     <img src="./img/admin_btn_del.gif" class="clickbutton" id="deletebutton2"
-                                    STYLE="type:button; value:삭제" />
+                                    STYLE="type: button; value: 삭제" />
                                     <img src="./img/admin_btn_zero.gif" class="clickbutton" id="resetbutton2"
-                                    STYLE="type:button; value:초기화" />
+                                    STYLE="type: button; value: 초기화" />
                                 </span>
                             </td>
                         </tr>
