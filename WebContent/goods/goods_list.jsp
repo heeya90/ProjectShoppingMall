@@ -23,7 +23,7 @@
 			<th class="jw_theader">상품코드</th>
 			<th class="jw_theader">상품명</th>
 			<th class="jw_theader">상품가격</th>
-			<th class="jw_theader">제조사</th>
+			<th class="jw_theader">제조사/원산지</th>
 			<th class="jw_theader">원산지</th>
 		</tr>
 	</thead>
@@ -47,3 +47,4 @@
 	<tbody>
 	</tbody>
 </table>
+				<%=request.getAttribute("category2")%>

@@ -10,7 +10,11 @@
 	<ul>
 	<li><a href="menuuser.tiles">사용자타일즈(메뉴)</a></li>
     <li><a href="nomenuuser.tiles">사용자타일즈(메뉴없음)</a></li>
-    <li><a href="no_user_main.tiles">사용자타일즈(메인화면)</a></li>
+    <li><a href="UserMain.do">사용자타일즈(메인화면)</a></li>
+    <li><a href="Header.do">사용자타일즈(헤더)</a></li>
+    <li><a href="Menu.do">사용자타일즈(메뉴)</a></li>
+ 
+ 	<li><a href="m_other_1.tiles">사용자타일즈(로그인)</a></li>   
 	<li><a href="no_user_login.tiles">사용자타일즈(로그인)</a></li>
 	<li><a href="no_user_find.tiles">사용자타일즈(아이디찾기)</a></li>
     <li><a href="no_user_reg.tiles">사용자타일즈(회원가입)</a></li>

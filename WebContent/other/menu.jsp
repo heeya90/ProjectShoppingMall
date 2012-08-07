@@ -5,7 +5,7 @@
 		<img src="./img/board_lefttt.gif" />
 	</div>
 	<div class="left_board_t02">
-		<span class="left_bd_mu01"><a href="">공지사항</a></span>
+		<span class="left_bd_mu02"><a href="">공지사항</a></span>
 		<span class="left_bd_mu02"><a href="">이용안내FAQ</a></span>
 		<span class="left_bd_mu03"><a href="">문의하기</a></span>
 		<span class="left_bd_mu04"><a href="">문의하기</a></span>
