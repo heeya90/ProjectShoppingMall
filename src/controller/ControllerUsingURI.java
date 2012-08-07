@@ -6,16 +6,16 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Properties;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import controller.command.CommandHandler;
 import controller.command.NullHandler;
+import controller.command.user.Header;
+import controller.command.user.Menu;
 
 public class ControllerUsingURI extends HttpServlet {
 
@@ -101,9 +101,15 @@ public class ControllerUsingURI extends HttpServlet {
 			// 값으로 전달 받는다. 핸들러 인스턴스인 handler의 process()메서드는 클라이언트의 요청을 알맞게 처리한
 			// 후, 뷰 페이지에 보여줄 결과값을 request나 session의 속성에 저장해야 한다.
 			viewPage = handler.process(request, response);
+			
+			//항상 Header의 메뉴를 셋팅하기 위해서 Hedaer.javad의 process 메서드를 실행해주자
+			// 추후 if문 걸어서 1번만 실행하면 그다음부터는 할 필요가 없다. 	
+			if(request.getSession().getAttribute("category1")==null)
+				new Header().process(request, response);
 		} catch (Throwable e){
 			throw new ServletException(e);
 		}
+		
 		
 		//핸들러 인스턴스가 리턴한 뷰 페이지로 이동한다.
 		System.out.println(viewPage);

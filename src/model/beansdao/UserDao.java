@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import model.beans.UserBean;
 import model.databasemanage.DBManager;
@@ -175,11 +176,71 @@ public class UserDao {
 			
 			rs.next();
 			result = rs.getInt(1);
-					
+			if (result == 1){
+				pstmt=conn.prepareStatement("select id, pw from t_user where id=? and pw=?");
+				pstmt.setString(1, name);
+				pstmt.setString(2, email);
+				pstmt.executeQuery();
+				
+				rs.next();
+				user.setId(rs.getString("id"));
+				user.setPw(rs.getString("pw"));
+			}		
 			
 		}catch(Exception e){ 
 			System.out.println("UserDao.findId() 에러"+e.getMessage());
 		}
 		return result;
+	}
+	
+	public ArrayList<UserBean> findidpw(String name, String email){
+		try{
+			conn = new DBManager().getConnection();
+			pstmt=conn.prepareStatement("SELECT id FROM t_user where name=? and email=?");
+
+			pstmt.setString(1, name);
+			pstmt.setString(2, email);
+			rs = pstmt.executeQuery();
+			ArrayList<UserBean> user = new ArrayList<UserBean>();
+
+			while(rs.next()){
+				UserBean bean = new UserBean();
+				bean.setId(rs.getString("id"));
+				user.add(bean);
+			}
+			return user;
+		}catch(Exception e){ 
+			System.out.println("사용자  이름별 리스트 에러 :"+e.getMessage());
+		}finally{
+			try{if(null!=rs) rs.close(); if(null!=pstmt) pstmt.close();if(conn!=null) conn.close();
+			}catch(SQLException e){e.getMessage();}
+		}
+		return null;
+	}
+	
+	public ArrayList<UserBean> findidpw(String id, String name, String email){
+		try{
+			conn = new DBManager().getConnection();
+			pstmt=conn.prepareStatement("SELECT pw FROM t_user where id=? and name=? and email=?");
+			
+			pstmt.setString(1, id);
+			pstmt.setString(2, name);
+			pstmt.setString(3, email);
+			rs = pstmt.executeQuery();
+			ArrayList<UserBean> user = new ArrayList<UserBean>();
+
+			while(rs.next()){
+				UserBean bean = new UserBean();
+				bean.setId(rs.getString("pw"));
+				user.add(bean);
+			}
+			return user;
+		}catch(Exception e){ 
+			System.out.println("사용자  이름별 리스트 에러 :"+e.getMessage());
+		}finally{
+			try{if(null!=rs) rs.close(); if(null!=pstmt) pstmt.close();if(conn!=null) conn.close();
+			}catch(SQLException e){e.getMessage();}
+		}
+		return null;
 	}
 }
