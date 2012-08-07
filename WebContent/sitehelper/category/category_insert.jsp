@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
-<script type="text/javascript" src="./category/js/category_insert.js"></script>
 
 <title>관리자모드(카테고리)</title>
 

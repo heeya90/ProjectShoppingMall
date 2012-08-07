@@ -6,7 +6,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import model.beans.GoodsBean;
-import model.beans.GoodsImgBean;
 import model.beansdao.GoodsDao;
 import model.beansdao.GoodsImgDao;
 import controller.command.CommandHandler;
@@ -17,15 +16,22 @@ public class GoodsList implements CommandHandler {
 	public String process(HttpServletRequest request,
 						  HttpServletResponse response) throws Throwable {
 		
+		String RETURN_PAGE="goods_list.tiles";
 		GoodsDao goodsDao = new GoodsDao();
 		GoodsImgDao goodsImgDao = new GoodsImgDao();
+		int totalGoodsCount = goodsDao.getGoodsCount(); 
 		ArrayList<GoodsBean> arrGoods = goodsDao.getGoodsList();
 		
 		for(GoodsBean gb : arrGoods){
 			gb.setImg(goodsImgDao.getGoodsImg(gb.getNo()));
 		}
+		
+		response.setCharacterEncoding("euc-kr");	//ajax, jQuery는 response 캐릭터 인코딩을 한글로 해야 한글이 안깨진다 
+		request.setAttribute("arrGoods", arrGoods);
+		request.setAttribute("totalGoods", totalGoodsCount);
+		System.out.println(totalGoodsCount);
 		//분류 상품코드 이미지 상품명 승인 공급가/판매가 조회 등록일
-		String XML="";
+		/*String XML="";
 		for(GoodsBean gb : arrGoods){
 			//값 숨기기(클릭시 상세페이지로 이동하기 위한 시퀀스
 			//XML+="<td>"+gb.getNo()+"</td>";
@@ -70,7 +76,7 @@ public class GoodsList implements CommandHandler {
 			//등록일
 			XML+="<td>"+gb.getInputdate()+"</td>";
 			XML+="</tr>";
-		}
+		}*/
 		/*<tr class='trClass'>
         <td><input type="checkbox" name="" class="" value="" /></td>
         <td style="text-align: left;">
@@ -116,12 +122,8 @@ public class GoodsList implements CommandHandler {
         </td>
     </tr>*/
 		//request.setCharacterEncoding("EUC-KR");	//이거해도 한글깨짐
-		response.setCharacterEncoding("euc-kr");	//ajax, jQuery는 response 캐릭터 인코딩을 한글로 해야 한글이 안깨진다 
-
-		request.setAttribute("XML", XML);
-		System.out.println(XML);
 		
-		return "goods/goods_list_return.jsp";
+		return RETURN_PAGE;
 	}
 
 }

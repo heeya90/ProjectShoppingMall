@@ -24,7 +24,10 @@ public class GoodsService {
 		String cat2 = multiReq.getParameter("categoryB");
 		String price = multiReq.getParameter("price");
 		String prime = multiReq.getParameter("prime_price");
-		if(cat1==null || cat2==null || price==null || prime==null){	//parseInt 해야해서 널값체크
+		String inventory = multiReq.getParameter("inventory");
+		if(cat1==null || cat2==null
+				|| price==null || prime==null
+					|| inventory==null ){	//parseInt 해야해서 널값체크
 			return -1;
 		}
 		
@@ -35,17 +38,15 @@ public class GoodsService {
 		goodsBean.setPrice		(Integer.parseInt(price));						// 판매가
 		goodsBean.setPrime		(Integer.parseInt(prime));						// 원가
 		goodsBean.setSales		(0);											// 판매량
-		goodsBean.setRegion		(multiReq.getParameter("origin_place_radio"));	// 원산지
-		goodsBean.setCompany	(multiReq.getParameter("company"));				//납품회사
+		goodsBean.setRegion		(multiReq.getParameter("region"));				// 원산지
+		goodsBean.setCompany	(multiReq.getParameter("company"));				// 납품회사
 		goodsBean.setContent	(multiReq.getParameter("prd_content"));			// 상세설명
 		goodsBean.setRecommand	(multiReq.getParameter("recommand_product"));	// 추천상품
 		goodsBean.setBest		(multiReq.getParameter("new_product"));			// 인기상품
 		goodsBean.setReadcnt	(0);											// 상품입력이므로 읽은횟수 0
 		goodsBean.setUse		(multiReq.getParameter("useType"));				// Y, N, P(일시품절)
+		goodsBean.setInventory	(Integer.parseInt(inventory));					// 재고
 		
-		//gb.setInventory("속성없음");	// 재고
-		
-		System.out.println(goodsBean.toString());
 		//값 검사해서 빈값있으면 -1 리턴(return 받는곳에서 -1인지 체크)
 		if(goodsBean.getCode().equals("") || goodsBean.getName().equals("")		//코드, 이름 체크
 			|| goodsBean.getCategory1() == 0 || goodsBean.getCategory2() == 0	//카테고리 대,중분류 체크
@@ -88,7 +89,7 @@ public class GoodsService {
 		//request.setCharacterEncoding("EUC-KR");
 		Integer FILEMAXSIZE = 10*1024*1024;		//업로드 용량 제한 10Mbyte
 		//form submit이 아니라 ajax로 보냈으므로 인코딩을 UTF-8로 해준다(ajax는 UTF-8로 인코딩해서 보낸다) 
-		MultipartRequest multi = new MultipartRequest(request, SAVEDIR, FILEMAXSIZE, "utf-8", new DefaultFileRenamePolicy());	//실제 업로드는 여기서
+		MultipartRequest multi = new MultipartRequest(request, SAVEDIR, FILEMAXSIZE, "UTF-8", new DefaultFileRenamePolicy());//실제 업로드는 여기서
 
 		////////////////////////////////////파일 업로드////////////////////////////////////
 		return multi;

@@ -1,96 +1,74 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"
 %>
     <!DOCTYPE html>
     <script type="text/javascript" src="goods/js/goods_insert.js"></script>
     <script type="text/javascript" src="../common/jquery.form.js"></script>
-    <title>∞¸∏Æ¿⁄∏µÂ(ªÛ«∞µÓ∑œ/ºˆ¡§)</title>
+    <title>Í¥ÄÎ¶¨ÏûêÎ™®Îìú(ÏÉÅÌíàÎì±Î°ù/ÏàòÏ†ï)</title>
     <div id="content">
-        <div class="admin_loca">HOME - ªÛ«∞∞¸∏Æ - ªÛ«∞µÓ∑œ/ºˆ¡§ - <b>ªÛ«∞<!-- [<span class="productListTitle"></span>] --></b></div>
+        <div class="admin_loca">HOME - ÏÉÅÌíàÍ¥ÄÎ¶¨ - ÏÉÅÌíàÎì±Î°ù/ÏàòÏ†ï - <b>ÏÉÅÌíà<!-- [<span class="productListTitle"></span>] --></b></div>
         <div class="admin_title">
-            <!-- [<span class="productListTitle"></span>] -->ªÛ«∞ µÓ∑œ</div>
-        <!-- <form name="frmMove" method="post">
-            <input type="hidden" name="sKey" id="sKey" value="" />
-            <input type="hidden" name="sType" id="sType" value="" />
-            <input type="hidden" name="com_type" id="com_type" value="" />
-            <input type="hidden" name="sort" id="sort" value="" />
-            <input type="hidden" name="com_category" id="com_category" value="" />
-            <input type="hidden" name="com_id" id="com_id" value="" />
-            <input type="hidden" name="productKey" id="productKey" value="" />
-            <input type="hidden" name="nPage" id="nPage" value="" />
-            <input type="hidden" name="pPage" id="pPage" value="" />
-            <input type="hidden" name="pKey" id="pKey" value="" />
-            <input type="hidden" name="pType" id="pType" value="" />
-            <input type="hidden" name="categoryA" id="categoryA" value="" />
-            <input type="hidden" name="categoryB" id="categoryB" value="" />
-            <input type="hidden" name="sYear" id="sYear" value="" />
-            <input type="hidden" name="sMonth" id="sMonth" value="" />
-            <input type="hidden" name="sDay" id="sDay" value="" />
-            <input type="hidden" name="eYear" id="eYear" value="" />
-            <input type="hidden" name="eMonth" id="eMonth" value="" />
-            <input type="hidden" name="eDay" id="eDay" value="" />
-            <input type="hidden" name="topSearch" id="topSearch" value="" />
-        </form> -->
+            <!-- [<span class="productListTitle"></span>] -->ÏÉÅÌíà Îì±Î°ù</div>
         <div id="productWriteForm">
-            <form name='frm' id='frm' method='post' enctype='multipart/form-data'>
+            <form action="goodsinsert.do" name='frm' id='frm' method='post' enctype='multipart/form-data; charset=UTF-8'>
                 <input type="hidden" name="com_id" id="com_id" value=">" />
-                <table class="boardinput" summary="ªÛ«∞ µÓ∑œ" style="width: 780px;">
+                <table class="boardinput" summary="ÏÉÅÌíà Îì±Î°ù" style="width: 780px;">
                     <tbody>
                         <tr>
                             <td class="td_cen" colspan="4">
                                 <span class="action">
                                     <img src="./img/admin_btn_enter.gif" class="clickbutton" id="submitbutton1"
-                                    STYLE="type: button; value: ¿‘∑¬" />
+                                    STYLE="type: button; value: ÏûÖÎ†•" />
                                     <img src="./img/admin_btn_list.gif" class="clickbutton" id="listbutton1"
-                                    STYLE="type: button; value: ∏ÆΩ∫∆Æ" />
+                                    STYLE="type: button; value: Î¶¨Ïä§Ìä∏" />
                                     <img src="./img/admin_btn_del.gif" class="clickbutton" id="deletebutton1"
-                                    STYLE="type: button; value: ªË¡¶" />
+                                    STYLE="type: button; value: ÏÇ≠Ï†ú" />
                                     <img src="./img/admin_btn_zero.gif" class="clickbutton" id="resetbutton1"
-                                    STYLE="type: button; value: √ ±‚»≠" />
+                                    STYLE="type: button; value: Ï¥àÍ∏∞Ìôî" />
                                 </span>
                             </td>
                         </tr>
                         <tr>
-                            <th class="th_center">ªÛ«∞∏Ì</th>
+                            <th class="th_center">ÏÉÅÌíàÎ™Ö</th>
                             <td class="left" colspan="3">
-                                <input type="text" class="input_box_txt" name="p_name" id="p_name" value="π›πŸ¡ˆ"
+                                <input type="text" class="input_box_txt" name="p_name" id="p_name" value="${ goodsBean.name }" 
                                 style="width: 400px;" />
                                 <!-- class="inputbox250" -->
                             </td>
                         </tr>
                         <tr>
-                            <th class="th_center">ªÛ«∞ƒ⁄µÂ</th>
+                            <th class="th_center">ÏÉÅÌíàÏΩîÎìú</th>
                             <td class="left">
-                                <input type="text" name="p_code" id="p_code" class="input_box_txt" readOnly="readOnly"
-                                value="" />
+                                <input type="text" name="p_code" id="p_code" class="input_box_txt" readOnly="readOnly" value="${ goodsBean.code }" />
+                                <input type="button" id="codegen" value="ÏΩîÎìúÏÉùÏÑ±"/>
                                 <!-- class="optionText" -->
                             </td>
                         </tr>
                         <tr>
-                            <th class="th_center">ƒ´≈◊∞Ì∏Æ</th>
+                            <th class="th_center">Ïπ¥ÌÖåÍ≥†Î¶¨</th>
                             <td class="left" colspan="4">
                                 <div class="categoryBox01">
-                                    <div class="categoryGubun01">¥Î∫–∑˘</div>
+                                    <div class="categoryGubun01">ÎåÄÎ∂ÑÎ•ò</div>
                                     <div class="categorySelectBox">
                                         <select name="categoryA" id="categoryA" class="selectBox" size="10"></select>
                                     </div>
                                 </div>
                                 <div class="categoryBox01">
-                                    <div class="categoryGubun01">¡ﬂ∫–∑˘</div>
+                                    <div class="categoryGubun01">Ï§ëÎ∂ÑÎ•ò</div>
                                     <div class="categorySelectBox">
                                         <select name="categoryB" id="categoryB" class="selectBox" size="10"></select>
                                     </div>
                                 </div>
                             </td>
                         </tr>
-                        <tr>
-                            <th class="th_center">∞Àªˆ≈∞øˆµÂ</th>
+                        <!-- <tr>
+                            <th class="th_center">Í≤ÄÏÉâÌÇ§ÏõåÎìú</th>
                             <td class="left" colspan="3">
-                                <input type="text" name="keyword" id="keyword" value="πŸ¡ˆ" class="input_box_txt"
+                                <input type="text" name="keyword" id="keyword" value="Î∞îÏßÄ" class="input_box_txt"
                                 />
                             </td>
-                        </tr>
-                        <tr>
-                            <th class="th_center">ø…º«</th>
+                        </tr> -->
+                        <!-- <tr>
+                            <th class="th_center">ÏòµÏÖò</th>
                             <td class="left" colspan="3">
                                 <table style="border: 0; cellpadding: 0; cellspacing: 0" class="admin_table03">
                                     <tr>
@@ -110,7 +88,7 @@
                                             <input type="text" name="optionText4" id="optionText4" value="" class="optionText"
                                             />
                                         </th>
-                                        <!--th class="eeeeBg"><input type="text" name="optionText3" id="optionText3" value="" class="optionText" /></th-->
+                                        th class="eeeeBg"><input type="text" name="optionText3" id="optionText3" value="" class="optionText" /></th
                                     </tr>
                                     <tr>
                                         <td class="td_cen">
@@ -132,22 +110,22 @@
                                     </tr>
                                 </table>
                             </td>
-                        </tr>
+                        </tr> -->
                         <tr>
-                            <th class="th_center">ªÛ«∞±∏∫–</th>
+                            <th class="th_center">ÏÉÅÌíàÍµ¨Î∂Ñ</th>
                             <td class="left" colspan="3">
                                 <table style="border: 0; cellpadding: 0; cellspacing: 0" class="admin_table03">
                                     <tr>
-                                        <th class="th_center">√ﬂ√µªÛ«∞</th>
-                                        <th class="th_center">¿Œ±‚ªÛ«∞</th>
+                                        <th class="th_center">Ï∂îÏ≤úÏÉÅÌíà</th>
+                                        <th class="th_center">Ïù∏Í∏∞ÏÉÅÌíà</th>
                                     </tr>
                                     <tr>
                                         <td class="td_cen">
                                             <input type="checkbox" name="recommand_product" id="recommand_product"
-                                            value="Y" checked="checked" />
+                                            value="${ goodsBean.recommand }" checked="checked" />
                                         </td>
                                         <td class="td_cen">
-                                            <input type="checkbox" name="new_product" id="new_product" value="Y" checked="checked"
+                                            <input type="checkbox" name="new_product" id="new_product" value="${ goodsBean.best }" checked="checked"
                                             />
                                         </td>
                                     </tr>
@@ -155,77 +133,70 @@
                             </td>
                         </tr>
                         <tr>
-                            <th class="th_center">∆«∏≈ªÛ≈¬</th>
+                            <th class="th_center">ÌåêÎß§ÏÉÅÌÉú</th>
                             <td class="left" colspan="3">
                                 <label>
-                                    <input type="radio" name="useType" value="Y" checked="checked" />Ω¬¿Œ</label>
+                                    <input type="radio" name="prd_use" value="Y" checked="checked" />ÏäπÏù∏</label>
                                 <label>
-                                    <input type="radio" name="useType" value="N" />πÃΩ¬¿Œ</label>
+                                    <input type="radio" name="prd_use" value="N" />ÎØ∏ÏäπÏù∏</label>
                                 <label>
-                                    <input type="radio" name="useType" value="P" />¿œΩ√«∞¿˝</label>
+                                    <input type="radio" name="prd_use" value="P" />ÏùºÏãúÌíàÏ†à</label>
                             </td>
                         </tr>
-                        <tr>
-                            <th class="th_center">∆«∏≈¥‹¿ß</th>
+                        <!-- <tr>
+                            <th class="th_center">ÌåêÎß§Îã®ÏúÑ</th>
                             <td class="left" colspan="3">
                                 <select name="sale_unit" id="sale_unit" class="admin_select_site">
-                                    <!-- class="inputbox" -->
-                                    <option value="∞≥" selected="selected">∞≥</option>
+                                    class="inputbox"
+                                    <option value="Í∞ú" selected="selected">Í∞ú</option>
                                     <option value="SET" selected="selected">SET</option>
                                     <option value="BOX" selected="selected">BOX</option>
                                 </select>
                             </td>
-                        </tr>
+                        </tr> -->
                         <tr>
-                            <th class="th_center">ø¯ªÍ¡ˆ</th>
+                            <th class="th_center">ÏõêÏÇ∞ÏßÄ</th>
                             <td class="left" colspan="3">
-                                <input name="origin_place_radio" type="radio" value="" />
-                                <span>ø¯ªÍ¡ˆπÃ»ÆΩ«</span>
-                                <input name="origin_place_radio" type="radio" value="±π≥ªªÍ"
+                                <span>ÏßÄÏó≠Î™Ö ÏûÖÎ†•:</span><input type="text" name="region" value="${ goodsBean.region }" />
+                                <!-- <input name="origin_place_radio" type="radio" value="" />
+                                <span>ÏõêÏÇ∞ÏßÄÎØ∏ÌôïÏã§</span>
+                                <input name="origin_place_radio" type="radio" value="Íµ≠ÎÇ¥ÏÇ∞"
                                 checked="checked" />
-                                <span>±π≥ªªÍ</span>
-                                <input name="origin_place_radio" type="radio" value="¡ﬂ±πªÍ" />
-                                <span>¡ﬂ±πªÍ</span>
+                                <span>Íµ≠ÎÇ¥ÏÇ∞</span>
+                                <input name="origin_place_radio" type="radio" value="Ï§ëÍµ≠ÏÇ∞" />
+                                <span>Ï§ëÍµ≠ÏÇ∞</span> -->
                             </td>
                         </tr>
                         <tr>
-                            <th class="th_center">»∏ªÁ</th>
+                            <th class="th_center">ÌöåÏÇ¨</th>
                             <td class="left" colspan="3">
-                            <span>≥≥«∞«œ¥¬ »∏ªÁ∏Ì :</span>
-                            <input type="text" name="company" id="company" value="ø ∞°∞‘" />
+                            <span>ÎÇ©ÌíàÌöåÏÇ¨Î™Ö :</span>
+                            <input type="text" name="company" id="company" value="${ goodsBean.company }" />
                             </td>
                         </tr>
                         <tr>
-                            <th class="th_center">∞°∞›</th>
+                            <th class="th_center">Í∞ÄÍ≤©</th>
                             <td class="left" colspan="3">
-                                <span>ªÛ«∞ø¯∞° :</span>
-                                <input type="text" name="prime_price" id="prime_price" value="30000"
-                                class="inputbox50" />ø¯
+                                <span>ÏÉÅÌíàÏõêÍ∞Ä :</span>
+                                <input type="text" name="prime_price" id="prime_price" value="${ goodsBean.price }"
+                                class="inputbox50" />Ïõê
                                 <div id="B2CPrice">
-                                    <span>∆« ∏≈ ∞° :</span>
-                                    <input type="text" name="price" id="price" value="34000"
-                                    class="inputbox50" />ø¯</div>
+                                <span>Ìåê Îß§ Í∞Ä :</span>
+                                <input type="text" name="price" id="price" value="${ goodsBean.prime }"
+                                class="inputbox50" />Ïõê</div>
                             </td>
                         </tr>
                         <tr>
-                            <th class="th_center">∞·¡¶πÊΩƒ</th>
+                            <th class="th_center">Ïû¨Í≥†</th>
                             <td class="left" colspan="3">
-                                <label>
-                                    <input type="radio" name="charge_type" value="cash" checked="checked"
-                                    />«ˆ±›</label>
-                                <label>
-                                    <input type="radio" name="charge_type" value="card" checked="checked"
-                                    />ƒ´µÂ</label>
-                                <label>
-                                    <input type="radio" name="charge_type" value="both" checked="checked"
-                                    />«ˆ±›+ƒ´µÂ</label>
+                                <input type="text" name="inventory" value="${ goodsBean.inventory }" />
                             </td>
                         </tr>
                         <tr>
-                            <th class="th_center">¿ÃπÃ¡ˆ</th>
+                            <th class="th_center">Ïù¥ÎØ∏ÏßÄ</th>
                             <td class="left" colspan="3">
                                 <span id="img1">
-                                    <input type="file" name="file" class="inputbox01" />
+                                    <input type="file" name="file1" class="inputbox01" />
                                     <img src="/upload/product/" border="0" />&nbsp;
                                     <img src="./img/admin_btn_del.gif" style="type: button" class="clickbutton"
                                     id="delimg1" />
@@ -261,40 +232,33 @@
                             </td>
                         </tr>
                         <tr>
-                            <th class="th_center">¿ÃπÃ¡ˆ ªÛººª¿‘</th>
-                            <td class="left" colspan="3">
-                                <input type="checkbox" name="content_include" id="content_include" value="Y"
-                                checked="checked" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="th_center">ªÛººº≥∏Ì</th>
+                            <th class="th_center">ÏÉÅÏÑ∏ÏÑ§Î™Ö</th>
                             <td class="left" colspan="3">
                                 <div id="contentTab">
-                                    <textarea id="prd_content" name="prd_content" style="width: 100%; height: 100px;"></textarea>
+                                    <textarea id="prd_content" name="prd_content" style="width: 100%; height: 100px;">${ goodsBean.content }</textarea>
                                 </div>
                                 <br>
-                                <input type="button" value="¿ÃπÃ¡ˆ√∑∫Œ" id="imgPluse" name="imgPluse" class="clickbutton01"
+                                <input type="button" value="Ïù¥ÎØ∏ÏßÄÏ≤®Î∂Ä" id="imgPluse" name="imgPluse" class="clickbutton01"
                                 />
                             </td>
                         </tr>
-                        <tr>
-                            <th class="th_center">∏ﬁ∏</th>
+                        <!-- <tr>
+                            <th class="th_center">Î©îÎ™®</th>
                             <td class="left" colspan="3">
-                                <textarea id="prd_memo" name="prd_memo" class="textarea" style="width: 100%; height: 150px;"></textarea>
+                                <textarea id="prd_memo" name="prd_memo" class="textarea" style="width: 100%; height: 150px;">Î©îÎ™®</textarea>
                             </td>
-                        </tr>
+                        </tr> -->
                         <tr>
                             <td class="td_cen" colspan="4">
                                 <span class="action">
                                     <img src="./img/admin_btn_enter.gif" class="clickbutton" id="submitbutton2"
-                                    STYLE="type: button; value: ¿‘∑¬" />
+                                    STYLE="type: button; value: ÏûÖÎ†•" />
                                     <img src="./img/admin_btn_list.gif" class="clickbutton" id="listbutton2"
-                                    STYLE="type: button; value: ∏ÆΩ∫∆Æ" />
+                                    STYLE="type: button; value: Î¶¨Ïä§Ìä∏" />
                                     <img src="./img/admin_btn_del.gif" class="clickbutton" id="deletebutton2"
-                                    STYLE="type: button; value: ªË¡¶" />
+                                    STYLE="type: button; value: ÏÇ≠Ï†ú" />
                                     <img src="./img/admin_btn_zero.gif" class="clickbutton" id="resetbutton2"
-                                    STYLE="type: button; value: √ ±‚»≠" />
+                                    STYLE="type: button; value: Ï¥àÍ∏∞Ìôî" />
                                 </span>
                             </td>
                         </tr>

@@ -5,7 +5,7 @@
 	<ul class="left_mu_ul">
 		<li class="left_mu_li">상품관리
 			<ul class="mu_ul">
-				<li class="mu_li"><a href="goods_list.tiles">상품 리스트</a></li>
+				<li class="mu_li"><a href="goodslist.do">상품 리스트</a></li>
 				<li class="mu_li"><a href="goods_insert.tiles">상품 등록 /수정</a></li>
 			</ul>
 		</li>

@@ -15,13 +15,66 @@ public class GoodsDao {
 	PreparedStatement pstmt=null;
 	ResultSet rs=null;
 
+	public GoodsBean updateGoods(String code){
+		try{
+			String sql="SELECT " +
+					"no, code, category1, category2, name," +
+					"use, price, prime, readcnt, inputdate "+
+					"FROM t_goods "+
+					"WHERE code=?";
+			conn = new DBManager().getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, code);
+			rs = pstmt.executeQuery();
+			
+			GoodsBean goodsBean = new GoodsBean();
+			while(rs.next()){
+				goodsBean.setNo(		rs.getInt(1));
+				goodsBean.setCode(		rs.getString(2));
+				goodsBean.setCategory1(	rs.getInt(3));
+				goodsBean.setCategory2(	rs.getInt(4));
+				goodsBean.setName(		rs.getString(5));
+				goodsBean.setUse(		rs.getString(6));
+				goodsBean.setPrice(		rs.getInt(7));
+				goodsBean.setPrime(		rs.getInt(8));
+				goodsBean.setReadcnt(	rs.getInt(9));
+				goodsBean.setInputdate(	rs.getString(10));
+			}
+			return goodsBean;
+			
+		}catch(SQLException e){
+			System.out.println(e.getMessage());
+		}
+		
+		return null;
+	}
+	
+	public int getGoodsCount(){
+		try {
+			String sql = "SELECT count(*) FROM t_goods";
+			conn = new DBManager().getConnection();
+			pstmt = conn.prepareStatement(sql);
+			
+			rs = pstmt.executeQuery();
+			rs.next();
+			int count = rs.getInt(1);
+			
+			return count;
+			
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+		}
+		
+		return -1;
+	}
+	
 	public ArrayList<GoodsBean> getGoodsList(){
 		try{
 			conn = new DBManager().getConnection();
 			pstmt=conn.prepareStatement(
 					"SELECT " +
 					"no, code, category1, category2, name," +
-					"price, prime, readcnt, inputdate "+
+					"use, price, prime, readcnt, inputdate "+
 					"FROM t_goods "+
 					"WHERE use='Y'");
 
@@ -34,10 +87,11 @@ public class GoodsDao {
 				goodsBean.setCategory1(	rs.getInt(3));
 				goodsBean.setCategory2(	rs.getInt(4));
 				goodsBean.setName(		rs.getString(5));
-				goodsBean.setPrice(		rs.getInt(6));
-				goodsBean.setPrime(		rs.getInt(7));
-				goodsBean.setReadcnt(	rs.getInt(8));
-				goodsBean.setInputdate(	rs.getString(9));
+				goodsBean.setUse(		rs.getString(6));
+				goodsBean.setPrice(		rs.getInt(7));
+				goodsBean.setPrime(		rs.getInt(8));
+				goodsBean.setReadcnt(	rs.getInt(9));
+				goodsBean.setInputdate(	rs.getString(10));
 				arrGoods.add(goodsBean);
 			}
 			return arrGoods;
@@ -50,6 +104,7 @@ public class GoodsDao {
 		
 		return null;
 	}
+	
 	public int insertGoods(GoodsBean gb){
 		try{
 			String sql="INSERT INTO t_goods (" +

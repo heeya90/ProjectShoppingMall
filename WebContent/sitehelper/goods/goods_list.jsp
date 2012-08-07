@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <script type="text/javascript" src="goods/js/goods_list.js"></script>
     <title>관리자모드(상품관리)</title>
     <div id="content">
@@ -21,9 +22,8 @@
         </form> -->
         <div id="productListForm">
             <div class="categoryGubun">등록상품 :
-                <span id="nTotal"></span>개
-                <input type="button" class="clickbutton02" id="allcategory" value="전체보기"
-                />
+                <span id="nTotal">${ totalGoods }</span>개
+                <input type="button" class="clickbutton02" id="allcategory" value="전체보기" />
             </div>
             <div class="categoryBox">
                 <div class="categoryGubun">대분류</div>
@@ -105,11 +105,24 @@
                         <th class="th_center">상품명</th>
                         <th class="th_center">승인</th>
                         <th class="th_center">공급가<br />판매가</th>
-                        <th class="th_center">조회</th>
+                        <th class="th_center">조회수</th>
                         <th class="th_center">등록일</th>
                     </tr>
                 </thead>
                 <tbody>
+                <c:forEach var="goods" items="${arrGoods}" >
+                    <tr>
+                        <td>${ goods.category1 }-${ goods.category2 }</td>
+                        <td><a href="#" class="p_code" >${ goods.code }</a></td>
+                        <td>image</td>
+                        <td><input type="text" name="p_name" value="${ goods.name }" /></td>
+                        <td>${ goods.use }</td>
+                        <td><input type="text" name="p_price" value="${ goods.price }" /><br />
+                            <input type="text" name="p_prime" value="${ goods.prime }" /></td>
+                        <td>${ goods.readcnt }</td>
+                        <td>${ goods.inputdate }</td>
+                    </tr>
+                </c:forEach>
                     <!-- <tr class='trClass'>
                         <td><input type="checkbox" name="" class="" value="" /></td>
                         <td style="text-align: left;">
