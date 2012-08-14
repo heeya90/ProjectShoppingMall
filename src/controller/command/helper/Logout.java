@@ -13,7 +13,6 @@ public class Logout implements CommandHandler {
 			HttpServletResponse response) throws Throwable {
 		
 		HttpSession session = request.getSession();
-		
 		session.removeAttribute("admin");
 		
 		return "../index.jsp";

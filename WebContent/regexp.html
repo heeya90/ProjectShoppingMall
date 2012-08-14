@@ -1,0 +1,348 @@
+<h1>자바스크립트/jQuery 정규식</h1>
+<div
+	style="margin-top: 70px; border-top: 1px solid #CCCCCC; padding-top: 15px">
+	<p>
+		오랜만의 강좌입니다. 예전의 열정을 찾아서 이제 주말에도 코드와 항상 함께 보내기로 결심한 요즘입니다. 아무튼 웹 테크놀로지를
+		보면서 클라이언트 처리 비중이 나날이 늘어나는 것을 많이 느끼고 있습니다. 그 중에서도 벨리데이션 처리에 대한 영역 또한 큰
+		몫을 차지하고 있을 것 같은데요. 오늘은 복잡한 벨리데이션 처리를 스크립트 단에서 깔끔하고 처리할 수 있는 정규식을 조금
+		정리해 드리고자 합니다. <br> <br> <br> <strong> <font
+			size="3">자바스크립트로 정규식 처리 방법</font>
+		</strong> <br> <br>보통 JQuery의 filter 메서드를 활용할 수도 있고, 정규 표현식 뒤에 붙는
+		test() 메서드를 이용할 수도 있고 아니면 문자열의 match 방법을 이용하여 해당 필드의 값을 확인할 수 있으며 어떤
+		코드를 이용할지는 선택의 자유이기 때문에 여기서 추천을 드리지는 않겠습니다.&nbsp;그래도 일단, 세가지 방법들에 대해서
+		일괄적으로 살펴보겠습니다. <br> <br>먼저 살펴볼 JQuery의 filter는 여러 필드들의 값을
+		한꺼번에 비교해야 할 경우에 유용합니다.
+	</p>
+	<p>
+		<br>1. div의 id가 지정한 정규식(숫자)과 일치하고 있는 div 를 가져오는 예제 <br> <br>
+	</p>
+	<div>
+		<div id="highlighter_409746" class="syntaxhighlighter  jscript">
+			<div class="toolbar">
+				<span> <a href="#" class="toolbar_item command_help help">?</a>
+				</span>
+			</div>
+			<table border="0" cellpadding="0" cellspacing="0">
+				<tbody>
+					<tr>
+						<td class="gutter">
+							<div class="line number1 index0 alt2">1</div>
+							<div class="line number2 index1 alt1">2</div>
+							<div class="line number3 index2 alt2">3</div>
+							<div class="line number4 index3 alt1">4</div>
+							<div class="line number5 index4 alt2">5</div>
+						</td>
+						<td class="code">
+							<div class="container">
+								<div class="line number1 index0 alt2">
+									<code class="jscript plain">$(</code>
+									<code class="jscript string">'div'</code>
+									<code class="jscript plain">)</code>
+								</div>
+								<div class="line number2 index1 alt1">
+									<code class="jscript spaces">&nbsp;</code>
+									<code class="jscript plain">.filter(</code>
+									<code class="jscript keyword">function</code>
+									<code class="jscript plain">() {</code>
+								</div>
+								<div class="line number3 index2 alt2">
+									<code class="jscript spaces">&nbsp;</code>
+									<code class="jscript keyword">return</code>
+									<code class="jscript keyword">this</code>
+									<code class="jscript plain">.id.match(/[^a-z0-9 ]+/);</code>
+								</div>
+								<div class="line number4 index3 alt1">
+									<code class="jscript spaces">&nbsp;</code>
+									<code class="jscript plain">})</code>
+								</div>
+								<div class="line number5 index4 alt2">
+									<code class="jscript spaces">&nbsp;</code>
+									<code class="jscript plain">.html(</code>
+									<code class="jscript string">"일치합니다."</code>
+									<code class="jscript plain">);</code>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<p>보통 아래와 같이 매칭되지 않은 필드에 CSS를 추가할 때도 유용하게 사용할 수 있습니다.</p>
+	<p>
+		<br>
+	</p>
+	<div>
+		<div id="highlighter_551277" class="syntaxhighlighter  jscript">
+			<div class="toolbar">
+				<span> <a href="#" class="toolbar_item command_help help">?</a>
+				</span>
+			</div>
+			<table border="0" cellpadding="0" cellspacing="0">
+				<tbody>
+					<tr>
+						<td class="gutter">
+							<div class="line number1 index0 alt2">1</div>
+							<div class="line number2 index1 alt1">2</div>
+							<div class="line number3 index2 alt2">3</div>
+							<div class="line number4 index3 alt1">4</div>
+							<div class="line number5 index4 alt2">5</div>
+						</td>
+						<td class="code">
+							<div class="container">
+								<div class="line number1 index0 alt2">
+									<code class="jscript plain">$(</code>
+									<code class="jscript string">"input:text"</code>
+									<code class="jscript plain">)</code>
+								</div>
+								<div class="line number2 index1 alt1">
+									<code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>
+									<code class="jscript plain">.filter(</code>
+									<code class="jscript keyword">function</code>
+									<code class="jscript plain">() {</code>
+								</div>
+								<div class="line number3 index2 alt2">
+									<code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>
+									<code class="jscript keyword">return</code>
+									<code class="jscript keyword">this</code>
+									<code class="jscript plain">.value.match(/[^\d]/);</code>
+								</div>
+								<div class="line number4 index3 alt1">
+									<code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>
+									<code class="jscript plain">})</code>
+								</div>
+								<div class="line number5 index4 alt2">
+									<code class="jscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>
+									<code class="jscript plain">.addClass(</code>
+									<code class="jscript string">"inputError"</code>
+									<code class="jscript plain">);</code>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<p></p>
+	<p>
+		2. 지정한 ID의 객체의 value 속성이 정규식(숫자)과 매치하고 있는 지에 대한 예제 <br> <br>
+	</p>
+	<div>
+		<div id="highlighter_195654" class="syntaxhighlighter  jscript">
+			<div class="toolbar">
+				<span> <a href="#" class="toolbar_item command_help help">?</a>
+				</span>
+			</div>
+			<table border="0" cellpadding="0" cellspacing="0">
+				<tbody>
+					<tr>
+						<td class="gutter">
+							<div class="line number1 index0 alt2">1</div>
+						</td>
+						<td class="code">
+							<div class="container">
+								<div class="line number1 index0 alt2">
+									<code class="jscript keyword">var</code>
+									<code class="jscript plain">test = $(</code>
+									<code class="jscript string">'#id'</code>
+									<code class="jscript plain">).attr(</code>
+									<code class="jscript string">'value'</code>
+									<code class="jscript plain">).match(/[^a-z0-9 ]+/);</code>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<p></p>
+	<p>
+		<br>&nbsp;
+	</p>
+	<p>
+		3. 아래 예제는 지정한 id의 값이 rege 정규식과 일치하는지 알아볼 수 있습니다. <br>
+	</p>
+	<div>
+		<div id="highlighter_536076" class="syntaxhighlighter  jscript">
+			<div class="toolbar">
+				<span> <a href="#" class="toolbar_item command_help help">?</a>
+				</span>
+			</div>
+			<table border="0" cellpadding="0" cellspacing="0">
+				<tbody>
+					<tr>
+						<td class="gutter">
+							<div class="line number1 index0 alt2">1</div>
+							<div class="line number2 index1 alt1">2</div>
+							<div class="line number3 index2 alt2">3</div>
+							<div class="line number4 index3 alt1">4</div>
+							<div class="line number5 index4 alt2">5</div>
+						</td>
+						<td class="code">
+							<div class="container">
+								<div class="line number1 index0 alt2">
+									<code class="jscript keyword">var</code>
+									<code class="jscript plain">rege = /[^a-z0-9 ]+/;</code>
+								</div>
+								<div class="line number2 index1 alt1">
+									<code class="jscript keyword">if</code>
+									<code class="jscript plain">(rege.test($(</code>
+									<code class="jscript string">'#id'</code>
+									<code class="jscript plain">).val()))</code>
+								</div>
+								<div class="line number3 index2 alt2">
+									<code class="jscript plain">{</code>
+								</div>
+								<div class="line number4 index3 alt1">
+									<code class="jscript spaces">&nbsp;</code>
+									<code class="jscript plain">alert(</code>
+									<code class="jscript string">"일치합니다."</code>
+									<code class="jscript plain">);</code>
+								</div>
+								<div class="line number5 index4 alt2">
+									<code class="jscript plain">}</code>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<p>
+		위와 같은 방법으로 벨리데이션 체크를 진행할 수 있고 필요한 정규식은 우선적으로 아래에서 검색해서 사용하시기
+		바랍니다.&nbsp;만약 찾는 정규식이 없다면&nbsp;거의 10년 동안 이용해&nbsp;오던 사이트인데요.&nbsp; <a
+			href="http://www.regexlib.com">www.regexlib.com</a>&nbsp;에 가셔서 검색해보시면
+		많은 정규식들을 찾아서 사용하실 수 있습니다.
+	<p></p>
+	<p>
+		<br>
+		<strong><font size="3">정규식 정리</font></strong><br>
+		<br>
+		<a href="http://www.jquery4u.com/">http://www.jquery4u.com/</a>&nbsp;에서는
+		유용한 정규식들에 대해서 포스팅 내용을 기반으로 유용한 것들만 간추려 보도록 하겠습니다.
+	</p>
+	<p>
+		<br>
+	</p>
+	<p>
+		<strong>숫자 관련</strong><br>
+		<br> <br>
+	<pre class="brush:jscript">// 숫자만 가능
+var intRegex = /[0-9 -()+]+$/;
+// IP 주소형식
+var ipRegex = '\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b';
+// 0-255 숫자
+var num0to255Regex = '^([01][0-9][0-9]|2[0-4][0-9]|25[0-5])$';
+// 0-999 범위의 수
+var num0to999Regex = '^([0-9]|[1-9][0-9]|[1-9][0-9][0-9])$';
+// 소수점 허용
+var floatRegex = '[-+]?([0-9]*\.[0-9]+|[0-9]+)';
+// 1-50 까지의 숫자
+var number1to50Regex = /(^[1-9]{1}$|^[1-4]{1}[0-9]{1}$|^50$)/gm;
+
+
+</pre>
+	<br> <strong>이메일, 폰, 비밀번호 등</strong><br> <br>
+	<pre class="brush:jscript">// 이메일
+var emailRegex = '^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$';
+// 카드 번호 4자리
+var creditCardRegex = '^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$';
+// 사용자 이름
+var usernameRegex = '/^[a-z0-9_-]{3,16}$/';
+// 비밀번호 - 길이, 대소문자 제한없음
+var passwordRegex = '/^[a-z0-9_-]{6,18}$/';
+// 강력한 비밀번호 - 8~15 사이의 수, 최소 1개의 대문자와 소문자 그리고 특수문자 1개 포함
+var passwordStrengthRegex = /((?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15})/gm;
+// 폰번호
+var phoneNumber = /[0-9-()+]{3,20}/;
+
+
+</pre>
+	<strong>날짜 관련<br></strong> <br>
+	<pre class="brush:jscript">// 일자 포맷 -&gt; 21/3/2006
+var dateRegex = /(\d{1,2}\/\d{1,2}\/\d{4})/gm;
+// 일자 포맷 -&gt; MM/DD/YYYY
+var dateMMDDYYYRegex = '^(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d$';
+// 일자 포맷 -&gt; DD/MM/YYYY
+var dateDDMMYYYRegex = '^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$';
+
+</pre>
+
+
+	<br>
+	<strong>URL 관련</strong><br>
+
+	<pre class="brush:jscript">// URL
+var urlRegex = '/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/';
+// URL 슬러그 형
+var urlslugRegex = '/^[a-z0-9-]+$/';
+
+
+</pre>
+	<br> <strong>모음만 모음<br></strong> <br>
+	<pre class="brush:jscript">// 모음만 입력가능(영어)
+var vowelRegex = /^[aeiou]/;
+
+
+</pre>
+	<br> <br> <strong>공백관련</strong><br>
+	<pre class="brush:jscript">// 공백
+var whiteSpaceRegex = '^[ \t]+';
+// 공백과 탭
+var whiteSpaceRegex = '^[ \t]+|[ \t]+$';
+// 공백과 탭과 \r포함(IE의 경우 textarea에서 엔터를 \r\n으로 인식)
+var whiteSpaceRegex = '[ \t\r\n]';
+// 엔터키를 <br>로 변경해주는 함수
+newLineToBr = function(str) { return str.replace(/(\r\n|[\r\n])/g, '<br>'); }
+
+
+</pre>
+
+	<br> <strong>도메인 이름 관련</strong><br> <br>
+
+	<pre class="brush:jscript">// 도메인 이름(http 포함)
+var domainRegex = /(.*?)[^w{3}\.]([a-zA-Z0-9]([a-zA-Z0-9\-]{0,65}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,6}/igm;
+// 도메인 이름 (http://를 제외한)
+var domainRegex = /[^w{3}\.]([a-zA-Z0-9]([a-zA-Z0-9\-]{0,65}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,6}/igm;
+// 도메인 이름 (아래의 co.uk 와 같은 특정도메인)
+var domainRegex = /(.*?)\.(com|net|org|info|coop|int|com\.au|co\.uk|org\.uk|ac\.uk|)/igm;
+// 서브 도메인과 매칭이 되는지 비교: www, dev, int, stage, int.travel, stage.travel
+var subDomainRegex = /(http:\/\/|https:\/\/)?(www\.|dev\.)?(int\.|stage\.)?(travel\.)?(.*)+?/igm;
+
+</pre>
+
+
+	<br> <br> <strong>이미지 관련</strong><br>
+
+
+
+	<pre class="brush:jscript">// jpg, gif, png 이미지, 아래 bmp나 기타 형식은 추가해서 사용가능
+var imageRegex = /([^\s]+(?=\.(jpg|gif|png))\.\2)/gm;
+// 모든 이미지 태그
+var imgTagsRegex = /<img. +?src=\"(.*?)\".+?>/ig;
+// 이미지 png 타입
+<img. +?src=\"(.*?.png)\".+?>
+
+
+</img.+?src=\"(.*?.png)\".+?></img.+?src=\"(.*?)\".+?>
+	</pre>
+
+	<strong>기타 유용한 정규식들</strong><br> <br> <br>
+
+	<pre class="brush:jscript">// RGB 컬러 형식
+var rgbRegex = /^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/;
+// Hex 코드 컬러 형식
+var hexRegex = '/^#?([a-f0-9]{6}|[a-f0-9]{3})$/';
+// Hex 코드 형식과 16진수로 작성되어 있는지 
+var hexRegex = /(#?([A-Fa-f0-9]){3}(([A-Fa-f0-9]){3})?)/gm;
+// HTML 태그 형식 #1
+var htmlTagRegex = '/^&lt;([a-z]+)([^&lt;]+)*(?:&gt;(.*)&lt;\/\1&gt;|\s+\/&gt;)$/';
+// HTML 태그 형식 #2
+var htmlTagRegex = /(\&lt;(/?[^\&gt;]+)\&gt;)/gm;
+// URL이 다음과 같이 특정 문자열을 포함하고 있는 포맷인지 -&gt; /product/123456789
+var productUrlRegex = '(\/product\/)?+[0-9]+';
+// 숫자와 문자만 사용가능
+var lnhRegex = /([A-Za-z0-9-]+)/gm;</pre>

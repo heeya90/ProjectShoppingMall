@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+		<span class="copyright_entry" style="display: block;"
+			title="java regex 정규표현식@@**@@http://easymicro.egloos.com/5461610"></span>
+		<span
+			style="WIDOWS: 2; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; BORDER-COLLAPSE: separate; FONT: medium Gulim; WHITE-SPACE: normal; ORPHANS: 2; LETTER-SPACING: normal; COLOR: rgb(0, 0, 0); WORD-SPACING: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"
+			class="Apple-style-span"> <span
+			style="TEXT-ALIGN: justify; LINE-HEIGHT: 18px; BORDER-COLLAPSE: collapse; FONT-FAMILY: 돋움; FONT-SIZE: 12px"
+			class="Apple-style-span"> <span style="FONT-SIZE: 24pt">
+					<br>자바 정규식 표현 <br>
+			</span> <br>
+				<table style="TEXT-ALIGN: left; BORDER-COLLAPSE: separate"
+					border="0" cellspacing="1" cellpadding="0" width="718"
+					bgcolor="#5f5b25" height="40">
+					<tbody>
+						<tr bgcolor="#cfcca2">
+							<td style="FONT-SIZE: 12px" width="718">&nbsp; <br>&nbsp;&nbsp;&nbsp;&nbsp;
+								java.util.regex 패키지에 있는 Match 클래스와 Pattern 클래스를 사용하여 문자열을
+								정규표현식으로 검증할 수 있습니다. <br>&nbsp; &nbsp;&nbsp; 해당 클래스 사용법은 자바
+								클래스 카테고리에 가면 있습니다. <span class="Apple-converted-space">&nbsp;</span>
+								<br> <br>&nbsp;&nbsp;&nbsp;&nbsp; boolean bln =
+								Pattern.matches("^[a-zA-Z0-9]*$", this.input); <br> <br>
+							</td>
+						</tr>
+					</tbody>
+				</table> <br> <br>
+				<table style="TEXT-ALIGN: left; BORDER-COLLAPSE: separate"
+					border="0" cellspacing="1" cellpadding="0" width="718"
+					bgcolor="#5f5b25" height="40">
+					<tbody>
+						<tr bgcolor="#cfcca2">
+							<td style="FONT-SIZE: 12px" width="718">&nbsp;&nbsp; 정규표현식은
+								다음과 같은 문법으로 되어 있습니다. <span class="Apple-converted-space">&nbsp;</span>
+								<br> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ^ : 문자열의
+								시작을 나타냅니다. <span class="Apple-converted-space">&nbsp;</span> <br>&nbsp;&nbsp;
+								<span class="Apple-converted-space">&nbsp;</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								$ : 문자열의 종료를 나타냅니다. <span class="Apple-converted-space">&nbsp;</span>
+								<br> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; . : 임의의
+								한 문자를 나타냅니다. (문자의 종류는 가리지 않습니다) <br>&nbsp; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								| : or를 나타냅니다. <br> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								? : 앞 문자가 없거나 하나있음을 나타냅니다. <span class="Apple-converted-space">&nbsp;</span>
+								<br>&nbsp; <span class="Apple-converted-space">&nbsp;</span>
+								<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; + : 앞 문자가 하나 이상임을 나타냅니다.
+								<span class="Apple-converted-space">&nbsp;</span> <br>&nbsp;
+								<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * : 앞 문자가 없을 수도 무한정 많을
+								수도 있음을 나타냅니다. <br> <br> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								만약, .* 으로 정규식이 시작한다면 시작하는 문자열과 같은 문자열이 뒤에 없거나 많을 수도 있는 경우에만 일치를
+								시킵 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								니다. 즉, abc 일 경우 시작문자인 a를 기준으로 a가 없을경우와 a가 무한정 많은 경우에도 true를 반환하기
+								때문에 abc의 <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 경우는
+								true를 반환합니다. <span class="Apple-converted-space">&nbsp;</span> <br>
+								<br>&nbsp;&nbsp;&nbsp;&nbsp; [] : 문자 클래스를 지정할 때 사용합니다. 문자의
+								집합이나 범위를 나타내면 두 문자 사이는 '-' 기호로 범위를 나타냅니다. <br>&nbsp; &nbsp;
+								&nbsp; &nbsp; &nbsp; &nbsp; []내에서 ^ 가 선행하여 나타나면 not 를 나타냅니다. <span
+								class="Apple-converted-space">&nbsp;</span> <br> <br>&nbsp;&nbsp;&nbsp;&nbsp;
+								{} : 선행문자가 나타나는 횟수 또는 범위를 나타냅니다. <span
+								class="Apple-converted-space">&nbsp;</span> <br> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								a{3} 인 경우 a가 3번 반복된 경우를 말하며, a{3,}이면 a가 3번 이상 반복인 경우를 말합니다. 또한
+								a{3,5}인 경우 a가 3번 <br>&nbsp; &nbsp; &nbsp; &nbsp;
+								&nbsp;&nbsp; 이상 5번 이하 반복된 경우를 나타냅니다. <span
+								class="Apple-converted-space">&nbsp;</span> <br>
+							</td>
+						</tr>
+					</tbody>
+				</table> <br>
+				<table
+					style="TEXT-ALIGN: left; WIDTH: 512px; BORDER-COLLAPSE: separate; HEIGHT: 134px"
+					border="0" cellspacing="1" cellpadding="0" width="512"
+					bgcolor="#5f5b25" height="134">
+					<tbody>
+						<tr bgcolor="#cfcca2">
+							<td style="FONT-SIZE: 12px" width="718">&nbsp; <br>&nbsp;&nbsp;&nbsp;
+								\w : 알파벳이나 숫자 <br> <br>&nbsp;&nbsp;&nbsp; \W : 알파벳이나
+								숫자를 제외한 문자 <br> <br>&nbsp;&nbsp;&nbsp; \d : 숫자 [0-9]와
+								동일 <br> <br>&nbsp;&nbsp;&nbsp; \D : 숫자를 제외한 모든 문자 <br>
+								<br>&nbsp;&nbsp;&nbsp; <span class="Apple-converted-space">&nbsp;</span>
+								<br>
+							</td>
+						</tr>
+					</tbody>
+				</table> <br> <br>
+				<table
+					style="TEXT-ALIGN: left; WIDTH: 511px; BORDER-COLLAPSE: separate; HEIGHT: 122px"
+					border="0" cellspacing="1" cellpadding="0" width="511"
+					bgcolor="#5f5b25" height="122">
+					<tbody>
+						<tr bgcolor="#cfcca2">
+							<td style="FONT-SIZE: 12px" width="718"><span
+								style="FONT-SIZE: 18pt">&nbsp;</span> <span
+								style="FONT-SIZE: 18pt">기본적인 문자열 검증 정규식</span> <br> <br>^[0-9]*$&nbsp;
+								:&nbsp; 숫자만 <br> <br>^[a-zA-Z]*$&nbsp; :&nbsp; 영문자만 <br>
+								<br>^[가-힣]*$&nbsp; :&nbsp; 한글만 <br> <br>^[a-zA-Z0-9]*$&nbsp;
+								:&nbsp; 영어/숫자만</td>
+						</tr>
+					</tbody>
+				</table> <br> <br>
+				<table
+					style="TEXT-ALIGN: left; WIDTH: 611px; BORDER-COLLAPSE: separate; HEIGHT: 170px"
+					border="0" cellspacing="1" cellpadding="0" width="611"
+					bgcolor="#5f5b25" height="170">
+					<tbody>
+						<tr bgcolor="#cfcca2">
+							<td style="FONT-SIZE: 12px" width="718">&nbsp; <span
+								class="Apple-converted-space">&nbsp;</span> <span
+								style="FONT-SIZE: 18pt">정규식 표현 예제</span> <br> <br>&nbsp;&nbsp;&nbsp;&nbsp;
+								이메일 : ^[a-zA-Z0-9]+@[a-zA-Z0-9]+$&nbsp; or&nbsp;
+								^[_0-9a-zA-Z-]+@[0-9a-zA-Z-]+(.[_0-9a-zA-Z-]+)*$ <span
+								class="Apple-converted-space">&nbsp;</span> <br>&nbsp;&nbsp;&nbsp;
+								<span class="Apple-converted-space">&nbsp;</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;
+								휴대폰 :&nbsp; ^01(?:0|1|[6-9]) - (?:\d{3}|\d{4}) - \d{4}$ <span
+								class="Apple-converted-space">&nbsp;</span> <br>&nbsp; <br>&nbsp;&nbsp;&nbsp;&nbsp;
+								일반전화 : ^\d{2,3} - \d{3,4} - \d{4}$ <br> <br>&nbsp;&nbsp;&nbsp;
+								주민등록번호 : \d{6} \- [1-4]\d{6} <br> <br>&nbsp;&nbsp;&nbsp;
+								IP 주소 : ([0-9]{1,3}) \. ([0-9]{1,3}) \. ([0-9]{1,3}) \.
+								([0-9]{1,3}) <br> <br>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+		</span>
+		</span> <br class="Apple-interchange-newline">
+</body>
+</html>

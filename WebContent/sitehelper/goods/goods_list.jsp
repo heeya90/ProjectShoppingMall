@@ -3,9 +3,7 @@
 <script type="text/javascript" src="goods/js/goods_list.js"></script>
     <title>包府磊葛靛(惑前包府)</title>
     <div id="content">
-        <div class="admin_loca">HOME - 惑前包府 - 惑前府胶飘 -
-            <B>[
-                <span class="productListTitle"></span>]</B>
+        <div class="admin_loca">HOME - 惑前包府 - <B>惑前府胶飘</B>
         </div>
         <div class="admin_title"></div>
         <!-- <form name="frmMove" method="post">
@@ -114,7 +112,8 @@
                     <tr>
                         <td>${ goods.category1 }-${ goods.category2 }</td>
                         <td><a href="#" class="p_code" >${ goods.code }</a></td>
-                        <td>image</td>
+                        <td><img src="${pageContext.request.contextPath}">
+                                 ${pageContext.request.contextPath}</td>
                         <td><input type="text" name="p_name" value="${ goods.name }" /></td>
                         <td>${ goods.use }</td>
                         <td><input type="text" name="p_price" value="${ goods.price }" /><br />

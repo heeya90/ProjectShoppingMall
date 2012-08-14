@@ -6,22 +6,64 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import model.beans.HelperBean;
-import model.databasemanage.DBManager;
+import model.databasemanage.DBManagerPool;
 
 public class HelperDao {
 	//insert, delete, update, selecte 메소드
-	
-	public HelperBean selectHelper(){
+	Connection conn=null;
+	PreparedStatement pstmt=null;
+	ResultSet rs=null;
 
-		Connection conn=null;
-		PreparedStatement pstmt=null;
-		ResultSet rs=null;
-		HelperBean helper=null;
-		
-		try{
-			conn = new DBManager().getConnection();
+	// 아이디를 받아 해당하는 관리자행에 현재시간 세팅
+	public void setLastLogin(String id){
+		try {
+			DBManagerPool.getInstance();
+			conn = DBManagerPool.getDataSource().getConnection();
 			
-			pstmt=conn.prepareStatement("SELECT id, pw FROM t_helper");
+			System.out.println(id);
+			pstmt=conn.prepareStatement(" UPDATE t_helper SET lastlogin=sysdate WHERE id=? ");
+			pstmt.setString(1, id);
+			
+			pstmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+		}finally{
+			close();
+		}
+	}
+
+	// 아이디를 받아 해당하는 관리자행의 마지막 로그인시간을 String으로 반환
+	public String getLastLogin(String id){
+
+		try {
+			DBManagerPool.getInstance();
+			conn = DBManagerPool.getDataSource().getConnection();
+			
+			pstmt=conn.prepareStatement("SELECT lastlogin FROM t_helper WHERE id=?");
+			pstmt.setString(1, id);
+			rs = pstmt.executeQuery();
+			rs.next();
+
+			return rs.getString(1);
+
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+		}finally{
+			close();
+		}
+
+		return null;
+	}
+	public HelperBean selectHelper(String id){
+
+		HelperBean helper=null;
+		try{
+			DBManagerPool.getInstance();
+			conn = DBManagerPool.getDataSource().getConnection();
+
+			pstmt=conn.prepareStatement("SELECT id, pw, lastlogin FROM t_helper WHERE id=?");
+			pstmt.setString(1, id);
 			rs = pstmt.executeQuery();
 			helper = new HelperBean();
 			while(rs.next()){
@@ -29,8 +71,8 @@ public class HelperDao {
 				helper.setPw(rs.getString("pw"));
 			}
 			return helper;
-			
-		}catch(Exception e){ 
+
+		}catch(SQLException e){ 
 			System.out.println("HelperDao.selectHelper() 에러"+e.getMessage());
 		}finally{
 			try {
@@ -39,6 +81,9 @@ public class HelperDao {
 				if(null!=conn) conn.close();
 			} catch (SQLException e) {
 				e.printStackTrace();
+			}
+			finally{
+				close();
 			}
 		}
 		return null;
@@ -51,5 +96,15 @@ public class HelperDao {
 	}
 	public void updateAdmin(){
 
+	}
+
+	public void close(){
+		try {
+			if(null!=rs) rs.close();
+			if(null!=pstmt) pstmt.close();
+			if(null!=conn) conn.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 }

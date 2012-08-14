@@ -1,13 +1,18 @@
-$("document").ready(function(){
-	//상품코드 받아와서 넣기
-	
-});
-
 jQuery(function(){
 	$("#submitbutton1, #submitbutton2").bind("click", function(){
-		$("form#frm").submit();
 		//입력 값 체크 (정규식이용해 비정상값과 빈값 체크)
-		});
+		//숫자만 입력되도록 체크하는 부분(상품코드, 원가, 판매가, 재고)
+		/*var onlynumber = /[0-9 -()+]+$/;
+		if(onlynumber.test($("#p_code, #prime_price, #price, #inventory").val())){
+			alert("숫자만 입력할곳에 다른값을 입력하셨네요?");
+		}
+		if($("input:text").val() == ''){
+			alert("값을 확인 해주세요");
+			$("input:text").val().match(onlynumber);
+			return false;
+		}*/
+		$("#frm").submit();
+	});
 	
 	$("#codegen").click(function(){
 		codegen();	//클릭하면 상품코드 받아서 텍스트상자에 넣기
@@ -25,6 +30,7 @@ jQuery(function(){
 	
 	$('#resetbutton1, #resetbutton2').click(function(){
 		$('form').find(":input").val("");
+		$('#codegen').val("코드생성");
 	});
 	
 	//파일 지우기 버튼

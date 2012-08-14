@@ -10,7 +10,6 @@ public final class DBManagerPool {
 	private static DataSource ds;
 	
 	private DBManagerPool() {
-
 		try {
 			Context initCtx = new InitialContext();
 			Context envCtx = (Context) initCtx.lookup("java:comp/env");

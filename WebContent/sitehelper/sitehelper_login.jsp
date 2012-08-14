@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -10,11 +11,14 @@
 <title>관리자 로그인</title>
 </head>
 <body>
-<% 
-if(null!=session.getAttribute("ADMINID")){
+<c:if test="${ null != sessionScope.admin }">
+    <c:redirect url="order_list.tiles" />
+</c:if>
+<%-- <% 
+if(null!=session.getAttribute("admin")){
     response.sendRedirect("order_list.tiles");
 } 
-%>
+%> --%>
 	<div id="login_main">
 		<div class="login_img">
 			<div class="login_left"><img src="./img/admin_login_ltt.gif" /></div>
@@ -25,24 +29,16 @@ if(null!=session.getAttribute("ADMINID")){
 						<span class="login_id"><img src="./img/admin_login_id.gif" /> <input type="text" class="text_Box" name="id" id="id" /></span>
 						<span class="login_pw"><img src="./img/admin_login_pw.gif" /> <input type="password" class="text_Box" name="pw" id="pw" /></span>
 					</div>
-
 					<div class="login_btn"><img src="./img/admin_login_btn.gif" border="0"  id="loginBtn" /></div>
 					<div class="login_txt"><b></b> <b></b></div>
 				</div>
 			</div>
-
 			<div class="login_copy">
 				<span class="login_cy"><b>ShoppingMall</b><br>
 				Tel: xx-xxxx-xxxx&nbsp;&nbsp;/&nbsp;&nbsp;Fax: xx-xxxx-xxxx&nbsp;&nbsp;/&nbsp;&nbsp;E-mail: xxxx@xxxx.xx.xx&nbsp;&nbsp;/&nbsp;&nbsp;
 				</span>
 			</div>
-
-
-
 		</div>
-
-
-
 	</div>
 </body>
 </html>

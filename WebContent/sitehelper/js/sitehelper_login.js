@@ -4,7 +4,7 @@ $(document).ready(function(){
 	$("#id").css("ime-mode","disabled");
 	$("#id").focus();
 	
-	$("#loginBtn").bind("click",function(){		
+	$("#loginBtn").bind("click", function(){		
 		if ($("#id").val() == '')
 		{
 			alert("아이디를 입력하세요");
@@ -33,6 +33,7 @@ $(document).ready(function(){
 			}
 		});
 	});
+	// ID, PW 텍스트박스에 엔터키가 눌렸을때
 	$("#pw,#id").keydown(function(e) {
 		if (e.keyCode == 13) {
 			$("#loginBtn").click();
