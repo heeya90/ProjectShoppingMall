@@ -61,8 +61,8 @@ div.tgnb01{float:right;text-align:right;margin-top:15px}
 .sta h1 a img{margin-right:50px;margin-left:13px;_margin-right:47px}
 .sta a{color:#646464;text-decoration:none}
 .sta .search_box{float:left;position:relative;margin-top:7px;padding-left:80px}
-.sta .search_box .search_text{line-height:14px;padding:9px 7px 9px 7px;margin-right:5px;float:left;width:296px;height:14px;border:1px solid #fa1900;color:#000;font-size:12px;font-family:'µ¸¿ò',Dotum,sans-serif;background:url(../img/bg_srch.gif) no-repeat left top}
-:root .sta .search_box .search_text{line-height:14px;padding:4px 7px 1px 7px;width:296px;height:27px}
+.sta .search_box .search_text{line-height:14px;padding:9px 7px 9px 7px;margin-right:5px;float:left;width:312px;height:14px;border:1px solid #fa1900;color:#000;font-size:12px;font-family:'µ¸¿ò',Dotum,sans-serif;background:url(../img/bg_srch.gif) no-repeat left top}
+:root .sta .search_box .search_text{line-height:14px;padding:4px 7px 1px 7px;width:312px;height:34px}
 .sta .search_box .btn_search{font-size:0;zoom:1}
 .sta h2{float:right;margin-top:-35px;margin-right:37px;_margin-top:-38px;_margin-right:17px;#margin-top:-38px}
 

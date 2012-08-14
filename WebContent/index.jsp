@@ -8,21 +8,11 @@
 </head>
 <body>
 	<ul>
-	<li><a href="menuuser.tiles">사용자타일즈(메뉴)</a></li>
-    <li><a href="nomenuuser.tiles">사용자타일즈(메뉴없음)</a></li>
-    <li><a href="UserMain.do">사용자타일즈(메인화면)</a></li>
-    <li><a href="Header.do">사용자타일즈(헤더)</a></li>
-    <li><a href="Menu.do">사용자타일즈(메뉴)</a></li>
- 
- 	<li><a href="m_other_1.tiles">사용자타일즈(로그인)</a></li>   
-	<li><a href="no_user_login.tiles">사용자타일즈(로그인)</a></li>
-	<li><a href="no_user_find.tiles">사용자타일즈(아이디찾기)</a></li>
-    <li><a href="no_user_reg.tiles">사용자타일즈(회원가입)</a></li>
-    <li><a href="no_user_success.tiles">사용자타일즈(회원가입성공)</a></li>
-    <li><a href="m_mypage_modify.tiles">사용자타일즈(회원정보수정)</a></li>
+    <li><a href="UserMain.do">사용자-메인화면</a></li>
+    <li><a href="MypageModify.do">사용자-회원정보수정</a></li>
+    
     <li><a href="m_mypage_orderlist.tiles">사용자타일즈(주문리스트)</a></li>
-    <li><a href="m_mypage_orderview.tiles">사용자타일즈(주문상세보기)</a></li>   
-    <li><a href="m_mypage_view.tiles">사용자타일즈(회원정보)</a></li>    
+    <li><a href="m_mypage_orderview.tiles">사용자타일즈(주문상세보기)</a></li>
     <li><a href="m_goods_list.tiles">사용자타일즈(상품리스트)</a></li>
     <li><a href="m_goods_view.tiles">사용자타일즈(상품상세내역)</a></li>
     <li><a href="m_order_order.tiles">사용자타일즈(주문)</a></li>

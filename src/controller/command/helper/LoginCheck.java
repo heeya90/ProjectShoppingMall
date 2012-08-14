@@ -39,6 +39,7 @@ public class LoginCheck implements CommandHandler{
 		
 		//3.뷰 페이지의 URI 리턴
 		// AJAX리턴이므로 임시 페이지 리턴
+		
 		return "sitehelper_login_return.jsp";
 	}
 

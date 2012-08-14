@@ -1,7 +1,7 @@
 @charset "euc-kr";
 
 /* Layout */
-body{width:100%;margin:0 auto;text-align:center;background:url(../../images/common/snb/lnb_sbg.gif) repeat-x left 75px}
+body{width:100%;margin:0 auto;text-align:center;background:url(../img/lnb_sbg.gif) repeat-x left 75px}
 
 /* ¼­ºê body */
 #content{_display:inline;float:left;width:740px;margin-top:-12px;text-align:left;#margin-top:6px}
@@ -34,13 +34,13 @@ body{width:100%;margin:0 auto;text-align:center;background:url(../../images/comm
 .board_stt02_tbl tr{border:0}
 .board_stt02_tbl .board_stt02_tr01{}
 .board_stt02_tbl th{padding:3px 10px 0 8px;text-align:center;height:30px;background-color:#f5f5f5;border-bottom:0;border-left:0;border-right:0;border-top:0;border-spacing:0;color:#838383;font-size:12px;font-family:'µ¸¿ò',Dotum,verdana,sans-serif;line-height:18px;font-weight:bold;letter-spacing:-0.3px;text-overflow:ellipsis;white-space:nowrap;}
-.board_stt02_tbl .board_stt02_th{background:url(../../images/order/cart_table_line.gif) no-repeat right 9px;background-color:#f5f5f5;}
+.board_stt02_tbl .board_stt02_th{background:url(../img/cart_table_line.gif) no-repeat right 9px;background-color:#f5f5f5;}
 .board_stt02_tbl td{padding:8px 8px 8px 8px;border-bottom:0;border-left:0;border-right:0;border-top:0;border-spacing:0;text-align:center}
 .board_stt02_tbl .board_stt02_td01{text-overflow:ellipsis;white-space:nowrap;color:#888;font-size:11px;font-family:verdana,'µ¸¿ò',Dotum,sans-serif;line-height:15px;border-top:1px solid #dcdcdc;letter-spacing:-0.3px;border-collapse:collapse}
 .board_stt02_tbl .board_stt02_td01 a{color:#888;font-size:11px;font-family:verdana,'µ¸¿ò',Dotum,sans-serif;line-height:15px;letter-spacing:-0.3px}
 .board_stt02_tbl .board_stt02_td01 a:hover{color:#888;font-size:11px;font-family:verdana,'µ¸¿ò',Dotum,sans-serif;line-height:15px;text-decoration:underline;letter-spacing:-0.3px}
 .board_stt02_tbl .board_stt02_td01 img{padding-top:5px}
-.board_stt02_tbl .board_stt02_td11{background:url(../../images/order/cart_table_line.gif) no-repeat right 9px;padding:3px 10px 0 8px;text-align:center;height:30px;border-bottom:0;border-left:0;border-right:0;border-top:0;border-spacing:0;color:#838383;font-size:12px;font-family:'µ¸¿ò',Dotum,verdana,sans-serif;line-height:18px;font-weight:bold;letter-spacing:-0.3px;text-overflow:ellipsis;white-space:nowrap;border-top:1px solid #dcdcdc;}
+.board_stt02_tbl .board_stt02_td11{background:url(../img/cart_table_line.gif) no-repeat right 9px;padding:3px 10px 0 8px;text-align:center;height:30px;border-bottom:0;border-left:0;border-right:0;border-top:0;border-spacing:0;color:#838383;font-size:12px;font-family:'µ¸¿ò',Dotum,verdana,sans-serif;line-height:18px;font-weight:bold;letter-spacing:-0.3px;text-overflow:ellipsis;white-space:nowrap;border-top:1px solid #dcdcdc;}
 .board_stt02_tbl .board_stt02_td02{color:#888;font-size:11px;font-family:verdana,'µ¸¿ò',Dotum,sans-serif;line-height:13px;border-top:1px solid #dcdcdc;}
 .board_stt02_tbl .board_stt02_td12{padding:15px 30px 15px 30px;text-align:left;color:#888;font-size:12px;font-family:'µ¸¿ò',Dotum,verdana,sans-serif;line-height:21px;letter-spacing:-0.3px;border-top:1px solid #dcdcdc;word-wrap:break-word; /* IE */ _white-space: pre; /* IE hack to re-specify in addition to word-wrap */white-space:pre-wrap;/* Internet Explorer 5.5+ */ white-space:pre-wrap; /* css-3 */ white-space:-moz-pre-wrap;/* Mozilla, since 1999 */ white-space:-pre-wrap;/* Opera 4-6 */white-space: -o-pre-wrap; /* Opera 7 */}
 .board_stt02_tbl .board_stt02_td12 pre{color:#888;font-size:12px;font-family:'µ¸¿ò',Dotum,verdana,sans-serif;line-height:21px;letter-spacing:-0.3px;word-wrap:break-word; /* IE */ _white-space: pre; /* IE hack to re-specify in addition to word-wrap */white-space:pre-wrap;/* Internet Explorer 5.5+ */ white-space:pre-wrap; /* css-3 */ white-space:-moz-pre-wrap;/* Mozilla, since 1999 */ white-space:-pre-wrap;/* Opera 4-6 */white-space: -o-pre-wrap; /* Opera 7 */}
@@ -98,16 +98,16 @@ body{width:100%;margin:0 auto;text-align:center;background:url(../../images/comm
 .board_list_tbl tr{border:0}
 .board_list_tbl .board_list_tr01{}
 .board_list_tbl th{padding:3px 10px 0 8px;text-align:center;height:30px;background-color:#f5f5f5;border-bottom:0;border-left:0;border-right:0;border-top:0;border-spacing:0;color:#838383;font-size:12px;font-family:'µ¸¿ò',Dotum,verdana,sans-serif;line-height:18px;font-weight:bold;letter-spacing:-0.3px;text-overflow:ellipsis;white-space:nowrap;}
-.board_list_tbl .board_list_th{background:url(../../images/order/cart_table_line.gif) no-repeat right 9px;background-color:#f5f5f5;}
+.board_list_tbl .board_list_th{background:url(../img/cart_table_line.gif) no-repeat right 9px;background-color:#f5f5f5;}
 .board_list_tbl td{padding:8px 8px 8px 8px;border-bottom:0;border-left:0;border-right:0;border-top:0;border-spacing:0;text-align:center}
-.board_list_tbl .board_list_td01{background:url(../../images/order/cart_table_line.gif) no-repeat right 9px;padding-right:15px;color:#888;font-size:12px;font-family:verdana,'µ¸¿ò',Dotum,sans-serif;line-height:15px;letter-spacing:-0.3px;font-weight:bold}
+.board_list_tbl .board_list_td01{background:url(../img/cart_table_line.gif) no-repeat right 9px;padding-right:15px;color:#888;font-size:12px;font-family:verdana,'µ¸¿ò',Dotum,sans-serif;line-height:15px;letter-spacing:-0.3px;font-weight:bold}
 .board_list_tbl .board_list_td01 img{padding-right:25px;vertical-align:middle}
 .board_list_tbl .board_list_td02{text-align:left;padding-left:20px;color:#888;font-size:12px;font-family:verdana,'µ¸¿ò',Dotum,sans-serif;line-height:15px;letter-spacing:-0.3px}
 .board_list_tbl .board_list_td02 a{color:#888;font-size:12px;font-family:verdana,'µ¸¿ò',Dotum,sans-serif;line-height:15px;letter-spacing:-0.3px}
 .board_list_tbl .board_list_td02 a:hover{color:#888;font-size:12px;font-family:verdana,'µ¸¿ò',Dotum,sans-serif;line-height:15px;letter-spacing:-0.3px;text-decoration:underline}
 .board_list_tbl .board_list_td03{text-overflow:ellipsis;white-space:nowrap;color:#888;font-size:11px;font-family:verdana,'µ¸¿ò',Dotum,sans-serif;line-height:15px;letter-spacing:-0.3px}
 .board_list_tbl .board_list_td04{text-overflow:ellipsis;white-space:nowrap;color:#888;font-size:11px;font-family:verdana,'µ¸¿ò',Dotum,sans-serif;line-height:15px;letter-spacing:-0.3px}
-.board_list_tbl .board_list_td11{background:url(../../images/order/cart_table_line.gif) no-repeat right 9px;padding-right:15px;color:#888;font-size:12px;font-family:verdana,'µ¸¿ò',Dotum,sans-serif;line-height:15px;border-top:1px solid #dcdcdc;letter-spacing:-0.3px;font-weight:bold}
+.board_list_tbl .board_list_td11{background:url(../img/cart_table_line.gif) no-repeat right 9px;padding-right:15px;color:#888;font-size:12px;font-family:verdana,'µ¸¿ò',Dotum,sans-serif;line-height:15px;border-top:1px solid #dcdcdc;letter-spacing:-0.3px;font-weight:bold}
 .board_list_tbl .board_list_td11 img{padding-bottom:3px;padding-right:25px;}
 .board_list_tbl .board_list_td12{text-align:left;padding-left:20px;color:#888;font-size:12px;font-family:verdana,'µ¸¿ò',Dotum,sans-serif;line-height:15px;border-top:1px solid #dcdcdc;letter-spacing:-0.3px}
 .board_list_tbl .board_list_td12 a{color:#888;font-size:12px;font-family:verdana,'µ¸¿ò',Dotum,sans-serif;line-height:15px;letter-spacing:-0.3px}
@@ -153,20 +153,19 @@ body{width:100%;margin:0 auto;text-align:center;background:url(../../images/comm
 .board_faq02{display:block;margin-top:30px;width:712px}
 .board_faq02 .board_stxt03{padding-bottom:5px;padding-left:10px;display:block;text-align:left;color:#e54430;font-size:14px;font-family:'µ¸¿ò',Dotum,verdana,sans-serif;line-height:19px;font-weight:bold;letter-spacing:-1px}
 .board_faq02 .board_stxt03 img{vertical-align:middle;padding-bottom:2px}
-.board_faq_sctt{width:712px;height:37px;background:url(../../images/order/cart_step03_sbg.gif) no-repeat right 0px;display:block;padding-top:10px}
+.board_faq_sctt{width:712px;height:37px;background:url(../img/cart_step03_sbg.gif) no-repeat right 0px;display:block;padding-top:10px}
 .board_faq_mn{color:#888;font-size:14px;font-family:'µ¸¿ò',Dotum,verdana,sans-serif;letter-spacing:-1px}
 .board_faq_mn b{color:#ff502b;font-size:14px;font-family:'µ¸¿ò',Dotum,verdana,sans-serif;letter-spacing:-1px;font-weight:bold}
 .board_faq_mn pre{display:block;position:relative;margin-top:-1px}
 .board_faq_mn a{color:#888;font-size:14px;font-family:'µ¸¿ò',Dotum,verdana,sans-serif;line-height:19px;font-weight:bold;letter-spacing:-1px}
 .board_faq_mn a:hover{color:#ff502b;font-size:14px;font-family:'µ¸¿ò',Dotum,verdana,sans-serif;line-height:19px;font-weight:bold;letter-spacing:-1px}
-
 table{border:0;}
 .board_faq02 .board_faq_table{width:712px;margin:0 auto;text-align:center}
 .board_faq_tbl{display:block;clear:both;width:712px;border-top:1px solid #e5422c;border-spacing:0;border-right:0;border-left:0;border-bottom:1px solid #e5422c}
 .board_faq_tbl tr{border:0}
 .board_faq_tbl .board_faq_tr01{display:block;border:0}
 .board_faq_tbl .board_faq_tr02{display:none;border:0;}
-.board_faq_tbl .board_faq_td{height:32px;color:#838383;font-size:12px;font-family:'µ¸¿ò',Dotum,verdana,sans-serif;line-height:18px;font-weight:bold;letter-spacing:-0.3px;border-bottom:0;border-left:0;border-right:0;border-spacing:0;padding:3px 10px 3px 10px;text-align:center;width:30px;border-top:1px solid #dcdcdc;background:url(../../images/order/cart_table_line.gif) no-repeat right 11px;background-color:#f5f5f5;}
+.board_faq_tbl .board_faq_td{height:32px;color:#838383;font-size:12px;font-family:'µ¸¿ò',Dotum,verdana,sans-serif;line-height:18px;font-weight:bold;letter-spacing:-0.3px;border-bottom:0;border-left:0;border-right:0;border-spacing:0;padding:3px 10px 3px 10px;text-align:center;width:30px;border-top:1px solid #dcdcdc;background:url(../img/cart_table_line.gif) no-repeat right 11px;background-color:#f5f5f5;}
 .board_faq_tbl .board_faq_td01{height:32px;background-color:#f5f5f5;color:#838383;font-size:12px;font-family:'µ¸¿ò',Dotum,verdana,sans-serif;line-height:18px;font-weight:normal;letter-spacing:-0.3px;border-bottom:0;border-left:0;border-right:0;border-spacing:0;padding:3px 10px 3px 18px;width:634px;border-top:1px solid #dcdcdc;background-color:#f5f5f5;text-align:left}
 .board_faq_tbl .board_faq_td01 a{color:#888;font-size:12px;font-family:verdana,'µ¸¿ò',Dotum,sans-serif;line-height:18px;letter-spacing:-0.3px;}
 .board_faq_tbl .board_faq_td01 a:hover{color:#888;font-size:12px;font-family:verdana,'µ¸¿ò',Dotum,sans-serif;line-height:18px;letter-spacing:-0.3px;text-decoration:underline}

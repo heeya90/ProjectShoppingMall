@@ -1,10 +1,10 @@
 $(document).ready(function() {
 	$("#login_main").wrap('<form name="frm" id="frm" method="post"></form>');
-	$("#btnlogin").css("cursor", "pointer");
+	$("#btnLogin").css("cursor", "pointer");
 	$("#id").css("ime-mode", "disabled");
 	$("#id").focus();
 
-	$("#btnlogin").bind("click", function() {
+	$("#btnLogin").bind("click", function(e) {
 		if ($("#id").val() == '') {
 			alert("아이디를 입력하세요");
 			$("#id").focus();
@@ -16,24 +16,25 @@ $(document).ready(function() {
 			return false;
 		}
 
-		$.post("ChkLogin.do", $("form").serialize(), function(data) {
+		$.post("UserLogin.do", $("form").serialize(), function(data) {
 			if (data == 'ok') {
-				location.href = 'no_user_reg.tiles';
-			} else if (data == 'id') {
-				alert('아이디를 확인하세요.');
-				return false;
-			} else if (data == 'pw') {
-				alert('비번을 확인하세요');
-				return false;
+				location.href = 'UserMain.do';
 			} else {
-				alert(data + '에러가 발생하였습니다.');
+				alert('아이디와 비번을 확인하세요.');
 				return false;
 			}
 		});
+		e.preventDefault();
 	});
 	$("#pw,#id").keydown(function(e) {
 		if (e.keyCode == 13) {
-			$("#loginBtn").click();
+			$("#btnLogin").click();
 		}
+	});
+	
+	$(".lg_btn_sid a").bind("click",function(e){
+		//location.href = 'no_user_find.tiles';
+		window.open("UserFindBefore.do","find","dialogWidth=400, dialogHeight=290, center:yes, status:no, scroll=no, resizale=no");
+		e.preventDefault();
 	});
 });

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$("#button").css("cursor","pointer");
+	$("#name").css("cursor","pointer");
 	$("#name").css("ime-mode","disabled");
 	$("#name").focus();
 	

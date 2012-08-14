@@ -5,12 +5,12 @@
 		<img src="./img/board_lefttt.gif" />
 	</div>
 	<div class="left_board_t02">
-		<span class="left_bd_mu02"><a href="">공지사항</a></span>
-		<span class="left_bd_mu02"><a href="">이용안내FAQ</a></span>
-		<span class="left_bd_mu03"><a href="">문의하기</a></span>
-		<span class="left_bd_mu04"><a href="">문의하기</a></span>
-		<span class="left_bd_mu05"><a href="">개인정보취급방침</a></span>
-		<span class="left_bd_mu06"><a href="">이용약관</a></span>
+		<span class="left_bd_mu02"><a href="Other_1.do">회사소개</a></span>
+		<span class="left_bd_mu02"><a href="Other_2.do">이용약관</a></span>
+		<span class="left_bd_mu03"><a href="Other_3.do">개인정보취급방침</a></span>
+		<span class="left_bd_mu04"><a href="Other_44.do">공지사항</a></span>
+		<span class="left_bd_mu05"><a href="Other_44.do">문의하기</a></span>
+		<span class="left_bd_mu06"><a href="Other_44.do">이용안내</a></span>
 	</div>
 	<div class="left_board_t03">
 		<img src="./img/board_left_mbgbt.gif"/>

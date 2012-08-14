@@ -17,7 +17,7 @@ function getuserlist(){
 /*이름으로 검색하기*/
 function getusername(){
 	$.post("UserListName.do",{"name":$(".input_box_sel").val(),}, function(result){
-		if(result==0){
+		if(result!==0){
 			$("#mainNotice").append(result);
 		}else{
 			alert("내용이 없습니다");
@@ -29,7 +29,7 @@ function getusername(){
 /*아이디로 검색하기*/
 function getuserid(){
 	$.post("UserListId.do",{"id":$(".input_box_sel").val(),}, function(result){
-		if(result==0){
+		if(result!==0){
 			$("#mainNotice").append(result);
 		}else{
 			alert("내용이 없습니다");
@@ -41,7 +41,7 @@ function getuserid(){
 /*이메일로 검색하기*/
 function getuseremail(){
 	$.post("UserListEmail.do",{"email":$(".input_box_sel").val(),}, function(result){
-		if(result==0){
+		if(result!==0){
 			$("#mainNotice").append(result);
 		}else{
 			alert("내용이 없습니다");

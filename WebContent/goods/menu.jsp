@@ -6,9 +6,9 @@
 	</div>
 	<div class="left_board_t02">
 		<span class="left_bd_mu06"><a href="UserMain.do">메인페이지</a></span>
-				<%=request.getAttribute("category2")%>
+		<%=request.getAttribute("category2")%>
 	</div>
 	<div class="left_board_t03">
 		<img src="./img/board_left_mbgbt.gif"/>
 	</div>
-</div>
+	</div>

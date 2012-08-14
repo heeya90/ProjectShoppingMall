@@ -8,6 +8,9 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.baseBrowserLibrary"/>
+<<<<<<< HEAD
 	<classpathentry kind="con" path="org.eclipselabs.jsdt.jquery.core.CoflictLibrary_1.7"/>
+=======
+>>>>>>> refs/remotes/origin/projectsun3
 	<classpathentry kind="output" path=""/>
 </classpath>

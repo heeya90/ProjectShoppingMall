@@ -17,7 +17,7 @@ public class FindIdPw implements CommandHandler{
 		String name = request.getParameter("name");
 		String email = request.getParameter("email");
 		//1.명령어와 관련된 비즈니스 로직 처리
-		UserDao dao= new UserDao();
+		UserDao dao = new UserDao();
 
 		//String email = request.getParameter("email");
 		System.out.println("파인드아이디 이름"+id);
@@ -25,7 +25,7 @@ public class FindIdPw implements CommandHandler{
 		System.out.println("파인드아이디 이메일"+email);
 		ArrayList<UserBean> arruse = null;
 		if(id==""){
-			arruse = dao.findidpw(name, email);	
+			arruse = dao.findidpw(name, email);
 		}else{
 			arruse = dao.findidpw(id, name, email);
 		}

@@ -66,6 +66,30 @@ public class Category_2DAO {
 		return null;
 	}
 	
+	public ArrayList<Category2Bean> select(){
+		try{
+			conn = new DBManager().getConnection();
+			pstmt=conn.prepareStatement("SELECT no,name, orderidx FROM t_category2 WHERE use='Y' and ctg1 is not null and (orderidx=1 or orderidx=2) order by orderidx");
+			rs = pstmt.executeQuery();
+			ArrayList<Category2Bean> arrcat2 = new ArrayList<Category2Bean>();
+			
+			while(rs.next()){
+				Category2Bean bean = new Category2Bean();
+				bean.setNo(rs.getInt("no"));
+				bean.setName(rs.getString("name"));
+				bean.setOrderidx(rs.getInt("Orderidx"));
+				arrcat2.add(bean);
+			}
+			return arrcat2;
+		}catch(Exception e){ 
+			System.out.println("카테고리2 업데이트 에러 : "+e.getMessage());
+		}finally{
+			try{if(null!=rs) rs.close(); if(null!=pstmt) pstmt.close();if(conn!=null) conn.close();
+			}catch(SQLException e){e.getMessage();}
+		}
+		return null;
+	}
+	
 	public int update(Category2Bean c2b) {
 		try {
 			conn = new DBManager().getConnection();

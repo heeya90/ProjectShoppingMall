@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-
+<link href="./common/mypage.css" rel="stylesheet" type="text/css" />
 	<div class="sub_loca">
 		<img src="./img/icon_home.gif" alt="현재위치" />홈-마이페이지-주문목록
 	</div>

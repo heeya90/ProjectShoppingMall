@@ -4,23 +4,24 @@
 <div id="footer">
 	<div class="f_menu">
 		<div class="f_mu_left">
-			<a href="/info/company.asp">
+			<a href="Other_1.do">
 				<img src="./img/f_ltt01.gif" alt="회사소개" />
 			</a>
 				<img src="./img/f_lttline.gif" alt="가운데라인" />
-			<a href="http://giftkor.giftmani.com/board/board06.asp">
+			<a href="Other_3.do">
 				<img src="./img/f_ltt02.gif" alt="개인정보취급방침" />
 			</a> 
 				<img src="./img/f_lttline.gif" alt="가운데라인" /> 
-			<a href="Other_1.do">
+			<a href="Other_2.do">
 				<img src="./img/f_ltt03.gif" alt="이용약관" />
 			</a>
 				<img src="./img/f_lttline.gif" alt="가운데라인" /> 
-			<a href="http://giftkor.giftmani.com/board/notice.asp">
+			<a href="Other_44.do">
 				<img src="./img/f_ltt04.gif" alt="고객지원센터" />
 			</a> 
 				<img src="./img/f_lttline.gif" alt="가운데라인" /> 
-			<a href="#"><img src="./img/f_ltt05.gif" alt="커뮤니티" />
+			<a href="Other_44.do">
+				<img src="./img/f_ltt05.gif" alt="커뮤니티" />
 			</a>
 		</div>
 	</div>
